@@ -1,0 +1,49 @@
+/* ══════════════════════════════════════════════════════
+   _glass.css  — Reusable glass / backdrop component
+   ══════════════════════════════════════════════════════ */
+
+/* ════════════════════════════════════════════════════════
+   Usage:  add class="glass" to any element.
+   Customise per-instance with CSS variables:
+     --glass-radius  (default: var(--radius-xl) = 25px)
+     --glass-rgb     (default: 255,255,255)
+     --glass-bg      (rgba alpha, default: 0.1)
+     --glass-blur    (default: 7px)
+   ════════════════════════════════════════════════════════ */
+
+.glass {
+  --glass-radius: var(--radius-xl);
+  --glass-rgb:    255, 255, 255;
+  --glass-bg:     0.1;
+  --glass-blur:   7px;
+  position: relative;
+  background: rgba(var(--glass-rgb), var(--glass-bg));
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-radius: var(--glass-radius);
+}
+
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--glass-radius);
+  padding: 1px;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 255, 255, 0.45)  0%,
+    rgba(255, 255, 255, 0.18) 30%,
+    rgba(255, 255, 255, 0.05) 60%,
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: var(--z-raised);
+}

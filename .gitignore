@@ -1,0 +1,24 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# Idea/Editor
+.vscode/
+.idea/
+
+# Images - Originals
+# We keep raw files out of the production build
+assets/img/originals/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Temp/Cache
+.cache/
+.sass-cache/
+node_modules/
+dist/
+build/

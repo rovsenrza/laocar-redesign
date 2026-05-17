@@ -1,0 +1,38 @@
+/* ══════════════════════════════════════════════════════
+   _typography.css  — Global type defaults
+   ══════════════════════════════════════════════════════ */
+
+body {
+  font-family: var(--font-base);
+  font-size: var(--text-lg);        /* 18px body copy default */
+  line-height: var(--leading-loose);
+  color: var(--color-text);
+}
+
+/* Heading font defaults — Unbounded display face */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: var(--leading-none);
+  color: var(--color-text);
+}
+
+p {
+  line-height: var(--leading-loose);
+}
+
+a {
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Screen-reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
