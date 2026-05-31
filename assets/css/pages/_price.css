@@ -1,0 +1,94 @@
+/* ══ PRICE PAGE (Прайс) ═══════════════════════════════ */
+
+.price-content-section {
+  max-width: 1264px;
+  margin: 0 auto;
+  padding: 58px 0 30px;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.price-list-item {
+  --glass-radius: 25px;
+  --glass-bg: 0.07;
+  --glass-blur: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 12px;
+  padding-right: 12px;
+}
+
+.price-list-leading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-left: 45px;
+  flex: 1;
+  min-width: 0;
+}
+
+.price-list-num,
+.price-list-name,
+.price-list-btn {
+  position: relative;
+  z-index: 2;
+}
+
+.price-list-num {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.price-list-divider {
+  flex-shrink: 0;
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.price-list-name {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+  margin: 0;
+  min-width: 0;
+}
+
+.price-list-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  padding-inline: 36px;
+  border: none;
+  border-radius: 12px;
+  background: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.price-list-btn:hover {
+  opacity: 0.7;
+}

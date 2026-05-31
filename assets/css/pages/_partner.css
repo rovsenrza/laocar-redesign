@@ -1,0 +1,100 @@
+/* ══ PARTNER PAGE (Стать партнером) ═══════════════════ */
+
+.intro-font {
+  font-family: "Unbounded", sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 46px;
+}
+
+/* ── PARTNER EARN CARDS ──────────────────────────────── */
+
+.partner-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.partner-earn-card {
+  --glass-radius: 32px;
+  --glass-bg: 0.07;
+  --glass-blur: 7px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.partner-earn-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 22px;
+  margin-bottom: 16px;
+}
+
+.partner-earn-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 6px 8px;
+}
+
+.partner-earn-name,
+.partner-earn-value {
+  font-family: "Unbounded", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.partner-earn-value {
+  margin-top: 8px;
+}
+
+.partner-earn-sub {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.1;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 900px) {
+  .partner-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .partner-earn-name,
+  .partner-earn-value {
+    font-size: 24px;
+  }
+
+  .partner-earn-sub {
+    font-size: 15px;
+  }
+}
+
+/* ── PARTNER ADVANTAGES GRID ─────────────────────────── */
+.partner-advantages-grid> .terms-card{padding-inline:20px !important;}
+.partner-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.partner-faq-list {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+@media (max-width: 768px) {
+  .partner-advantages-grid {
+    grid-template-columns: 1fr;
+  }
+}

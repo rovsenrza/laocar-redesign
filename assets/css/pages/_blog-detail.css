@@ -1,0 +1,275 @@
+/* ══ Blog Detail PAGE ════════════════════════════════════════ */
+
+/* ── BLOG DETAIL PAGE ────────────────────────────────── */
+
+.blog-detail-page {
+  width: 100%;
+  background: var(--bg);
+}
+
+.blog-detail-container {
+  width: 100%;
+  max-width: 1264px;
+  margin: 0 auto;
+  
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.blog-detail-speedbar {
+  margin: 0 0 30px;
+}
+
+.blog-detail-title {
+  font-family: "Unbounded", sans-serif;
+  font-size: 47px;
+  font-weight: 600;
+  line-height: 1;
+  color: rgba(236, 236, 236, 1);
+  margin-bottom: 14px;
+}
+
+.blog-detail-subtext {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px;
+}
+
+.blog-detail-main-image {
+  width: 100%;
+  height: 604px;
+  object-fit: cover;
+  border-radius: 65px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.blog-detail-text-block p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 130%;
+  
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 10px;
+}
+
+.blog-detail-mixed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-block: 20px;
+}
+
+.blog-detail-grid-image {
+  width: 100%;
+  height: 471px;
+  object-fit: cover;
+  border-radius: 46px;
+  display: block;
+}
+
+.blog-detail-grid-text {
+  min-height: 320px;
+}
+
+.blog-detail-grid-text h3 {
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-detail-grid-text p {
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 10px;
+}
+
+.blog-detail-cars-title,
+.blog-detail-related-title {
+  font-family: "Unbounded", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.blog-detail-cars-title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-detail-cars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-block: 20px;
+}
+
+.blog-detail-car-card {
+  display: block;
+  border-radius: 13px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.blog-detail-car-card .car-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 201px;
+  overflow: hidden;
+}
+
+.blog-detail-car-card .car-img-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-detail-car-card .car-img-main {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.blog-detail-car-card .car-img-second {
+  z-index: 1;
+}
+
+.blog-detail-car-card:hover .car-img-main {
+  opacity: 0;
+}
+
+.blog-detail-car-body {
+  height: 53px;
+  background: #343434;
+  padding: 6px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.blog-detail-car-name {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  margin-bottom: 2px;
+  font-weight: 600;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.blog-detail-car-price {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.blog-detail-glass-btn {
+  border: none;
+  --glass-radius: 25px;
+  --glass-bg: 0.1;
+  --glass-blur: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding-inline: 50px;
+  height: 64px;
+  text-decoration: none;
+  font-family: "Unbounded", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 auto 30px;
+  transition: .25s;
+}
+.blog-detail-glass-btn:hover {
+  --glass-bg: 0.05;
+}
+
+.blog-detail-related-title {
+  margin-bottom: 20px;
+}
+
+.blog-detail-related-grid {
+  margin-block: 20px;
+}
+
+.blog-detail-related-grid .blog-card {
+  min-height: 358px;
+}
+
+@media (max-width: 1280px) {
+  .blog-detail-container {
+    padding-inline: 40px;
+  }
+
+  .blog-detail-cars-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .blog-detail-main-image {
+    height: 440px;
+    border-radius: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-detail-container {
+    padding-inline: 20px;
+    padding-top: 20px;
+  }
+
+  .blog-detail-title {
+    font-size: 32px;
+  }
+
+  .blog-detail-subtext,
+  .blog-detail-text-block p {
+    font-size: 16px;
+  }
+
+  .blog-detail-main-image {
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  .blog-detail-mixed-grid,
+  .blog-detail-cars-grid,
+  .blog-detail-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-detail-grid-image,
+  .blog-detail-grid-text {
+    min-height: 0;
+    height: auto;
+  }
+
+  .blog-detail-grid-image {
+    border-radius: 20px;
+  }
+
+  .blog-detail-glass-btn {
+    width: 100%;
+    font-size: 20px;
+    height: 56px;
+  }
+}

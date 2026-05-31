@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAOCAR - Купе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter+Tight:wght@300;400;500&family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body class="autopark-category-page">
+    <header class="site-header">
+      <div class="container-header">
+        <div class="logo"><a href="/">LAOCAR</a></div>
+
+        <nav class="main-nav">
+          <a href="autopark.html" style="border-bottom-color: #fff;">Автопарк</a>
+          <a href="terms.html">Условия</a>
+          <a href="certificates.html">Сертификаты</a>
+          <a href="blogs.html">Блог</a>
+          <a href="partner.html">Стать партнером</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+
+        <div class="header-right">
+          <div class="phone-dropdown">
+            <a class="phone-link" href="tel:+375333337744">
+              +375 (33) 333 77 44
+              <img class="phone-chevron" src="/assets/img/chevron.svg" alt="" aria-hidden="true" loading="lazy" />
+            </a>
+            <div class="phone-dropdown-menu">
+              <a href="#" class="phone-dropdown-item">Telegram</a>
+              <a href="#" class="phone-dropdown-item">Max</a>
+              <a href="#" class="phone-dropdown-item">WhatsApp</a>
+            </div>
+          </div>
+          <div class="lang-switch">
+            <div class="hdr-dropdown">
+              <button class="hdr-dropdown-trigger" type="button">RU</button>
+              <div class="hdr-dropdown-menu">
+                <a href="#" class="hdr-dropdown-item hdr-dropdown-item--active">RU</a>
+                <a href="#" class="hdr-dropdown-item">ENG</a>
+                <a href="#" class="hdr-dropdown-item">TR</a>
+                <a href="#" class="hdr-dropdown-item">ZH</a>
+              </div>
+            </div>
+            <div class="hdr-dropdown">
+              <button class="hdr-dropdown-trigger" type="button">USD</button>
+              <div class="hdr-dropdown-menu">
+                <a href="#" class="hdr-dropdown-item hdr-dropdown-item--active">USD</a>
+                <a href="#" class="hdr-dropdown-item">BYN</a>
+                <a href="#" class="hdr-dropdown-item">RUB</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="autopark-category-page">
+      <div class="container-page autopark-category-container">
+        <div class="speedbar autopark-category-speedbar">
+          <a href="index.html" class="speedbar-link">Главная</a>
+          <img src="/assets/img/br-cev.svg" alt="/" class="speedbar-icon" aria-hidden="true" loading="lazy" />
+          <a href="autopark.html" class="speedbar-link">Автопарк</a>
+          <img src="/assets/img/br-cev.svg" alt="/" class="speedbar-icon" aria-hidden="true" loading="lazy" />
+          <span class="speedbar-current">Купе</span>
+        </div>
+
+        <nav class="autopark-category-nav" aria-label="Категории автопарка">
+          <a href="autopark-category.html" class="autopark-category-pill">Доступны на сегодня</a>
+          <a href="autopark.html" class="autopark-category-pill">Все автомобили</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Внедорожники</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Спорткары</a>
+          <a href="autopark-category.html" class="autopark-category-pill autopark-category-pill--active">Купе</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Электрокары</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Семейные</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Премиум</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Кабриолеты</a>
+        </nav>
+
+        <div class="autopark-toolbar-wrap">
+        <div class="autopark-toolbar">
+          <div class="autopark-filter" id="autoparkFilter">
+            <div class="autopark-filter-control" id="autoparkFilterControl">
+              <button type="button" class="autopark-filter-btn" id="autoparkFilterBtn" aria-expanded="false" aria-controls="autoparkFilterPanel">
+                <img src="/assets/img/filter.svg" alt="" aria-hidden="true" />
+                <span class="autopark-filter-label">Фильтр</span>
+                <span class="autopark-filter-chips" id="autoparkFilterChips"></span>
+              </button>
+              <button type="button" class="autopark-filter-bar-clear" id="autoparkFilterBarClear" aria-label="Сбросить фильтры" hidden>
+                <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
+          <form class="autopark-search-form" id="autoparkSearchForm">
+            <div class="autopark-search-control">
+              <div class="autopark-search-field">
+                <input class="autopark-search-input" type="text" name="q" placeholder="Поиск автомобиля" autocomplete="off" />
+                <button type="button" class="autopark-search-clear" aria-label="Очистить">
+                  <img src="/assets/img/close.svg" alt="" width="15" height="15" aria-hidden="true" />
+                </button>
+              </div>
+              <button type="submit" class="autopark-search-submit">Искать</button>
+            </div>
+          </form>
+
+          <div class="autopark-sort" id="autoparkSort">
+            <div class="autopark-sort-control" id="autoparkSortControl">
+              <button type="button" class="autopark-sort-btn" id="autoparkSortBtn" aria-expanded="false" aria-haspopup="listbox">
+                <span class="autopark-sort-arrows" aria-hidden="true">
+                  <img src="/assets/img/up.svg" alt="" />
+                  <img src="/assets/img/down.svg" alt="" />
+                </span>
+                <span class="autopark-sort-label">Сортировать</span>
+                <span class="autopark-sort-chip">
+                  <span class="autopark-sort-chip-text"></span>
+                </span>
+              </button>
+              <button type="button" class="autopark-sort-clear" id="autoparkSortClear" aria-label="Сбросить сортировку" hidden>
+                <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
+              </button>
+            </div>
+            <div class="autopark-sort-menu" id="autoparkSortMenu" role="listbox" aria-label="Сортировка">
+              <button type="button" class="autopark-sort-option is-active" data-sort="default" role="option">По умолчанию</button>
+              <button type="button" class="autopark-sort-option" data-sort="new" role="option">Сначала новые</button>
+              <button type="button" class="autopark-sort-option" data-sort="price-asc" role="option">Сначала низкие цены</button>
+              <button type="button" class="autopark-sort-option" data-sort="price-desc" role="option">Сначала высокие цены</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="autopark-filter-panel" id="autoparkFilterPanel" aria-hidden="true">
+          <button type="button" class="autopark-filter-panel-close" id="autoparkFilterPanelClose" aria-label="Закрыть фильтр">
+            <img src="/assets/img/close.svg" alt="" width="15" height="15" aria-hidden="true" />
+          </button>
+
+          <section class="autopark-filter-section" data-filter-section="class">
+            <h3 class="autopark-filter-headline">Класс</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-capsules">
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="all">Все автомобили</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="suv">Внедорожники</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="sport">Спорткары</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="coupe">Купе</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="electric">Электрокары</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="family">Семейные</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="premium">Премиум</button>
+              <button type="button" class="autopark-filter-capsule" data-group="class" data-value="convertible">Кабриолеты</button>
+            </div>
+          </section>
+
+          <section class="autopark-filter-section" data-filter-section="brand">
+            <h3 class="autopark-filter-headline">Марка</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-capsules">
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="audi">Audi</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="avatr">Avatr</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="bentley">Bentley</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="bmw">BMW</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="cadillac">Cadillac</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="deepal">Deepal</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="dodge">Dodge</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="ford">Ford</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="jeep">Jeep</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="lamborghini">Lamborghini</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="lixiang">Lixiang</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="m-hero">M-Hero</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="maserati">Maserati</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="mercedes">Mercedes-Benz</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="porsche">Porsche</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="rolls-royce">Rolls-Royce</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="tesla">Tesla</button>
+              <button type="button" class="autopark-filter-capsule" data-group="brand" data-value="xiaomi">Xiaomi</button>
+            </div>
+          </section>
+
+          <section class="autopark-filter-section" data-filter-section="engine">
+            <h3 class="autopark-filter-headline">Тип двигателя</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-capsules">
+              <button type="button" class="autopark-filter-capsule" data-group="engine" data-value="petrol">Бензин</button>
+              <button type="button" class="autopark-filter-capsule" data-group="engine" data-value="diesel">Дизель</button>
+              <button type="button" class="autopark-filter-capsule" data-group="engine" data-value="electric">Электро</button>
+              <button type="button" class="autopark-filter-capsule" data-group="engine" data-value="hybrid">Гибрид</button>
+            </div>
+          </section>
+
+          <section class="autopark-filter-section" data-filter-section="drive">
+            <h3 class="autopark-filter-headline">Привод</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-capsules">
+              <button type="button" class="autopark-filter-capsule" data-group="drive" data-value="awd">Полный</button>
+              <button type="button" class="autopark-filter-capsule" data-group="drive" data-value="fwd">Передний</button>
+              <button type="button" class="autopark-filter-capsule" data-group="drive" data-value="rwd">Задний</button>
+            </div>
+          </section>
+
+          <section class="autopark-filter-section" data-filter-section="power">
+            <h3 class="autopark-filter-headline">Мощность</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-range" data-range="power" data-min="0" data-max="1500" data-default-min="130" data-default-max="130">
+              <div class="autopark-filter-range-inputs">
+                <label class="autopark-filter-range-field">
+                  <span class="autopark-filter-range-label">от</span>
+                  <input type="number" class="autopark-filter-range-from" value="130" min="0" max="1500" />
+                  <span class="autopark-filter-range-unit">л.с.</span>
+                </label>
+                <label class="autopark-filter-range-field">
+                  <span class="autopark-filter-range-label">до</span>
+                  <input type="number" class="autopark-filter-range-to" value="130" min="0" max="1500" />
+                  <span class="autopark-filter-range-unit">л.с.</span>
+                </label>
+              </div>
+              <div class="autopark-filter-slider">
+                <div class="autopark-filter-slider-track">
+                  <div class="autopark-filter-slider-fill"></div>
+                </div>
+                <input type="range" class="autopark-filter-slider-min" min="0" max="1500" value="130" aria-label="Мощность от" />
+                <input type="range" class="autopark-filter-slider-max" min="0" max="1500" value="130" aria-label="Мощность до" />
+              </div>
+            </div>
+          </section>
+
+          <section class="autopark-filter-section" data-filter-section="price">
+            <h3 class="autopark-filter-headline">Цена</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-capsules autopark-filter-capsules--period">
+              <button type="button" class="autopark-filter-capsule is-selected" data-group="pricePeriod" data-value="day">Сутки</button>
+              <button type="button" class="autopark-filter-capsule" data-group="pricePeriod" data-value="week">Неделя</button>
+              <button type="button" class="autopark-filter-capsule" data-group="pricePeriod" data-value="month">Месяц</button>
+            </div>
+            <div class="autopark-filter-range" data-range="price" data-min="0" data-max="5000" data-default-min="130" data-default-max="130">
+              <div class="autopark-filter-range-inputs">
+                <label class="autopark-filter-range-field">
+                  <span class="autopark-filter-range-label">от</span>
+                  <input type="number" class="autopark-filter-range-from" value="130" min="0" max="5000" />
+                  <span class="autopark-filter-range-unit">$</span>
+                </label>
+                <label class="autopark-filter-range-field">
+                  <span class="autopark-filter-range-label">до</span>
+                  <input type="number" class="autopark-filter-range-to" value="130" min="0" max="5000" />
+                  <span class="autopark-filter-range-unit">$</span>
+                </label>
+              </div>
+              <div class="autopark-filter-slider">
+                <div class="autopark-filter-slider-track">
+                  <div class="autopark-filter-slider-fill"></div>
+                </div>
+                <input type="range" class="autopark-filter-slider-min" min="0" max="5000" value="130" aria-label="Цена от" />
+                <input type="range" class="autopark-filter-slider-max" min="0" max="5000" value="130" aria-label="Цена до" />
+              </div>
+            </div>
+          </section>
+
+          <section class="autopark-filter-section" data-filter-section="availability">
+            <h3 class="autopark-filter-headline">Доступность</h3>
+            <hr class="autopark-filter-divider" />
+            <div class="autopark-filter-capsules">
+              <button type="button" class="autopark-filter-capsule" data-group="availability" data-value="today">Доступны сегодня</button>
+            </div>
+          </section>
+
+          <div class="autopark-filter-footer">
+            <button type="button" class="autopark-filter-find" id="autoparkFilterFind">Найти</button>
+            <button type="button" class="autopark-filter-reset" id="autoparkFilterReset">Сбросить</button>
+          </div>
+        </div>
+        </div>
+
+        <div class="certs-cars-grid" id="autoparkCategoryGrid"></div>
+      </div>
+
+      <section class="certs-content-section">
+        <h2 class="intro-font">В мире автомобилей купе — как вечерний смокинг среди повседневной одежды. Они созданы не для того, чтобы быть удобными — они созданы для того, чтобы быть незабываемыми.</h2>
+        <p class="certs-intro-text autopark-category-intro">Стиль, страсть, скорость. Двухдверное купе — это не просто автомобиль, это вызов повседневности. Это момент, когда всё лишнее исчезает, и остаются только ты, дорога и рев мотора. LaoCar.by предлагает аренду спортивных купе в Минске для тех, кто выбирает жизнь в ярких красках.</p>
+
+        <div class="certs-conditions-grid">
+          <article class="terms-card glass">
+            <h3 class="terms-card-title">Porsche 911 Carrera</h3>
+            <p class="terms-card-text">Классика с характером. Каждая поездка на нём — как сцена из культового фильма.</p>
+          </article>
+          <article class="terms-card glass">
+            <h3 class="terms-card-title">Porsche 911 Turbo S</h3>
+            <p class="terms-card-text">Ускорение, от которого перехватывает дыхание. Легенда, ставшая арт-объектом на колёсах.</p>
+          </article>
+          <article class="terms-card glass">
+            <h3 class="terms-card-title">Bentley Continental GT 6.0</h3>
+            <p class="terms-card-text">Роскошь в каждом изгибе. Это не просто купе — это дорогой костюм от английского портного.</p>
+          </article>
+          <article class="terms-card glass">
+            <h3 class="terms-card-title">BMW M4 Competition</h3>
+            <p class="terms-card-text">Резкий, как вспышка молнии. Для тех, кто привык брать от жизни максимум.</p>
+          </article>
+          <article class="terms-card glass">
+            <h3 class="terms-card-title">Ford Mustang</h3>
+            <p class="terms-card-text">Голос Америки, звучащий через рев мотора. Символ свободы и силы.</p>
+          </article>
+          <article class="terms-card glass">
+            <h3 class="terms-card-title">Dodge Challenger</h3>
+            <p class="terms-card-text">Автомобиль с душой, которая рычит, когда ты касаешься педали газа.</p>
+          </article>
+        </div>
+
+        <h2 class="certs-section-title">Зачем брать купе в аренду?</h2>
+
+        <div class="autopark-why-grid">
+          <div>
+            <img src="/assets/img/1.webp" alt="" class="certs-how-number" aria-hidden="true" loading="lazy" />
+            <article class="certs-how-card glass">
+              <div class="certs-how-content">
+                <h3 class="certs-how-title">Для особенного дня</h3>
+                <p class="certs-how-text">Свадьба, свидание, премьера — появиться в купе значит выделиться и запомниться.</p>
+              </div>
+            </article>
+          </div>
+          <div>
+            <img src="/assets/img/2.webp" alt="" class="certs-how-number" aria-hidden="true" loading="lazy" />
+            <article class="certs-how-card glass">
+              <div class="certs-how-content">
+                <h3 class="certs-how-title">Для себя</h3>
+                <p class="certs-how-text">Чтобы просто почувствовать: ты живёшь. Не выживаешь — живёшь.</p>
+              </div>
+            </article>
+          </div>
+          <div>
+            <img src="/assets/img/3.webp" alt="" class="certs-how-number" aria-hidden="true" loading="lazy" />
+            <article class="certs-how-card glass">
+              <div class="certs-how-content">
+                <h3 class="certs-how-title">Для фотографии</h3>
+                <p class="certs-how-text">Каждый изгиб кузова, каждая линия — повод нажать на затвор.</p>
+              </div>
+            </article>
+          </div>
+          <div>
+            <img src="/assets/img/4.png" alt="" class="certs-how-number" aria-hidden="true" loading="lazy" />
+            <article class="certs-how-card glass">
+              <div class="certs-how-content">
+                <h3 class="certs-how-title">Для подарка</h3>
+                <p class="certs-how-text">Подари близкому человеку эмоции, которые невозможно купить в магазине.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <h2 class="certs-section-title">Как арендовать автомобиль в LaoCar.by?</h2>
+
+        <div class="autopark-how-grid">
+          <article class="terms-card glass">
+            <p class="autopark-how-main">1</p>
+            <p class="autopark-how-sub">Выберите автомобиль из нашего автопарка</p>
+          </article>
+          <article class="terms-card glass">
+            <p class="autopark-how-main">2</p>
+            <p class="autopark-how-sub">Свяжитесь с нами для уточнения условий аренды</p>
+          </article>
+          <article class="terms-card glass">
+            <p class="autopark-how-main">3</p>
+            <p class="autopark-how-sub">Оформите договор и получите авто в удобное время и место</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <section class="home-cta">
+      <div class="home-cta-content">
+        <h2 class="home-cta-title">Есть вопросы? Звони!</h2>
+        <p class="home-cta-text">
+          Бесплатная консультация и помощь эксперта<br />
+          в выборе автомобиля по телефону:<br />
+        </p>
+        <div class="home-cta-phone">
+          <a href="tel:+375333337744">+375 (33) 333 77 44</a>
+        </div>
+        <div class="home-cta-actions">
+          <a href="#" class="home-cta-btn home-cta-btn-telegram glass">Написать в Telegram</a>
+          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass">Написать в WhatsApp</a>
+          <a href="#" class="home-cta-btn home-cta-btn-max glass">Написать в Max</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="footer-top">
+          <div class="footer-col">
+            <h4 class="footer-head">Клиентам:</h4>
+            <ul class="footer-links">
+              <li><a href="autopark.html">Автопарк</a></li>
+              <li><a href="terms.html">Условия</a></li>
+              <li><a href="certificates.html">Сертификаты</a></li>
+              <li><a href="legal.html">Для юр. лиц</a></li>
+              <li><a href="abroad.html">Выезд за границу</a></li>
+              <li><a href="price.html">Прайс</a></li>
+              <li><a href="blogs.html">Блог</a></li>
+              <li><a href="partner.html">Сдать авто</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-head">Автопарк:</h4>
+            <ul class="footer-links">
+              <li><a href="autopark-category.html">Внедорожники</a></li>
+              <li><a href="autopark-category.html">Кабриолеты</a></li>
+              <li><a href="autopark-category.html">Спорткары</a></li>
+              <li><a href="autopark-category.html">Премиум</a></li>
+              <li><a href="autopark-category.html">Электрокары</a></li>
+              <li><a href="autopark-category.html">Семейные</a></li>
+              <li><a href="autopark-category.html">Купе</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-head">Для мероприятий:</h4>
+            <ul class="footer-links">
+              <li><a href="events.html">Видеосъемка</a></li>
+              <li><a href="events.html">Фотосессия</a></li>
+              <li><a href="events.html">День Рождения</a></li>
+              <li><a href="events.html">Свадьба</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-head">О компании:</h4>
+            <ul class="footer-links">
+              <li><a href="about.html">О нас</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="documents.html">Документы</a></li>
+              <li><a href="privacy-policy.html">Политика конфиденциальности</a></li>
+              <li><a href="cookies.html">Политика Cookies</a></li>
+              <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 class="footer-head">Контакты:</h4>
+            <ul class="footer-links">
+              <li><a href="tel:+375333337744">+375 (33) 333 77 44</a></li>
+              <li><a href="mailto:admin@laocar.by">admin@laocar.by</a></li>
+              <li class="footer-social-item"><img src="/assets/img/tg.svg" alt="Telegram" class="footer-social-icon" loading="lazy" /><a href="#">Telegram</a></li>
+              <li class="footer-social-item"><img src="/assets/img/wp.svg" alt="WhatsApp" class="footer-social-icon" loading="lazy" /><a href="#">WhatsApp</a></li>
+              <li class="footer-social-item"><img src="/assets/img/ig.svg" alt="Instagram" class="footer-social-icon" loading="lazy" /><a href="#">Instagram</a></li>
+              <li class="footer-social-item"><img src="/assets/img/tt.svg" alt="TikTok" class="footer-social-icon" loading="lazy" /><a href="#">TikTok</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Для удобства иностранных граждан других государств на сайте справочно указана ориентировочная стоимость аренды в долларах США. Все расчеты за аренду автомобилей осуществляются исключительно в Национальной валюте (BYN, белорусский рубль, согласно действующему законодательству Республики Беларусь.</p>
+          <p>ООО «ПраймАвтоСолюшн»</p>
+          <p>УНП 193771180</p>
+          <p>юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/assets/js/index.js"></script>
+    <script src="/assets/js/autopark-category.js"></script>
+  </body>
+</html>

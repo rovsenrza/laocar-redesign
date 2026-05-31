@@ -1,0 +1,5 @@
+/* ══ HOME PAGE (index.html) ════════════════════════════ */
+
+.hero + .categories .categories-grid {
+  margin-top: -60px;
+}

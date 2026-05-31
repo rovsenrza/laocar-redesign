@@ -1,0 +1,14 @@
+/* ══ INNER PAGES — shared shell overrides ═══════════════
+   Base inner-hero / speedbar live in style.css.
+   Page-specific component tweaks belong in pages/_*.css
+   ══════════════════════════════════════════════════════ */
+
+/* Pages without hero banner image */
+.price-page .inner-hero-title,
+.autopark-page .inner-hero-title {
+  margin-bottom: 0;
+}
+
+.terms-page .inner-hero-title {
+  z-index: 3;
+}

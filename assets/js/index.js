@@ -74,6 +74,22 @@ function initModal(overlayId, openBtnId, closeBtnId, formId, submitBtnId, preven
   form.addEventListener('submit', (e) => { e.preventDefault(); closeModal(); });
 }
 
+function initInlineForm(formId, submitBtnId) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+  const submitBtn = document.getElementById(submitBtnId);
+  const fields = form.querySelectorAll('input, textarea');
+
+  const checkFilled = () => {
+    if (submitBtn) {
+      submitBtn.disabled = ![...fields].every(f => f.value.trim() !== '');
+    }
+  };
+
+  fields.forEach(f => f.addEventListener('input', checkFilled));
+  form.addEventListener('submit', (e) => { e.preventDefault(); });
+}
+
 // ── Init ──────────────────────────────────────────────
 initGlassFilter();
 
@@ -83,4 +99,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal('meroModalOverlay',   'meroOrderBtn',       'meroModalClose',          'meroModalForm',          'meroModalSubmit');
   initModal('partnerIncomeModal', 'partnerIncomeBtn',   'partnerIncomeModalClose', 'partnerIncomeModalForm', 'partnerIncomeModalSubmit', true);
   initModal('reviewModalOverlay', 'reviewModalOpenBtn', 'reviewModalClose',        'reviewModalForm',        'reviewModalSubmit');
+  initInlineForm('legalContactForm', 'legalContactSubmit');
 });
