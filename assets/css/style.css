@@ -1818,8 +1818,8 @@ body {
   margin-bottom: 6px;
 }
 .tc-forbidden-note {
-  color: rgba(255, 255, 255, 0.5) !important;
-  font-size: 13px !important;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
   font-style: italic;
 }
 
@@ -2191,8 +2191,8 @@ body {
   padding: 46px 20px;
  text-align: center;
 }
-.certs-conditions-grid .terms-card:nth-of-type(1) .terms-card-title{
-  height: inherit !important;
+.certs-conditions-grid .terms-card:nth-of-type(1) .terms-card-title {
+  height: auto;
 }
 .certs-conditions-grid .terms-card-title {
   text-align: center;

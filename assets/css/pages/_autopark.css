@@ -60,7 +60,7 @@
 
 .autopark-category-pill--active {
   background: rgba(41, 41, 41, 0.2);
-  border-color: #2d2d2d;
+  border-color: #4b4b4b;
 }
 
 .autopark-toolbar-wrap {
@@ -88,7 +88,7 @@
   padding-right: 0;
   border-radius: 60px;
   border: 1px solid #4b4b4b;
-  background: #2a2a2a;
+  background: #2b2b2b;
   transition: border-color 0.2s;
 }
 
@@ -98,7 +98,7 @@
 
 .autopark-filter-control.is-open,
 .autopark-filter-control:hover {
-  border-color: #6b6b6b;
+  border-color: #2B2B2B;
 }
 
 .autopark-filter-btn {
@@ -111,7 +111,7 @@
   padding: 10px 18px;
   border: none;
   border-radius: 60px;
-  background: none;
+  background: #2B2B2B;
   font-family: "Inter", sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -129,6 +129,7 @@
 
 .autopark-filter-chips {
   display: none;
+  
   align-items: center;
   flex-wrap: wrap;
   gap: 6px;
@@ -147,6 +148,7 @@
   font-family: "Inter", sans-serif;
   font-size: 10px;
   font-weight: 400;
+  min-height:19px;
   line-height: 1;
   color: #ececec;
   white-space: nowrap;
@@ -156,8 +158,8 @@
   display: none;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 19px;
+  height: 19px;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -167,13 +169,17 @@
 }
 
 .autopark-filter-bar-clear img {
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   display: block;
 }
 
 .autopark-filter-control.has-selection .autopark-filter-bar-clear {
   display: inline-flex;
+}
+
+.autopark-filter-control.has-selection .autopark-filter-label {
+  display: none;
 }
 
 /* Filter panel */
@@ -631,7 +637,7 @@
 
 .autopark-sort-control.is-open,
 .autopark-sort-control:hover {
-  border-color: #6b6b6b;
+  border-color: #2B2B2B;
 }
 
 .autopark-sort-btn {
@@ -673,6 +679,7 @@
   background: rgba(140, 140, 140, 0.35);
   font-family: "Inter", sans-serif;
   font-size: 10px;
+  min-height: 19px;
   font-weight: 400;
   line-height: 1;
   color: #ececec;
@@ -687,8 +694,8 @@
   display: none;
   align-items: center;
   justify-content: center;
-  width: 22px;
-  height: 22px;
+  width: 19px;
+  height: 19px;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -698,8 +705,8 @@
 }
 
 .autopark-sort-clear img {
-  width: 11px;
-  height: 11px;
+  width: 9px;
+  height: 9px;
   display: block;
 }
 
@@ -783,7 +790,10 @@
   text-align: center;
   margin-bottom: 32px;
 }
-.certs-intro-text{padding-inline: 40px;margin-bottom: 30px;}
+.autopark-category-page .certs-intro-text {
+  padding-inline: 40px;
+  margin-bottom: 30px;
+}
 .autopark-category-intro {
   max-width: 1263px;
   margin-inline: auto;

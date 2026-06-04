@@ -17,3 +17,10 @@
     margin-bottom: -50px;
   }
 }
+.certificate-top-gr .terms-list li{
+font-family: "Unbounded", sans-serif;
+font-size: 24px;
+}
+.certificates-intro {
+  padding-inline: 0;
+}
