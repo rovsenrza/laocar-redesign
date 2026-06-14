@@ -1,0 +1,308 @@
+/* ══ PARTNER PAGE — mobile (≤576px) ═══════════════════
+   Figma node 409:5465
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .partner-page .certs-content-section {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+
+  /* Intro headline below hero */
+  .partner-page .intro-font {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .partner-page .certs-section-title {
+    margin-bottom: 10px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ececec;
+  }
+
+  .partner-page .certs-section-title + .certs-section-title {
+    margin-top: 20px;
+  }
+
+  /* How-it-works steps */
+  .partner-page .certs-how-grid {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .partner-page .certs-how-grid > div {
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .partner-page .certs-how-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ececec;
+    margin-bottom: 4px;
+  }
+
+  .partner-page .certs-how-text {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  /* Earnings slider — stays inside section padding */
+  .partner-page .partner-cards-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-bottom: 10px;
+  }
+
+  .partner-page .partner-cards-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .partner-page .partner-earn-card {
+    flex: 0 0 252px;
+    width: 252px;
+    height: 263px;
+    scroll-snap-align: start;
+    --glass-radius: 16px;
+    --glass-bg: 0;
+    --glass-blur: 0;
+    padding: 7px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .partner-page .partner-earn-card::before {
+    display: none;
+  }
+
+  .partner-page .partner-earn-img {
+    display: block;
+    width: 100%;
+    height: 112px;
+    margin: 0;
+    border-radius: 0;
+    object-fit: cover;
+    aspect-ratio: auto;
+    flex-shrink: 0;
+  }
+
+  .partner-page .partner-earn-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    min-height: 0;
+    padding: 0 2px 9px;
+  }
+
+  .partner-page .partner-earn-name {
+    margin: 21px 0 4px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .partner-page .partner-earn-sub--lease {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .partner-page .partner-earn-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    margin-top: 36px;
+    align-items: start;
+  }
+
+  .partner-page .partner-earn-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .partner-page .partner-earn-stat .partner-earn-value {
+    margin: 0;
+    font-family: "Unbounded", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .partner-page .partner-earn-stat .partner-earn-sub {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .partner-page .blog-detail-glass-btn {
+    height: 44px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+
+  /* Advantages 2×3 — Figma card order */
+  .partner-page .partner-advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card:nth-child(1) {
+    order: 1;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card:nth-child(2) {
+    order: 2;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card:nth-child(3) {
+    order: 4;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card:nth-child(4) {
+    order: 6;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card:nth-child(5) {
+    order: 5;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card:nth-child(6) {
+    order: 3;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card {
+    --glass-bg: 0;
+    --glass-blur: 0;
+    backdrop-filter: none;
+    min-height: 116px;
+    padding: 14px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card-title {
+    margin-bottom: 8px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.375;
+    color: #ececec;
+  }
+
+  .partner-page .partner-advantages-grid .terms-card-text {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.6);
+  }
+
+  /* FAQ accordion pills */
+  .partner-page .partner-faq-list {
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 20px;
+  }
+  .partner-page .certs-how-card{min-height:0;}
+
+  .partner-page .partner-faq-list .terms-wide-card {
+    --glass-radius: 14px;
+    padding: 0 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .partner-page .partner-faq-list .terms-wide-card .terms-card-title {
+    min-height: 45px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.375;
+    color: #ececec;
+  }
+
+  .partner-page .partner-faq-list .terms-wide-card .terms-card-text,
+  .partner-page .partner-faq-list .terms-wide-card .terms-forbidden-list {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.6);
+  }
+
+  /* CTA card tweaks */
+  main.partner-page + .home-cta {
+    margin-top: 0;
+  }
+
+  main.partner-page + .home-cta .home-cta-title {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  main.partner-page + .home-cta .home-cta-phone a {
+    font-size: 15px;
+  }
+
+  main.partner-page + .home-cta .home-cta-btn {
+    max-width: none;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  main.partner-page + .home-cta .home-cta-btn-telegram {
+    background: rgba(118, 208, 255, 0.64);
+  }
+
+  main.partner-page + .home-cta .home-cta-btn-whatsapp {
+    background: rgba(154, 231, 163, 0.65);
+  }
+
+  main.partner-page + .home-cta .home-cta-btn-max {
+    background: rgba(144, 149, 234, 0.65);
+  }
+}

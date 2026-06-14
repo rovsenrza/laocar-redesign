@@ -1,0 +1,271 @@
+/* ══ INNER PAGE CONTENT — mobile (≤576px) ═══════════════
+   Page-specific layouts: certs, partner, events, terms,
+   blogs, about, FAQ, privacy, documents, legal, abroad, price
+   Shared shell/typography → pages/_inner-mobile.css
+   Shared bar buttons      → components/_bar-btn-mobile.css
+   Shared car strips       → components/_fleet-card.css
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  /* ── Accordion pills (terms, partner FAQ, legal FAQ) ─ */
+  .terms-content-section .terms-wide-card,
+  .partner-faq-list .terms-wide-card,
+  .legal-page .terms-wide-card {
+    --glass-radius: 14px;
+    padding: 0 16px;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  .terms-content-section .terms-wide-card .terms-card-title,
+  .partner-faq-list .terms-wide-card .terms-card-title,
+  .legal-page .terms-wide-card .terms-card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 45px;
+    margin: 0;
+    padding-block: 12px;
+    cursor: pointer;
+  }
+
+  .terms-content-section .terms-wide-card .terms-card-title::after,
+  .partner-faq-list .terms-wide-card .terms-card-title::after,
+  .legal-page .terms-wide-card .terms-card-title::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    margin-left: 12px;
+    background: url("/assets/img/chevron.svg") center / contain no-repeat;
+    opacity: 0.7;
+    transition: transform 0.2s ease;
+  }
+
+  .terms-content-section .terms-wide-card.is-open .terms-card-title::after,
+  .partner-faq-list .terms-wide-card.is-open .terms-card-title::after,
+  .legal-page .terms-wide-card.is-open .terms-card-title::after {
+    transform: rotate(180deg);
+  }
+
+  .terms-content-section .terms-wide-card .terms-card-text,
+  .terms-content-section .terms-wide-card .terms-forbidden-list,
+  .partner-faq-list .terms-wide-card .terms-card-text,
+  .legal-page .terms-wide-card .terms-card-text {
+    display: none;
+    padding-bottom: 16px;
+  }
+
+  .terms-content-section .terms-wide-card.is-open .terms-card-text,
+  .terms-content-section .terms-wide-card.is-open .terms-forbidden-list,
+  .partner-faq-list .terms-wide-card.is-open .terms-card-text,
+  .legal-page .terms-wide-card.is-open .terms-card-text {
+    display: block;
+  }
+
+  /* ── Certificates → pages/_certs-mobile.css ────────── */
+  /* ── Partner → pages/_partner-mobile.css ─────────────── */
+
+  /* ── Events ────────────────────────────────────────── */
+  .events-page .partner-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .events-page .partner-faq-list br {
+    display: none;
+  }
+
+  .events-page .partner-faq-list article {
+    --glass-radius: 18px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .events-page .partner-faq-list .terms-card-title {
+    margin-bottom: 8px;
+  }
+
+  .events-page .partner-advantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .events-page .partner-advantages-grid .terms-card {
+    text-align: center;
+  }
+
+  /* ── Blog listing ──────────────────────────────────── */
+  .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
+      .terms-page
+    ):not(.autopark-page):not(.price-page):not(.abroad-page):not(
+      .legal-entities-page
+    ):not(.about-page)
+    .blogs-page-grid
+    .blog-card,
+  .blog-detail-page .blog-detail-related-grid .blog-card {
+    --glass-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+  }
+
+  .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
+      .terms-page
+    ):not(.autopark-page):not(.price-page):not(.abroad-page):not(
+      .legal-entities-page
+    ):not(.about-page)
+    .blogs-page-grid
+    .blog-card-img-wrap,
+  .blog-detail-page .blog-detail-related-grid .blog-card-img-wrap {
+    width: 100%;
+    height: 138px;
+    border-radius: 0;
+  }
+
+  .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
+      .terms-page
+    ):not(.autopark-page):not(.price-page):not(.abroad-page):not(
+      .legal-entities-page
+    ):not(.about-page)
+    .blogs-page-grid
+    .blog-card-img,
+  .blog-detail-page .blog-detail-related-grid .blog-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
+      .terms-page
+    ):not(.autopark-page):not(.price-page):not(.abroad-page):not(
+      .legal-entities-page
+    ):not(.about-page)
+    .blogs-page-grid
+    .blog-card-content,
+  .blog-detail-page .blog-detail-related-grid .blog-card-content {
+    padding: 12px 14px 14px;
+  }
+
+  .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
+      .terms-page
+    ):not(.autopark-page):not(.price-page):not(.abroad-page):not(
+      .legal-entities-page
+    ):not(.about-page)
+    .blogs-page-grid
+    .blog-card-title,
+  .blog-detail-page .blog-detail-related-grid .blog-card-title {
+    margin-bottom: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
+      .terms-page
+    ):not(.autopark-page):not(.price-page):not(.abroad-page):not(
+      .legal-entities-page
+    ):not(.about-page)
+    .blogs-page-grid
+    .blog-card-desc,
+  .blog-detail-page .blog-detail-related-grid .blog-card-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  /* ── Legal entities ────────────────────────────────── */
+  .legal-entities-page .legal-page-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  .legal-entities-page .legal-advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .legal-benefits-grid .terms-card {
+    padding: 14px;
+  }
+  .legal-benefits-grid .terms-card-title {
+    text-align: start;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  .terms-list{margin-bottom: 10px;}
+  .terms-list li {
+    margin-bottom: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    color: rgba(236, 236, 236, 0.6);
+  }
+  .legal-entities-page .legal-advantages-grid .terms-card {
+    padding: 16px 21px;
+  }
+
+  .legal-entities-page .legal-request-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 32px 0 20px;
+  }
+
+  .legal-entities-page .legal-request-text {
+    display: none;
+  }
+
+  .legal-entities-page .legal-inline-form {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-header {
+    margin-bottom: 10px;
+  }
+
+  .legal-entities-page .legal-inline-form-desc {
+    margin: 0 0 40px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: #111;
+  }
+
+  .legal-entities-page .legal-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* ── Abroad ────────────────────────────────────────── */
+  .abroad-page .intro-font {
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  .abroad-page .terms-wide-card {
+    margin-bottom: 10px;
+  }
+
+  /* ── Legal text pages (privacy) ────────────────────── */
+  .legal-page .legal-text h2 {
+    margin-top: 24px;
+  }
+
+  .legal-page .legal-text p,
+  .legal-page .legal-text li {
+    margin-bottom: 10px;
+  }
+}

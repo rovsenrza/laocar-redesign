@@ -13,13 +13,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style-mobile.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container-header">
       <div class="logo"><a href="index.html">LAOCAR</a></div>
 
-      <nav class="main-nav">
+      
+      <div class="header-mobile-actions">
+        <a href="tel:+375333337744" class="header-mobile-phone" aria-label="Позвонить">
+          <img src="/assets/img/phone-icon.svg" alt="" width="20" height="20" loading="lazy" />
+        </a>
+        <button type="button" class="header-mobile-menu" aria-label="Меню" aria-expanded="false" aria-controls="mobile-menu">
+          <img class="header-menu-icon header-menu-icon--open" src="/assets/img/hammenu.svg" alt="" width="20" height="20" />
+          <img class="header-menu-icon header-menu-icon--close" src="/assets/img/x-white.svg" alt="" width="20" height="20" />
+        </button>
+      </div>
+
+<nav class="main-nav">
         <a href="autopark.html">Автопарк</a>
         <a href="terms.html">Условия</a>
         <a href="certificates.html">Сертификаты</a>
@@ -67,25 +79,60 @@
       </div>
     </header>
 
-    
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu-nav">
+        <a href="autopark.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="terms.html" class="mobile-menu-link">Условия<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="certificates.html" class="mobile-menu-link">Сертификаты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="blogs.html" class="mobile-menu-link">Блог<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="partner.html" class="mobile-menu-link">Стать партнером<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="contacts.html" class="mobile-menu-link">Контакты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="tel:+375333337744" class="mobile-menu-phone">+375 (33) 333 77 44</a>
+        <div class="mobile-menu-social">
+          <a href="#" aria-label="Telegram"><img src="/assets/img/tg.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="WhatsApp"><img src="/assets/img/wp.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Instagram"><img src="/assets/img/ig.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Max"><img src="/assets/img/max.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="TikTok"><img src="/assets/img/tt.svg" alt="" loading="lazy" /></a>
+        </div>
+        <div class="mobile-menu-lang">
+          <a href="#" class="mobile-menu-lang-item mobile-menu-lang-item--active">RU</a>
+          <a href="#" class="mobile-menu-lang-item">ENG</a>
+          <a href="#" class="mobile-menu-lang-item">TR</a>
+          <a href="#" class="mobile-menu-lang-item">ZH</a>
+        </div>
+        <div class="mobile-menu-currency">
+          <a href="#" class="mobile-menu-currency-item">USD</a>
+          <a href="#" class="mobile-menu-currency-item mobile-menu-currency-item--active">BYN</a>
+          <a href="#" class="mobile-menu-currency-item">RUB</a>
+        </div>
+      </div>
+    </div>
 
     <div class="hero">
       <img class="hero-bg-image" src="/assets/img/banner-image.webp" alt="" aria-hidden="true" width="1920" height="1080" loading="eager" fetchpriority="high" />
+      <img class="hero-bg-image hero-bg-image--mobile" src="/assets/img/mobile-banner.webp" alt="" aria-hidden="true" width="390" height="640" loading="eager" />
       <img class="hero-light" src="/assets/img/polygon.webp" alt="" aria-hidden="true" width="265" height="400" loading="eager" />
       <img class="hero-stop" src="/assets/img/stop.webp" alt="" aria-hidden="true" width="100" height="160" loading="eager" />
       <div class="hero-content">
         <h1>Аренда авто премиум класса в Минске</h1>
         <p>Мы предлагаем исключительно люксовые автомобили известных мировых брендов.</p>
       </div>
+      <a href="autopark.html" class="btn-primary hero-cta">
+        <span>Перейти в каталог</span>
+        <img src="/assets/img/button-chevron.svg" alt="" class="btn-primary__chevron" aria-hidden="true" />
+      </a>
     </div>
     <section class="categories">
       <div class="container-index">
-      <h2 class="categories-title">Категории автомобилей</h2>
+      <h2 class="categories-title section-headline">Категории автомобилей</h2>
       <div class="categories-grid">
 
         <a href="autopark-category.html" class="cat-card">
           <div class="cat-card-info">
-            <span class="cat-card-name">Доступны<br>сегодня</span>
+            <span class="cat-card-name">Доступны сегодня</span>
             <span class="cat-card-link"><img src="/assets/img/arrow.svg" alt="→" class="cat-card-arrow" loading="lazy">Смотреть все</span>
           </div>
           <img src="/assets/img/cat1.webp" alt="Доступны сегодня" class="cat-card-img"  loading="lazy" />
@@ -162,30 +209,31 @@
     <section class="features">
       <img src="/assets/img/section3.webp" alt="" class="features-bg" aria-hidden="true"  loading="lazy" />
       <div class="features-left">
-        <div class="features-list">
-          <div class="feature-item">
-            <h3 class="feature-title">Полная конфиденциальность</h3>
-            <p class="feature-sub">В наших автомобилях не ведется видео- и аудиозапись, что гарантирует полную конфиденциальность.</p>
+        <h2 class="section-headline features-title">Наши преимущества</h2>
+        <div class="features-list gray-card-list">
+          <div class="feature-item gray-card">
+            <h3 class="feature-title gray-card__title">Полная конфиденциальность</h3>
+            <p class="feature-sub gray-card__text">В наших автомобилях не ведется видео- и аудиозапись, что гарантирует полную конфиденциальность.</p>
           </div>
-          <div class="feature-item">
-            <h3 class="feature-title">Премиальный автопарк</h3>
-            <p class="feature-sub">Мы предлагаем исключительно люксовые автомобили известных мировых брендов.</p>
+          <div class="feature-item gray-card">
+            <h3 class="feature-title gray-card__title">Премиальный автопарк</h3>
+            <p class="feature-sub gray-card__text">Мы предлагаем исключительно люксовые автомобили известных мировых брендов.</p>
           </div>
-          <div class="feature-item">
-            <h3 class="feature-title">Доставка автомобиля</h3>
-            <p class="feature-sub">Мы обеспечиваем удобную и быструю доставку автомобилей по всей Беларуси. Вам не нужно тратить время.</p>
+          <div class="feature-item gray-card">
+            <h3 class="feature-title gray-card__title">Доставка автомобиля</h3>
+            <p class="feature-sub gray-card__text">Мы обеспечиваем удобную и быструю доставку автомобилей по всей Беларуси. Вам не нужно тратить время.</p>
           </div>
-          <div class="feature-item">
-            <h3 class="feature-title">Страхование включено</h3>
-            <p class="feature-sub">Мы заботимся о вашей безопасности и включаем страхование КАСКО и ОСАГО в стоимость аренды.</p>
+          <div class="feature-item gray-card">
+            <h3 class="feature-title gray-card__title">Страхование включено</h3>
+            <p class="feature-sub gray-card__text">Мы заботимся о вашей безопасности и включаем страхование КАСКО и ОСАГО в стоимость аренды.</p>
           </div>
-          <div class="feature-item">
-            <h3 class="feature-title">Поддержка 24/7</h3>
-            <p class="feature-sub">Наши специалисты готовы прийти на помощь в любое время дня и ночи. Мы оперативно решаем все <br> вопросы, связанные с арендой.</p>
+          <div class="feature-item gray-card">
+            <h3 class="feature-title gray-card__title">Поддержка 24/7</h3>
+            <p class="feature-sub gray-card__text">Наши специалисты готовы прийти на помощь в любое время дня и ночи. Мы оперативно решаем все вопросы, связанные с арендой.</p>
           </div>
-          <div class="feature-item">
-            <h3 class="feature-title">6 лет на рынке</h3>
-            <p class="feature-sub">Мы успешно работаем в сфере аренды люксовых автомобилей уже более 6 лет.</p>
+          <div class="feature-item gray-card">
+            <h3 class="feature-title gray-card__title">6 лет на рынке</h3>
+            <p class="feature-sub gray-card__text">Мы успешно работаем в сфере аренды люксовых автомобилей уже более 6 лет.</p>
           </div>
         </div>
       </div>
@@ -197,7 +245,7 @@
 
     <section class="offers">
       <div class="container-index">
-      <h2 class="offers-title">Спецпредложения</h2>
+      <h2 class="offers-title section-headline">Спецпредложения</h2>
       <div class="offers-grid">
 
         <div class="offer-card glass">
@@ -207,7 +255,7 @@
             <span class="offer-name">На долгосрочную аренду</span>
             <p class="offer-desc">Скидка действует при аренде от 7 дней</p>
           </div>
-          <a href="terms.html" class="offer-btn glass">Подробнее</a>
+          <a href="terms.html" class="offer-btn glass btn-pill">Подробнее</a>
         </div>
 
         <div class="offer-card glass">
@@ -217,7 +265,7 @@
             <span class="offer-name">На повторную аренду</span>
             <p class="offer-desc">Скидка действует 3 месяца с момента окончания первой аренды</p>
           </div>
-          <a href="terms.html" class="offer-btn glass">Подробнее</a>
+          <a href="terms.html" class="offer-btn glass btn-pill">Подробнее</a>
         </div>
 
         <div class="offer-card glass">
@@ -227,7 +275,7 @@
             <span class="offer-name">Всем именинникам</span>
             <p class="offer-desc">Скидка действует 3 дня до и 5 дней после Дня Рождения</p>
           </div>
-          <a href="terms.html" class="offer-btn glass">Подробнее</a>
+          <a href="terms.html" class="offer-btn glass btn-pill">Подробнее</a>
         </div>
 
         <div class="offer-card glass">
@@ -237,7 +285,7 @@
             <span class="offer-name">На подарочный сертификат</span>
             <p class="offer-desc">Скидка действует на покупку сертификата на аренду в Lao Car</p>
           </div>
-          <a href="certificates.html" class="offer-btn glass">Подробнее</a>
+          <a href="certificates.html" class="offer-btn glass btn-pill">Подробнее</a>
         </div>
 
       </div>
@@ -247,40 +295,60 @@
     <section class="events">
       <img src="/assets/img/section5.webp" alt="" class="events-bg" aria-hidden="true"  loading="lazy" />
       <div class="events-left">
-        <h2 class="events-title">Премиум автомобили<br>для мероприятий</h2>
-        <div class="events-list">
+        <h2 class="events-title section-headline">Премиум автомобили<br>для мероприятий</h2>
+        <div class="events-list gray-card-list">
 
-          <div class="events-card glass">
-            <h3 class="events-card-title">Аренда премиум автомобилей для видеосъемки</h3>
-            <div class="events-card-bottom">
-              <p class="events-card-desc">Профессиональная видеосъёмка требует особого антуража, и аренда премиальных автомобилей способна придать вашим кадрам неповторимый стиль и элегантность.</p>
-              <a href="events.html" class="events-card-more">Узнать больше</a>
+          <article class="events-card gray-card accordion-card glass">
+            <button type="button" class="accordion-card__trigger" aria-expanded="false" aria-controls="events-panel-1">
+              <span class="events-card-title accordion-card__title">Аренда премиум автомобилей для видеосъемки</span>
+              <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+            </button>
+            <div class="accordion-card__panel" id="events-panel-1">
+              <div class="events-card-bottom">
+                <p class="events-card-desc">Профессиональная видеосъёмка требует особого антуража, и аренда премиальных автомобилей способна придать вашим кадрам неповторимый стиль и элегантность.</p>
+                <a href="events.html" class="events-card-more">Узнать больше</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="events-card glass">
-            <h3 class="events-card-title">Аренда премиум автомобилей для фотосессии</h3>
-            <div class="events-card-bottom">
-              <p class="events-card-desc">Профессиональная фотосессия с нашими премиальными автомобилями — это идеальная возможность придать вашим снимкам особый шик и элегантность.</p>
-              <a href="events.html" class="events-card-more">Узнать больше</a>
+          <article class="events-card gray-card accordion-card glass">
+            <button type="button" class="accordion-card__trigger" aria-expanded="false" aria-controls="events-panel-2">
+              <span class="events-card-title accordion-card__title">Аренда премиум автомобилей для фотосессии</span>
+              <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+            </button>
+            <div class="accordion-card__panel" id="events-panel-2">
+              <div class="events-card-bottom">
+                <p class="events-card-desc">Профессиональная фотосессия с нашими премиальными автомобилями — это идеальная возможность придать вашим снимкам особый шик и элегантность.</p>
+                <a href="events.html" class="events-card-more">Узнать больше</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="events-card glass">
-            <h3 class="events-card-title">Аренда премиум автомобилей на День Рождения</h3>
-            <div class="events-card-bottom">
-              <p class="events-card-desc">Сделайте ваш день рождения незабываемым! Подарите себе или близким ощущение роскоши и драйва, выбрав премиальный автомобиль для главного праздника в году.</p>
-              <a href="events.html" class="events-card-more">Узнать больше</a>
+          <article class="events-card gray-card accordion-card glass">
+            <button type="button" class="accordion-card__trigger" aria-expanded="false" aria-controls="events-panel-3">
+              <span class="events-card-title accordion-card__title">Аренда премиум автомобилей на День Рождения</span>
+              <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+            </button>
+            <div class="accordion-card__panel" id="events-panel-3">
+              <div class="events-card-bottom">
+                <p class="events-card-desc">Сделайте ваш день рождения незабываемым! Подарите себе или близким ощущение роскоши и драйва, выбрав премиальный автомобиль для главного праздника в году.</p>
+                <a href="events.html" class="events-card-more">Узнать больше</a>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <div class="events-card glass">
-            <h3 class="events-card-title">Аренда премиум автомобилей на свадьбы</h3>
-            <div class="events-card-bottom">
-              <p class="events-card-desc">Компания Laocar предлагает сделать Вашу свадьбу более яркой и наполнить ее неповторимыми эмоциями, выбрав вместо традиционных лимузинов премиум автомобиль.</p>
-              <a href="events.html" class="events-card-more">Узнать больше</a>
+          <article class="events-card gray-card accordion-card glass">
+            <button type="button" class="accordion-card__trigger" aria-expanded="false" aria-controls="events-panel-4">
+              <span class="events-card-title accordion-card__title">Аренда премиум автомобилей на свадьбы</span>
+              <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+            </button>
+            <div class="accordion-card__panel" id="events-panel-4">
+              <div class="events-card-bottom">
+                <p class="events-card-desc">Компания Laocar предлагает сделать Вашу свадьбу более яркой и наполнить ее неповторимыми эмоциями, выбрав вместо традиционных лимузинов премиум автомобиль.</p>
+                <a href="events.html" class="events-card-more">Узнать больше</a>
+              </div>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
@@ -292,41 +360,35 @@
     </section>
     <section class="blog">
       <div class="container-index">
-      <h2 class="blog-title">Блог</h2>
+      <h2 class="blog-title section-headline">Блог</h2>
       <div class="blog-grid">
 
         <a href="blog-detail.html" class="blog-card glass">
-          <div class="blog-card-top">
-            <h3 class="blog-card-title">Lamborghini Huracán или Audi R8 V10: что выбрать в аренду в Минске?</h3>
-          </div>
           <div class="blog-card-img-wrap">
             <img src="/assets/img/blog-1.webp" alt="Blog post" class="blog-card-img"  loading="lazy" />
           </div>
-          <div class="blog-card-bottom">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Lamborghini Huracán или Audi R8 V10: что выбрать в аренду в Минске?</h3>
             <p class="blog-card-desc">Когда речь заходит о настоящих суперкарах, выбор редко бывает простым. Особенно если перед вами два автомобиля, которые по сути построены на одной...</p>
           </div>
         </a>
 
         <a href="blog-detail.html" class="blog-card glass">
-          <div class="blog-card-top">
-            <h3 class="blog-card-title">Премиум-путешествие по Беларуси: лучшие направления для арендного авто из Минска</h3>
-          </div>
           <div class="blog-card-img-wrap">
             <img src="/assets/img/blog-2.webp" alt="Blog post" class="blog-card-img"  loading="lazy" />
           </div>
-          <div class="blog-card-bottom">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Премиум-путешествие по Беларуси: лучшие направления для арендного авто из Минска</h3>
             <p class="blog-card-desc">Путешествие на автомобиле — это всегда про свободу. Но когда речь идёт о премиальном автомобиле, свобода превращается в стиль. Это уже не просто...</p>
           </div>
         </a>
 
         <a href="blog-detail.html" class="blog-card glass">
-          <div class="blog-card-top">
-            <h3 class="blog-card-title">Lamborghini в аренду: Urus, Urus SE и Huracán — три истории про скорость и стиль</h3>
-          </div>
           <div class="blog-card-img-wrap">
             <img src="/assets/img/blog-3.webp" alt="Blog post" class="blog-card-img"  loading="lazy" />
           </div>
-          <div class="blog-card-bottom">
+          <div class="blog-card-content">
+            <h3 class="blog-card-title">Lamborghini в аренду: Urus, Urus SE и Huracán — три истории про скорость и стиль</h3>
             <p class="blog-card-desc">Есть марки, которые давно стали больше, чем просто производители автомобилей. Они существуют в культуре, в кино, в разговорах о статусе. Одно их...</p>
           </div>
         </a>
@@ -334,8 +396,9 @@
       </div>
       <div class="blog-footer">
         <a href="blogs.html" class="blog-see-all">
-          Смотреть все
-          <img src="/assets/img/arrow-3.svg" alt="→" class="blog-see-all-arrow"  loading="lazy" />
+          <span>Смотреть все</span>
+          <img src="/assets/img/arrow.svg" alt="" class="blog-see-all-arrow" aria-hidden="true" loading="lazy" />
+          <img src="/assets/img/button-chevron.svg" alt="" class="blog-see-all-chevron" aria-hidden="true" loading="lazy" />
         </a>
       </div>
       </div>
@@ -343,7 +406,10 @@
 
     <section class="home-cta">
       <div class="home-cta-content">
-        <h2 class="home-cta-title">Есть вопросы? Звони!</h2>
+        <h2 class="home-cta-title">
+          <span class="home-cta-title-line">Есть вопросы?</span>
+          <span class="home-cta-title-line">Звони!</span>
+        </h2>
         <p class="home-cta-text">
           Бесплатная консультация и помощь эксперта<br />
           в выборе автомобиля по телефону:<br />
@@ -352,20 +418,36 @@
           <a href="tel:+375333337744">+375 (33) 333 77 44</a>
         </div>
         <div class="home-cta-actions">
-          <a href="#" class="home-cta-btn home-cta-btn-telegram glass">Написать в Telegram</a>
-          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass">Написать в WhatsApp</a>
-          <a href="#" class="home-cta-btn home-cta-btn-max glass">Написать в Max</a>
+          <a href="#" class="home-cta-btn home-cta-btn-telegram glass">
+            <img src="/assets/img/tg.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в Telegram</span>
+          </a>
+          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass">
+            <img src="/assets/img/wp.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в WhatsApp</span>
+          </a>
+          <a href="#" class="home-cta-btn home-cta-btn-max glass">
+            <img src="/assets/img/max.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в Max</span>
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container-footer">
+      <div class="footer-brand"><a href="index.html">LAOCAR</a></div>
       <div class="footer-top">
 
-        <div class="footer-col">
-          <h4 class="footer-head">Клиентам:</h4>
-          <ul class="footer-links">
+        <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Клиентам:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-clients">
+            <span class="footer-head footer-head--mobile">Клиентам</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-clients">
+
+            <ul class="footer-links">
             <li><a href="autopark.html">Автопарк</a></li>
             <li><a href="terms.html">Условия</a></li>
             <li><a href="certificates.html">Сертификаты</a></li>
@@ -376,11 +458,19 @@
             <li><a href="partner.html">Сдать авто</a></li>
             <li><a href="contacts.html">Контакты</a></li>
           </ul>
+
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-head">Автопарк:</h4>
-          <ul class="footer-links">
+        <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Автопарк:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-fleet">
+            <span class="footer-head footer-head--mobile">Автопарк</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-fleet">
+
+            <ul class="footer-links">
             <li><a href="autopark-category.html">Внедорожники</a></li>
             <li><a href="autopark-category.html">Кабриолеты</a></li>
             <li><a href="autopark-category.html">Спорткары</a></li>
@@ -389,21 +479,37 @@
             <li><a href="autopark-category.html">Семейные</a></li>
             <li><a href="autopark-category.html">Купе</a></li>
           </ul>
+
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-head">Для мероприятий:</h4>
-          <ul class="footer-links">
+        <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Для мероприятий:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-events">
+            <span class="footer-head footer-head--mobile">Для мероприятий</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-events">
+
+            <ul class="footer-links">
             <li><a href="events.html">Видеосъемка</a></li>
             <li><a href="events.html">Фотосессия</a></li>
             <li><a href="events.html">День Рождения</a></li>
             <li><a href="events.html">Свадьба</a></li>
           </ul>
+
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4 class="footer-head">О компании:</h4>
-          <ul class="footer-links">
+        <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">О компании:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-company">
+            <span class="footer-head footer-head--mobile">Компания</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-company">
+
+            <ul class="footer-links">
             <li><a href="about.html">О нас</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="documents.html">Документы</a></li>
@@ -411,11 +517,14 @@
             <li><a href="cookies.html">Политика Cookies</a></li>
             <li><a href="reviews.html">Отзывы</a></li>
           </ul>
+
+          </div>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-col footer-col--contacts">
           <h4 class="footer-head">Контакты:</h4>
-          <ul class="footer-links">
+
+            <ul class="footer-links">
             <li><a href="tel:+375333337744">+375 (33) 333 77 44</a></li>
             <li><a href="mailto:admin@laocar.by">admin@laocar.by</a></li>
             <li class="footer-social-item">
@@ -435,22 +544,31 @@
               <a href="#">TikTok</a>
             </li>
           </ul>
-        </div>
+                </div>
 
+      </div>
+
+      <div class="footer-contacts">
+        <h4 class="footer-contacts-title">Контакты:</h4>
+        <a href="tel:+375333337744" class="footer-contacts-phone">+375 (33) 333 77 44</a>
+        <a href="mailto:admin@laocar.by" class="footer-contacts-email">admin@laocar.by</a>
+        <div class="footer-socials">
+          <a href="#" aria-label="Telegram"><img src="/assets/img/tg.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="WhatsApp"><img src="/assets/img/wp.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Instagram"><img src="/assets/img/ig.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Max"><img src="/assets/img/max.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="TikTok"><img src="/assets/img/tt.svg" alt="" loading="lazy" /></a>
+        </div>
       </div>
 
       <div class="footer-bottom">
-        <p>Для удобства иностранных граждан других государств на сайте справочно указана ориентировочная стоимость аренды в долларах США. Все расчеты за аренду автомобилей осуществляются исключительно в Национальной валюте (BYN, белорусский рубль, согласно действующему законодательству Республики Беларусь.</p>
-        <p>ООО «ПраймАвтоСолюшн»</p>
-        <p>УНП 193771180</p>
-        <p>юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
+        <p>Для удобства иностранных граждан других государств на сайте справочно указана ориентировочная стоимость аренды в долларах США. Все расчеты за аренду автомобилей осуществляются исключительно в Национальной валюте (BYN, белорусский рубль, согласно действующему законодательству Республики Беларусь.</p>        <p class="footer-bottom-company">ООО «ПраймАвтоСолюшн» · УНП 193771180 · г. Минск, пр-т Газеты Звязда 16</p>
+        <p class="footer-bottom-company-line">ООО «ПраймАвтоСолюшн»</p>
+        <p class="footer-bottom-company-line">УНП 193771180</p>
+        <p class="footer-bottom-company-line">юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
       </div>
       </div>
     </footer>
-
-    </section>
-
-   
 
     <script type="module" src="/assets/js/index.js"></script>
   </body>

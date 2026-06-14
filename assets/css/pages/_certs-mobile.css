@@ -1,0 +1,250 @@
+/* ══ CERTIFICATES PAGE — mobile (≤576px) ═══════════════
+   Figma node 452:6073
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  /* ── Hero & shell ──────────────────────────────────── */
+  .certs-page .inner-hero-container {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .certs-page .inner-hero-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+    color: #ececec;
+    margin: 0 0 12px;
+  }
+
+  .certs-page .certs-content-section {
+    padding-top: 0;
+    padding-bottom: 24px;
+  }
+
+  /* ── Intro (single paragraph per Figma) ────────────── */
+  .certs-page .certs-intro-title,
+  .certs-page .certs-intro-grid p:first-child {
+    display: none;
+  }
+
+  .certs-page .certs-intro-grid {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .certs-page .certs-intro-text {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  /* ── Section titles ────────────────────────────────── */
+  .certs-page .certs-section-title,
+  .certs-page .certs-cars-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ececec;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .certs-page .certs-section-title + .certs-section-title,
+  .certs-page .certs-cars-title {
+    margin-top: 20px;
+  }
+
+  /* ── Requirements & docs cards ─────────────────────── */
+  .certs-page .terms-top-grid {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .certs-page .terms-top-grid .terms-card {
+    --glass-bg: 0;
+    --glass-blur: 0;
+    backdrop-filter: none;
+    border-radius: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .certs-page .terms-top-grid .terms-card-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ececec;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .certs-page .terms-top-grid .terms-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding-inline: 8px;
+  }
+
+  .certs-page .terms-top-grid .terms-stats > div {
+    flex: 1;
+  }
+
+  .certs-page .terms-top-grid .terms-stats > div + div {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 16px;
+  }
+
+  .certs-page .terms-stat-value {
+    font-family: "Unbounded", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ececec;
+    margin-bottom: 4px;
+  }
+
+  .certs-page .terms-stat-label {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(236, 236, 236, 0.8);
+  }
+
+  .certs-page .certificate-top-gr .terms-list {
+    padding-left: 18px;
+    text-align: left;
+  }
+
+  .certs-page .certificate-top-gr .terms-list li {
+    font-family: "Unbounded", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+    margin-bottom: 4px;
+  }
+
+  .certs-page .certificate-top-gr .terms-card:nth-child(2) .terms-card-title {
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+  }
+
+  /* ── Conditions 2×2 grid ───────────────────────────── */
+  .certs-page .certs-conditions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .certs-page .certs-conditions-grid .terms-card {
+    --glass-bg: 0;
+    --glass-blur: 0;
+    --glass-radius: 22px;
+    backdrop-filter: none;
+    border-radius: 22px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+  }
+
+  .certs-page .certs-conditions-grid .terms-card-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.375;
+    color: #ececec;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+
+  .certs-page .certs-conditions-grid .terms-card-text {
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  /* ── Order CTA ─────────────────────────────────────── */
+  .certs-page .inner-mobile-order-btn {
+    height: 44px;
+    margin: 10px 0 20px;
+    padding: 0 20px;
+  }
+
+  /* ── How-to steps ──────────────────────────────────── */
+  .certs-page .certs-how-grid {
+    counter-reset: cert-step;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .certs-page .certs-how-grid > div {
+    counter-increment: cert-step;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .certs-page .certs-how-number {
+    display: none;
+  }
+
+  .certs-page .certs-how-grid > div::after {
+    content: counter(cert-step);
+    position: absolute;
+    right: 16px;
+    top: 8px;
+    font-family: "Inter", sans-serif;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+    color: #ececec;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .certs-page .certs-how-card {
+    --glass-bg: 0;
+    --glass-blur: 2px;
+    position: relative;
+    width: 100%;
+    min-height: 85px;
+    padding: 16px 56px 16px 16px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .certs-page .certs-how-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.375;
+    color: #ececec;
+    margin-bottom: 6px;
+  }
+
+  .certs-page .certs-how-text {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  /* ── Cars grid title spacing ───────────────────────── */
+  .certs-page .certs-cars-grid {
+    margin-bottom: 16px;
+  }
+}

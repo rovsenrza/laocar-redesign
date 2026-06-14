@@ -1,0 +1,71 @@
+/* ══ DOCUMENTS PAGE — mobile (≤576px) ═════════════════
+   Figma frame DOCS (409:6223)
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .legal-page .legal-page-inner:first-of-type {
+    display: none;
+  }
+
+  .legal-page .legal-hero {
+    margin-bottom: 0;
+  }
+
+  .legal-content--documents {
+    margin-top: 24px;
+    padding-bottom: 8px;
+  }
+
+  .legal-content--documents .legal-page-title {
+    margin: 0 0 20px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .legal-content--documents .legal-documents-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .legal-content--documents .legal-documents-list li {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: 12px;
+    align-items: center;
+    width: 100%;
+    min-height: 45px;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #ececec;
+  }
+
+  .legal-content--documents .legal-documents-list li::before {
+    flex-shrink: 0;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: #ececec;
+  }
+
+  .legal-content--documents .legal-documents-label {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

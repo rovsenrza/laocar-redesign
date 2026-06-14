@@ -1,9 +1,12 @@
+/* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
+@media (min-width: 577px) {
 /* ══ ABROAD PAGE (Выезд за границу) ═══════════════════ */
 
 .abroad-page .intro-font {
-  font-size: 30px;
+  font-size: 14px;
   font-weight: 500;
 }
 .abroad-page .abroad-text {
   color: var(--color-white);
+}
 }

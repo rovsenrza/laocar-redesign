@@ -1,0 +1,66 @@
+/* ══ BUTTON COMPONENTS (mobile) ═══════════════════════ */
+
+@media (max-width: 576px) {
+  .btn-primary,
+  .btn-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #ffffff;
+    padding: 14px 21px;
+    border: none;
+    text-decoration: none;
+    color: #111111;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    border-radius: 16px;
+  }
+
+  .btn-bar {
+    border-radius: 6666px;
+  }
+
+  .btn-primary__chevron,
+  .btn-bar__chevron {
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+  }
+
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 6666px;
+    padding: 11px;
+    border: none;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1;
+    color: #ffffff;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+  }
+
+  .btn-pill.glass {
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+    font-weight: 300;
+    --glass-blur: 4px;
+  }
+
+  .btn-pill.glass:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}

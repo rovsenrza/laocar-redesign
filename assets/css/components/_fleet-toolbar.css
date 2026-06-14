@@ -1,0 +1,233 @@
+/* ══ FLEET TOOLBAR — search + filter + sort (mobile) ═══ */
+
+@media (max-width: 576px) {
+  .fleet-toolbar,
+  .autopark-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 16px;
+  }
+
+  .fleet-toolbar__search,
+  .autopark-search-form {
+    flex: 1 1 auto;
+    min-width: 0;
+    order: 1;
+  }
+
+  .fleet-toolbar__filter,
+  .autopark-filter {
+    flex-shrink: 0;
+    order: 2;
+  }
+
+  .fleet-toolbar__sort,
+  .autopark-sort {
+    flex-shrink: 0;
+    order: 3;
+    margin-left: 0;
+  }
+
+  .autopark-search-control {
+    display: block;
+    width: 100%;
+  }
+
+  .autopark-search-field {
+    width: 100%;
+  }
+
+  .autopark-search-input {
+    width: 100%;
+    height: 35px;
+    padding: 0 12px;
+    font-size: var(--m-body);
+    font-weight: 500;
+    border-radius: 60px;
+    border: 1px solid #4b4b4b;
+    background: #2a2a2a;
+  }
+
+  .autopark-search-submit {
+    display: none;
+  }
+
+  .autopark-search-clear {
+    width: 19px;
+    height: 19px;
+    right: 8px;
+  }
+
+  .autopark-search-clear img {
+    width: 9px;
+    height: 9px;
+  }
+
+  /* Compact icon-only filter / sort controls */
+  .autopark-filter-control,
+  .autopark-sort-control {
+    position: relative;
+    height: 35px;
+    min-width: 35px;
+    padding: 0;
+    border-radius: 60px;
+    border: 1px solid #4b4b4b;
+    background: #2a2a2a;
+  }
+
+  .autopark-filter-control.has-selection,
+  .autopark-sort-control.has-selection {
+    padding-right: 0;
+  }
+
+  .autopark-filter-btn,
+  .autopark-sort-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    gap: 0;
+    border-radius: 60px;
+    background: transparent;
+  }
+
+  .autopark-filter-label,
+  .autopark-sort-label,
+  .autopark-filter-chips,
+  .autopark-sort-chip,
+  .autopark-filter-bar-clear,
+  .autopark-sort-clear {
+    display: none !important;
+  }
+
+  .autopark-filter-btn img {
+    width: 14px;
+    height: auto;
+  }
+
+  .autopark-sort-arrows {
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: 12px;
+  }
+
+  .autopark-sort-arrows img {
+    height: 14px;
+    width: auto;
+  }
+
+  .toolbar-badge {
+    position: absolute;
+    top: 7px;
+    right: -4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-width: 19px;
+    height: 19px;
+    padding: 0 4px;
+    border-radius: 89px;
+    background: var(--color-text);
+    font-family: var(--font-base);
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-bg);
+    pointer-events: none;
+  }
+
+  .autopark-filter-control.has-selection .toolbar-badge--filter,
+  .autopark-sort-control.has-selection .toolbar-badge--sort {
+    display: flex;
+  }
+
+  /* Sort dropdown */
+  .autopark-sort-menu {
+    right: 0;
+    left: auto;
+    min-width: 172px;
+    padding: 10px;
+    border-radius: 13px;
+    background: #343434;
+    border-color: #4b4b4b;
+    gap: 8px;
+  }
+
+  .autopark-sort-option {
+    font-size: var(--m-body);
+    font-weight: 500;
+    text-align: right;
+    padding: 2px 0;
+  }
+
+  /* Filter panel — full-screen sheet */
+  .autopark-toolbar-wrap {
+    margin-bottom: 16px;
+  }
+
+  .autopark-filter-panel {
+    position: fixed;
+    inset: 65px 0 0;
+    top: 65px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    z-index: 1500;
+    padding: 16px;
+    border-radius: 0;
+    overflow-y: auto;
+    transform: translateY(100%);
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.35s ease, visibility 0s linear 0.35s;
+  }
+
+  .autopark-filter-panel.is-open {
+    min-height: 0;
+    transform: translateY(0);
+    visibility: visible;
+    pointer-events: auto;
+    border-color: transparent;
+    transition: transform 0.35s ease, visibility 0s;
+  }
+
+  .autopark-filter-headline {
+    font-size: var(--m-section);
+    font-weight: 600;
+  }
+
+  .autopark-filter-capsule {
+    padding: 10px 14px;
+    font-size: var(--m-body);
+  }
+
+  .autopark-filter-section {
+    margin-bottom: 28px;
+  }
+
+  .autopark-filter-footer {
+    position: sticky;
+    bottom: 0;
+    padding-block: 16px;
+    background: #2a2a2a;
+  }
+
+  .autopark-filter-find {
+    flex: 1;
+    padding: 10px 24px;
+    font-size: var(--m-body);
+  }
+}
+
+@media (min-width: 577px) {
+  .toolbar-badge {
+    display: none !important;
+  }
+}

@@ -1,0 +1,196 @@
+/* ══ ABOUT PAGE — mobile (≤576px) ═════════════════════
+   Figma frame «О нас» (409:5823)
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .about-page .legal-page-inner:first-of-type {
+    display: none;
+  }
+
+  /* Hero — LAOCAR on image, title below */
+  .about-page .about-hero-stack {
+    display: block;
+  }
+
+  .about-page .about-hero-stack .legal-hero-overlay {
+    display: flex;
+  }
+
+  .about-page .about-hero-stack .legal-page-inner--hero-title {
+    position: static;
+    z-index: auto;
+    width: 100%;
+    padding: 20px 16px 0;
+    text-align: left;
+    pointer-events: auto;
+  }
+
+  .about-page .about-hero-stack .legal-page-inner--hero-title .legal-page-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: var(--m-page-title);
+    font-weight: 500;
+    line-height: 1.4;
+    color: #ececec;
+    text-align: left;
+  }
+
+  .about-page .about-hero-stack + .certs-content-section {
+    padding-top: 32px;
+  }
+
+  /* Stats 2×3 grid */
+  .about-page .certs-conditions-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .about-page .certs-conditions-grid .terms-card {
+    --glass-bg: 0;
+    --glass-blur: 0;
+    --glass-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 124px;
+    padding: 16px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .about-page .certs-conditions-grid .terms-card.glass::before {
+    display: none;
+  }
+
+  .about-page .certs-conditions-grid .terms-card-text2 {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #ececec;
+  }
+
+  .about-page .certs-conditions-grid .terms-card-title2 {
+    margin: 4px 0;
+    font-family: "Unbounded", sans-serif;
+    font-size: var(--m-stat);
+    font-weight: 500;
+    line-height: 1;
+    color: #ececec;
+  }
+
+  .about-page .certs-conditions-grid .terms-card-text2:last-of-type {
+    font-weight: 300;
+    line-height: 1.25;
+    color: rgba(236, 236, 236, 0.85);
+  }
+
+  /* Why choose — stacked glass cards */
+  .about-page .certs-section-title {
+    margin-bottom: 20px;
+  }
+
+  .about-page .partner-advantages-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .about-page .partner-advantages-grid .terms-card {
+    --glass-bg: 0;
+    --glass-blur: 0;
+    --glass-radius: 14px;
+    padding: 16px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  .about-page .partner-advantages-grid .terms-card.glass::before {
+    display: none;
+  }
+
+  .about-page .partner-advantages-grid .terms-card-title {
+    margin: 0 0 8px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #ececec;
+  }
+
+  .about-page .partner-advantages-grid .terms-card-text {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 1.35;
+    color: rgba(236, 236, 236, 0.75);
+  }
+
+  /* Fleet strip */
+  .about-page .certs-cars-title {
+    margin-bottom: 12px;
+    line-height: 1.25;
+  }
+
+  .about-page .about-fleet-intro {
+    margin: 0 0 20px;
+    font-family: "Inter", sans-serif;
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.45;
+    color: rgba(236, 236, 236, 0.75);
+  }
+
+  .about-page .certs-cars-grid {
+    margin-bottom: 16px;
+  }
+
+  .about-page .blog-detail-glass-btn {
+    height: 44px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    padding: 0 20px;
+    border-radius: 16px;
+  }
+
+  /* Services — plain text blocks */
+  .about-page .partner-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 0;
+  }
+
+  .about-page .partner-faq-list br {
+    display: none;
+  }
+
+  .about-page .partner-faq-list article {
+    margin: 0;
+  }
+
+  .about-page .partner-faq-list .terms-card-title {
+    margin: 0 0 12px;
+    font-family: "Unbounded", sans-serif;
+    font-size: var(--m-section);
+    font-weight: 600;
+    line-height: 1.25;
+    color: #ececec;
+    text-align: left;
+  }
+
+  .about-page .partner-faq-list .terms-card-text {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.45;
+    color: rgba(236, 236, 236, 0.75);
+  }
+}

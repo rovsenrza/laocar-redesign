@@ -1,0 +1,104 @@
+/* ══ CARD COMPONENTS (mobile) ═════════════════════════ */
+
+@media (max-width: 576px) {
+  .gray-card {
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--color-surface);
+  }
+
+  .gray-card__title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-bottom: 8px;
+  }
+
+  .gray-card__text {
+    font-family: var(--font-base);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: var(--color-text-muted);
+  }
+
+  .gray-card-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .accordion-card__trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-align: left;
+    color: inherit;
+  }
+
+  .accordion-card__title {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .accordion-card__chevron {
+    width: 12px;
+    height: 8px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-card.is-open .accordion-card__chevron {
+    transform: rotate(180deg);
+  }
+
+  .accordion-card__panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .accordion-card.is-open .accordion-card__panel {
+    max-height: 400px;
+  }
+}
+
+@media (min-width: 577px) {
+  .accordion-card__chevron {
+    display: none;
+  }
+
+  .accordion-card__trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    text-align: left;
+    appearance: none;
+    -webkit-appearance: none;
+    pointer-events: none;
+    cursor: default;
+  }
+
+  .accordion-card__panel {
+    max-height: none;
+    overflow: visible;
+  }
+}

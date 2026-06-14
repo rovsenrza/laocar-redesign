@@ -103,6 +103,11 @@ function initAutoparkSort() {
     control.classList.toggle('has-selection', hasSelection);
     clearBtn.hidden = !hasSelection;
     chipText.textContent = hasSelection ? SORT_OPTIONS[selectedSort] : '';
+
+    const sortBadge = document.getElementById('autoparkSortBadge');
+    if (sortBadge) {
+      sortBadge.textContent = hasSelection ? '1' : '';
+    }
   };
 
   const selectSort = (sortKey) => {
@@ -276,6 +281,11 @@ function initAutoparkFilter() {
     control.classList.toggle('has-selection', barSections.size > 0);
     barClear.hidden = barSections.size === 0;
     renderBarChips(barSections);
+
+    const filterBadge = document.getElementById('autoparkFilterBadge');
+    if (filterBadge) {
+      filterBadge.textContent = String(barSections.size);
+    }
   };
 
   const resetFilters = () => {
@@ -365,9 +375,31 @@ function initAutoparkFilter() {
   updateUI();
 }
 
+function initAutoparkShowAll() {
+  const grid = document.getElementById('autoparkCategoryGrid');
+  const btn = document.getElementById('autoparkShowAll');
+  if (!grid || !btn) return;
+
+  const syncButton = () => {
+    const totalCards = grid.querySelectorAll('.blog-detail-car-card').length;
+    if (totalCards <= 4) {
+      btn.classList.add('is-hidden');
+      grid.classList.remove('is-collapsed');
+    }
+  };
+
+  btn.addEventListener('click', () => {
+    grid.classList.remove('is-collapsed');
+    btn.classList.add('is-hidden');
+  });
+
+  syncButton();
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   renderAutoparkGrid();
   initAutoparkSearch();
   initAutoparkSort();
   initAutoparkFilter();
+  initAutoparkShowAll();
 });

@@ -11,15 +11,18 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 577px) {
   .certs-page .inner-hero-title {
     font-size: 40px;
     margin-bottom: -50px;
   }
 }
-.certificate-top-gr .terms-list li{
-font-family: "Unbounded", sans-serif;
-font-size: 24px;
+
+@media (min-width: 577px) {
+  .certificate-top-gr .terms-list li {
+    font-family: "Unbounded", sans-serif;
+    font-size: 24px;
+  }
 }
 .certificates-intro {
   padding-inline: 0;

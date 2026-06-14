@@ -1,3 +1,5 @@
+/* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
+@media (min-width: 577px) {
 /* ══ REVIEWS PAGE ══════════════════════════════════════ */
 
 .reviews-section {
@@ -118,4 +120,5 @@
   border-radius: 16px;
   cursor: pointer;
   color: inherit;
+}
 }

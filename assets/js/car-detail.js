@@ -31,7 +31,8 @@ function initCarGallery() {
   let isAnimating = false;
 
   const getMetrics = () => {
-    const gap = 20;
+    const isMobile = window.innerWidth <= 576;
+    const gap = isMobile ? 0 : 20;
     const slideWidth = slides[0].getBoundingClientRect().width;
     return {
       gap,
@@ -47,11 +48,47 @@ function initCarGallery() {
     track.style.transform = `translateX(${offset}px)`;
   };
 
+  const dotsRoot = gallery.querySelector('.car-detail-gallery-dots');
+  const originalCount = originals.length;
+
+  const getOriginalIndex = () => {
+    if (trackIndex === 0) return originalCount - 1;
+    if (trackIndex === slides.length - 1) return 0;
+    return trackIndex - 1;
+  };
+
+  const updateDots = () => {
+    if (!dotsRoot) return;
+    const active = getOriginalIndex();
+    dotsRoot.querySelectorAll('.car-detail-gallery-dot').forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === active);
+      dot.setAttribute('aria-selected', i === active ? 'true' : 'false');
+    });
+  };
+
   const updateActive = () => {
     slides.forEach((slide, i) => {
       slide.classList.toggle('is-active', i === trackIndex);
     });
+    updateDots();
   };
+
+  if (dotsRoot) {
+    dotsRoot.innerHTML = '';
+    originals.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'car-detail-gallery-dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Фото ${i + 1}`);
+      dot.addEventListener('click', () => {
+        if (isAnimating) return;
+        isAnimating = true;
+        goTo(i + 1, true);
+      });
+      dotsRoot.appendChild(dot);
+    });
+  }
 
   const goTo = (idx, animate = true) => {
     trackIndex = idx;
@@ -114,7 +151,7 @@ function initCarReviewsSlider() {
   let index = 0;
 
   const getVisibleCount = () => {
-    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 576) return 1;
     if (window.innerWidth <= 1100) return 2;
     return 3;
   };

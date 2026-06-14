@@ -42,6 +42,18 @@
   padding: 4px 6px 8px;
 }
 
+.partner-earn-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.partner-earn-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .partner-earn-name,
 .partner-earn-value {
   font-family: var(--font-display);

@@ -1,6 +1,7 @@
 // ── Glass liquid SVG filter — injected once per page ──
 function initGlassFilter() {
   if (document.getElementById('glass-liquid-filter')) return;
+  if (window.matchMedia('(max-width: 576px)').matches) return;
 
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('width', '0');
@@ -27,7 +28,9 @@ function initGlassFilter() {
 
 // ── Hero images — revealed when banner animation starts ──
 function initHeroImages() {
-  const heroBgImage = document.querySelector('.hero-bg-image');
+  if (window.matchMedia('(max-width: 576px)').matches) return;
+
+  const heroBgImage = document.querySelector('.hero-bg-image:not(.hero-bg-image--mobile)');
   const heroLight   = document.querySelector('.hero-light');
   const heroStop    = document.querySelector('.hero-stop');
   if (!heroBgImage && !heroLight && !heroStop) return;
@@ -36,14 +39,85 @@ function initHeroImages() {
   if (heroStop)    heroStop.style.display    = 'block';
 }
 
+// ── Mobile menu ───────────────────────────────────────
+function initMobileMenu() {
+  const menuBtn = document.querySelector('.header-mobile-menu');
+  const menu    = document.getElementById('mobile-menu');
+  if (!menuBtn || !menu) return;
+
+  const openMenu = () => {
+    document.body.classList.add('mobile-menu-open');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+  };
+
+  const closeMenu = () => {
+    document.body.classList.remove('mobile-menu-open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+  };
+
+  menuBtn.addEventListener('click', () => {
+    if (document.body.classList.contains('mobile-menu-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  menu.querySelectorAll('.mobile-menu-link').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && document.body.classList.contains('mobile-menu-open')) {
+      closeMenu();
+    }
+  });
+}
+
+// ── Accordion cards ───────────────────────────────────
+function initAccordionGroup(cards) {
+  if (!cards.length) return;
+
+  const isMobile = () => window.matchMedia('(max-width: 576px)').matches;
+
+  cards.forEach((card) => {
+    const trigger = card.querySelector('.accordion-card__trigger');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', () => {
+      if (!isMobile()) return;
+
+      const isOpen = card.classList.contains('is-open');
+
+      cards.forEach((other) => {
+        other.classList.remove('is-open');
+        const otherTrigger = other.querySelector('.accordion-card__trigger');
+        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        card.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+function initAccordionCards() {
+  initAccordionGroup(document.querySelectorAll('.events-list .accordion-card'));
+  initAccordionGroup(document.querySelectorAll('.footer-accordion'));
+}
+
 // ── Modal utility ─────────────────────────────────────
 function initModal(overlayId, openBtnId, closeBtnId, formId, submitBtnId, preventDefault = false) {
   const overlay   = document.getElementById(overlayId);
   if (!overlay) return;
-  const openBtn   = document.getElementById(openBtnId);
+  const openBtn   = openBtnId ? document.getElementById(openBtnId) : null;
   const closeBtn  = document.getElementById(closeBtnId);
   const form      = document.getElementById(formId);
-  if (!openBtn || !closeBtn || !form) return;
+  if (!closeBtn || !form) return;
   const submitBtn = document.getElementById(submitBtnId);
   const fields    = form.querySelectorAll('input, textarea');
 
@@ -66,12 +140,32 @@ function initModal(overlayId, openBtnId, closeBtnId, formId, submitBtnId, preven
     }
   };
 
-  openBtn.addEventListener('click', openModal);
+  if (openBtn) openBtn.addEventListener('click', openModal);
+  document.querySelectorAll(`[data-open-modal="${overlayId}"]`).forEach((btn) => {
+    btn.addEventListener('click', openModal);
+  });
   closeBtn.addEventListener('click', closeModal);
   overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
   fields.forEach(f => f.addEventListener('input', checkFilled));
   form.addEventListener('submit', (e) => { e.preventDefault(); closeModal(); });
+}
+
+function initMobileAccordion() {
+  const cards = document.querySelectorAll(
+    '.terms-content-section .terms-wide-card, .partner-faq-list .terms-wide-card, .legal-page .terms-wide-card'
+  );
+  if (!cards.length) return;
+
+  cards.forEach((card) => {
+    const title = card.querySelector('.terms-card-title');
+    if (!title) return;
+
+    title.addEventListener('click', () => {
+      if (!window.matchMedia('(max-width: 576px)').matches) return;
+      card.classList.toggle('is-open');
+    });
+  });
 }
 
 function initInlineForm(formId, submitBtnId) {
@@ -95,9 +189,12 @@ initGlassFilter();
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroImages();
+  initMobileMenu();
+  initAccordionCards();
   initModal('certModalOverlay',   'certOrderBtn',       'certModalClose',          'certModalForm',          'certModalSubmit');
   initModal('meroModalOverlay',   'meroOrderBtn',       'meroModalClose',          'meroModalForm',          'meroModalSubmit');
   initModal('partnerIncomeModal', 'partnerIncomeBtn',   'partnerIncomeModalClose', 'partnerIncomeModalForm', 'partnerIncomeModalSubmit', true);
   initModal('reviewModalOverlay', 'reviewModalOpenBtn', 'reviewModalClose',        'reviewModalForm',        'reviewModalSubmit');
   initInlineForm('legalContactForm', 'legalContactSubmit');
+  initMobileAccordion();
 });

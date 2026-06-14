@@ -1,0 +1,41 @@
+/* ══════════════════════════════════════════════════════
+   style-mobile.css — LAOCAR responsive entry point
+   ──────────────────────────────────────────────────────
+   Load after style.css in every HTML page.
+   Cascade: layout → components → pages (≤576px only).
+   ══════════════════════════════════════════════════════ */
+
+/* Layout & tokens */
+@import url("layout/_mobile.css");
+
+/* Shared mobile components */
+@import url("components/_buttons.css");
+@import url("components/_bar-btn-mobile.css");
+@import url("components/_cards.css");
+@import url("components/_glass-mobile.css");
+@import url("components/_mobile-menu.css");
+@import url("components/_footer-mobile.css");
+@import url("components/_cta-mobile.css");
+@import url("components/_category-pills.css");
+@import url("components/_fleet-toolbar.css");
+@import url("components/_fleet-card.css");
+@import url("components/_step-cards.css");
+@import url("components/_modals-mobile.css");
+
+/* Pages */
+@import url("pages/_home.css");
+@import url("pages/_inner-mobile.css");
+@import url("pages/_inner-pages-mobile.css");
+@import url("pages/_car-detail-mobile.css");
+@import url("pages/_contacts-mobile.css");
+@import url("pages/_reviews-mobile.css");
+@import url("pages/_legal-docs-mobile.css");
+@import url("pages/_blog-detail-mobile.css");
+@import url("pages/_autopark-mobile.css");
+@import url("pages/_certs-mobile.css");
+@import url("pages/_partner-mobile.css");
+@import url("pages/_price-mobile.css");
+@import url("pages/_about-mobile.css");
+@media (max-width:577px) {
+   .terms-card{margin-bottom: 10px;}
+}

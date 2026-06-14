@@ -1,0 +1,417 @@
+/* ══ INNER PAGES — shared mobile shell (≤576px) ═════════
+   Typography, heroes, cards, grids — all inner pages.
+   Page-specific content blocks → pages/_inner-pages-mobile.css
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  /* ── Shell ─────────────────────────────────────────── */
+  .speedbar {
+    display: none;
+  }
+
+  /* ── Page titles ───────────────────────────────────── */
+  .inner-hero-title,
+  .certs-page .inner-hero-title,
+  .legal-page-title,
+  .contacts-title,
+  .blog-detail-title,
+  .car-detail-title {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--m-page-title);
+    font-weight: 500;
+    line-height: 1.2;
+    position: static;
+    z-index: auto;
+  }
+
+  .inner-hero-image-wrap .certs-hero-order-btn {
+    display: none;
+  }
+
+  /* ── Section titles (inner pages; homepage → .section-headline) ─ */
+  .certs-section-title,
+  .certs-cars-title,
+  .certs-intro-title,
+  .intro-font,
+  .reviews-title,
+  .internal-title,
+  .blog-detail-cars-title,
+  .blog-detail-related-title,
+  .car-detail-description-title,
+  .car-detail-booking-title,
+  .autopark-category-page .certs-section-title,
+  .legal-text h2 {
+    font-family: var(--font-display);
+    font-size: var(--m-section);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-text);
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .certs-section-title + .certs-section-title,
+  .certs-cars-title {
+    margin-top: 32px;
+  }
+
+  .intro-font {
+    margin-bottom: 20px;
+  }
+
+  .legal-page-subtitle {
+    margin-top: 12px;
+    font-family: var(--font-base);
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  /* ── Card titles ───────────────────────────────────── */
+  .terms-card-title,
+  .certs-how-title,
+  .certs-conditions-grid .terms-card-title,
+  .review-card-name,
+  .blog-detail-grid-text h3,
+  .partner-earn-name,
+  .partner-earn-value,
+  .price-list-name {
+    font-family: var(--font-display);
+    font-size: var(--m-card-title);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .terms-top-grid .terms-card-title {
+    margin-bottom: 8px;
+  }
+
+  /* ── Body copy ─────────────────────────────────────── */
+  .terms-card-text,
+  .terms-card-text2,
+  .certs-how-text,
+  .certs-intro-text,
+  .autopark-category-intro,
+  .legal-text p,
+  .legal-text li,
+  .review-card-text,
+  .review-card-car,
+  .review-card-date,
+  .blog-detail-subtext,
+  .blog-detail-text-block p,
+  .blog-detail-grid-text p,
+  .partner-earn-sub,
+  .contacts-info-label,
+  .terms-list li,
+  .terms-stat-label,
+  .terms-forbidden-list li,
+  .small-p,
+  .price-list-num {
+    font-family: var(--font-base);
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--color-text-muted);
+  }
+
+  .terms-card-text2,
+  .legal-text h2 + p {
+    font-weight: 300;
+  }
+
+  .terms-stat-value {
+    font-family: var(--font-display);
+    font-size: var(--m-card-title);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .terms-card-title2 {
+    font-family: var(--font-display);
+    font-size: var(--m-stat);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .contacts-info-value {
+    font-family: var(--font-display);
+    font-size: var(--m-card-title);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  /* ── Cards & grids ─────────────────────────────────── */
+  .terms-card,
+  .certs-how-card,
+  .review-card {
+    --glass-radius: 16px;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .certs-conditions-grid .terms-card {
+    --glass-radius: 16px;
+    border-radius: 16px;
+    padding: 16px;
+  }
+
+  .terms-top-grid,
+  .certs-intro-grid,
+  .certs-conditions-grid,
+  .certs-how-grid,
+  .partner-cards-grid,
+  .partner-advantages-grid,
+  .legal-advantages-grid,
+  .legal-advantages-grid2,
+  .autopark-why-grid,
+  .reviews-grid,
+  .price-list,
+  .terms-wide-card {
+    gap: 10px;
+  }
+
+  .terms-top-grid {
+    margin-bottom: 10px;
+  }
+
+  .terms-top-grid,
+  .certs-conditions-grid,
+  .certs-how-grid,
+  .partner-cards-grid,
+  .partner-advantages-grid,
+  .legal-advantages-grid,
+  .autopark-why-grid {
+    grid-template-columns: 1fr;
+  }
+  .legal-advantages-grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .legal-advantages-grid2 > article {
+    padding: 18px 5px !important;
+    min-height: 0 !important;
+    text-align: center;
+  }
+
+  .legal-advantages-grid2 h3 {
+    font-size: 12px;
+  }
+
+  .legal-advantages-grid2 .terms-card-text {
+    font-size: 11px;
+  }
+
+  .certs-how-grid {
+    flex-direction: column;
+  }
+
+  /* ── Stacked hero (image → title below) ────────────── */
+  .events-page .inner-hero,
+  .certs-page .inner-hero,
+  .terms-page .inner-hero,
+  .legal-entities-page .inner-hero {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .events-page .inner-hero-image-wrap,
+  .certs-page .inner-hero-image-wrap,
+  .terms-page .inner-hero-image-wrap,
+  .legal-entities-page .inner-hero-image-wrap {
+    order: -1;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .events-page .inner-hero-container,
+  .certs-page .inner-hero-container,
+  .terms-page .inner-hero-container,
+  .legal-entities-page .inner-hero-container {
+    order: 1;
+    padding-inline: 16px;
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  /* ── Hero title overlaid on image bottom (blog, abroad, partner) */
+  .abroad-page .inner-hero,
+  .partner-page .inner-hero,
+  main.blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(.terms-page):not(.autopark-page):not(.price-page):not(.abroad-page):not(.legal-entities-page) .inner-hero {
+    position: relative;
+    display: block;
+  }
+
+  .abroad-page .inner-hero-image-wrap,
+  .partner-page .inner-hero-image-wrap,
+  main.blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(.terms-page):not(.autopark-page):not(.price-page):not(.abroad-page):not(.legal-entities-page) .inner-hero-image-wrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .abroad-page .inner-hero-container,
+  .partner-page .inner-hero-container,
+  main.blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(.terms-page):not(.autopark-page):not(.price-page):not(.abroad-page):not(.legal-entities-page) .inner-hero-container {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 0 16px 16px;
+  }
+
+  .abroad-page .inner-hero-title,
+  .partner-page .inner-hero-title,
+  main.blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(.terms-page):not(.autopark-page):not(.price-page):not(.abroad-page):not(.legal-entities-page) .inner-hero-title {
+    margin: 0;
+  }
+
+  .inner-hero-image-wrap::before,
+  .inner-hero-image-wrap::after {
+    display: none;
+    content: none;
+  }
+
+  .inner-hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ── Centered overlay heroes (about, FAQ, docs, reviews, PP) ─ */
+  .legal-hero {
+    position: relative;
+    display: grid;
+    grid-template-areas: "hero";
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .legal-hero-image,
+  .legal-hero-image.legal-hero-image--mobile {
+    grid-area: hero;
+  }
+
+  .legal-hero-overlay {
+    position: relative;
+    grid-area: hero;
+    align-self: center;
+    justify-self: center;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    text-align: center;
+    color: var(--color-text);
+    pointer-events: none;
+  }
+
+  .legal-hero-brand {
+    font-family: var(--font-display);
+    font-size: var(--m-hero-brand);
+    font-weight: 500;
+    line-height: 1;
+    color: #ececec;
+  }
+
+  .legal-hero-mark {
+    margin-top: 8px;
+    font-family: var(--font-display);
+    font-size: var(--m-hero-mark);
+    font-weight: 500;
+    line-height: 1;
+    color: #ececec;
+  }
+
+  /* About — center h1 on hero image (mobile) */
+  .about-hero-stack {
+    display: grid;
+    grid-template-areas: "hero";
+    width: 100%;
+  }
+
+  .about-hero-stack > * {
+    grid-area: hero;
+  }
+
+  .about-hero-stack .legal-page-inner--hero-title {
+    align-self: center;
+    justify-self: center;
+    z-index: 2;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .about-hero-stack .legal-page-inner--hero-title .legal-page-title {
+    font-family: var(--font-display);
+    font-size: var(--m-page-title);
+    font-weight: 500;
+    line-height: 1.2;
+    color: #ececec;
+  }
+
+  .about-hero-stack .legal-hero-overlay {
+    display: none;
+  }
+
+  .inner-hero-img:not(.inner-hero-img--mobile) {
+    display: none !important;
+  }
+
+  .inner-hero-img.inner-hero-img--mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .legal-hero-image:not(.legal-hero-image--mobile) {
+    display: none !important;
+  }
+
+  .legal-hero-image.legal-hero-image--mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .legal-hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* ── Blog listing page ─────────────────────────────── */
+  .blogs-grid-section {
+    margin-top: 40px;
+    padding-top: 0;
+  }
+
+  .blogs-page-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 0;
+  }
+
+  /* CTA inside inner page containers */
+  .container-page .home-cta,
+  .legal-page-inner .home-cta,
+  .contacts-page-inner .home-cta {
+    margin: 32px 0;
+  }
+}

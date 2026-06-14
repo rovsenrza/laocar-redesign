@@ -1,0 +1,13 @@
+/* Glass — flat surfaces on mobile only (desktop .glass lives in style.css) */
+
+@media (max-width: 576px) {
+  .glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .glass::before {
+    display: none;
+    content: none;
+  }
+}

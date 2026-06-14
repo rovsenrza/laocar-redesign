@@ -1,0 +1,83 @@
+/* ══ BLOG DETAIL — mobile (≤576px) ═════════════════════ */
+
+@media (max-width: 576px) {
+  .blog-detail-container {
+    padding-top: 20px;
+    padding-bottom: 24px;
+  }
+
+  .blog-detail-speedbar {
+    display: none;
+  }
+
+  .blog-detail-title {
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .blog-detail-subtext {
+    margin-bottom: 16px;
+  }
+
+  .blog-detail-main-image {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+  }
+
+  .blog-detail-text-block p {
+    margin-bottom: 12px;
+  }
+
+  .blog-detail-mixed-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-block: 16px;
+  }
+
+  .blog-detail-grid-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    border-radius: 14px;
+  }
+
+  .blog-detail-grid-text {
+    min-height: 0;
+  }
+
+  .blog-detail-grid-text h3 {
+    margin-bottom: 10px;
+  }
+
+  .blog-detail-grid-text p {
+    margin-bottom: 10px;
+  }
+
+  .blog-detail-cars-title {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
+  .blog-detail-related-title {
+    margin-bottom: 16px;
+  }
+
+  .blog-detail-related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-block: 0;
+  }
+
+  .blog-detail-page .blog-detail-related-grid .blog-card {
+    min-height: 0;
+  }
+
+  .blog-detail-page + .home-cta {
+    margin-top: 0;
+  }
+}

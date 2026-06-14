@@ -1,0 +1,165 @@
+/* ══ FLEET CAR CARDS — mobile (≤576px) ═════════════════
+   .fleet-grid                    — full catalog (category)
+   .certs-cars-grid:not(.fleet-grid),
+   .blog-detail-cars-grid         — compact 2×2 strips (inner pages)
+   Figma: 409:8030 (catalog), 452:6145 (compact)
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  /* ── Shared card shell ─────────────────────────────── */
+  .fleet-grid .blog-detail-car-card,
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card,
+  .blog-detail-cars-grid .blog-detail-car-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 13px;
+    overflow: hidden;
+    background: #343434;
+    text-decoration: none;
+  }
+
+  .fleet-grid .blog-detail-car-card .car-img-wrap,
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card .car-img-wrap,
+  .blog-detail-cars-grid .blog-detail-car-card .car-img-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 13px 13px 0 0;
+    flex-shrink: 0;
+  }
+
+  .fleet-grid .blog-detail-car-card .car-img-wrap img,
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card .car-img-wrap img,
+  .blog-detail-cars-grid .blog-detail-car-card .car-img-wrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .fleet-grid .blog-detail-car-card .car-img-main,
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card .car-img-main,
+  .blog-detail-cars-grid .blog-detail-car-card .car-img-main {
+    z-index: 2;
+  }
+
+  .fleet-grid .blog-detail-car-card .car-img-second,
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card .car-img-second,
+  .blog-detail-cars-grid .blog-detail-car-card .car-img-second {
+    z-index: 1;
+  }
+
+  /* ── Full catalog cards (autopark category) ─────────── */
+  .fleet-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-block: 0 16px;
+  }
+
+  .fleet-grid .blog-detail-car-card {
+    height: 280px;
+  }
+
+  .fleet-grid .car-img-wrap {
+    height: 226px;
+  }
+
+  .fleet-grid .blog-detail-car-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 4px;
+    height: 54px;
+    padding: 9px;
+    background: #343434;
+  }
+
+  .fleet-grid .blog-detail-car-name {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+  }
+
+  .fleet-grid .blog-detail-car-price {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: normal;
+    color: #fff;
+  }
+
+  .fleet-grid.is-collapsed .blog-detail-car-card:nth-child(n + 5) {
+    display: none;
+  }
+
+  /* ── Compact 2×2 car strips ────────────────────────── */
+  .certs-cars-grid:not(.fleet-grid),
+  .blog-detail-cars-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card,
+  .blog-detail-cars-grid .blog-detail-car-card {
+    height: 173px;
+  }
+
+  .certs-cars-grid:not(.fleet-grid) .car-img-wrap,
+  .blog-detail-cars-grid .car-img-wrap {
+    height: 110px;
+  }
+
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-body,
+  .blog-detail-cars-grid .blog-detail-car-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2px;
+    flex: 1;
+    min-height: 0;
+    padding: 8px 10px 10px;
+    background: #343434;
+  }
+
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-name,
+  .blog-detail-cars-grid .blog-detail-car-name {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #ececec;
+  }
+
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-price,
+  .blog-detail-cars-grid .blog-detail-car-price {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  .certs-cars-grid:not(.fleet-grid).is-collapsed .blog-detail-car-card:nth-child(n + 5),
+  .blog-detail-cars-grid.is-collapsed .blog-detail-car-card:nth-child(n + 5),
+  .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card:nth-child(n + 5),
+  .blog-detail-cars-grid .blog-detail-car-card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+  .autopark-show-all {
+    display: none !important;
+  }
+}

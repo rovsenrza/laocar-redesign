@@ -9,6 +9,18 @@
   margin-bottom: 0;
 }
 
+.inner-hero-img.inner-hero-img--mobile,
+.legal-hero-image.legal-hero-image--mobile {
+  display: none;
+}
+
+@media (min-width: 577px) {
+  .inner-hero-img.inner-hero-img--mobile,
+  .legal-hero-image.legal-hero-image--mobile {
+    display: none !important;
+  }
+}
+
 .terms-page .inner-hero-title {
   z-index: 3;
 }

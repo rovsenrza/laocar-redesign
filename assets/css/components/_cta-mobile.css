@@ -1,0 +1,131 @@
+/* ══ HOME CTA — mobile (≤576px) ════════════════════════ */
+
+@media (max-width: 576px) {
+  .home-cta {
+    position: relative;
+    overflow: hidden;
+    margin: 32px 16px;
+    padding: 24px 20px;
+    border-radius: 20px;
+    max-width: none;
+    background: #292929;
+  }
+
+  .home-cta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/assets/img/section-5.webp") right center / cover no-repeat;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .home-cta-content {
+    position: relative;
+    z-index: 1;
+    max-width: none;
+  }
+
+  .home-cta-title {
+    margin: 0 0 12px;
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--color-text);
+  }
+
+  .home-cta-title-line {
+    display: block;
+    
+    
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+
+  .home-cta-text {
+    margin: 0 0 8px;
+    font-family: var(--font-base);
+    font-size: var(--m-body);
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--color-text);
+  }
+
+  .home-cta-phone a {
+    display: inline-block;
+    margin: 0 0 16px;
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .home-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .home-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 288px;
+    height: 45px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 30px;
+    font-family: var(--font-base);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #ffffff;
+    text-decoration: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .home-cta-btn__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .home-cta-btn-telegram {
+    background: rgba(118, 208, 255, 0.2);
+    --glass-bg: 0;
+  }
+
+  .home-cta-btn-whatsapp {
+    background: rgba(154, 231, 163, 0.2);
+    --glass-bg: 0;
+  }
+
+  .home-cta-btn-max {
+    background: rgba(144, 149, 234, 0.2);
+    --glass-bg: 0;
+  }
+}
+
+@media (min-width: 577px) {
+  .home-cta-title-line {
+    display: inline;
+    text-decoration: none;
+  }
+
+  .home-cta-title-line + .home-cta-title-line::before {
+    content: " ";
+  }
+
+  .home-cta-btn__icon {
+    display: none;
+  }
+}

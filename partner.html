@@ -11,13 +11,25 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style-mobile.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container-header">
         <div class="logo"><a href="index.html">LAOCAR</a></div>
 
-        <nav class="main-nav">
+        
+      <div class="header-mobile-actions">
+        <a href="tel:+375333337744" class="header-mobile-phone" aria-label="Позвонить">
+          <img src="/assets/img/phone-icon.svg" alt="" width="20" height="20" loading="lazy" />
+        </a>
+        <button type="button" class="header-mobile-menu" aria-label="Меню" aria-expanded="false" aria-controls="mobile-menu">
+          <img class="header-menu-icon header-menu-icon--open" src="/assets/img/hammenu.svg" alt="" width="20" height="20" />
+          <img class="header-menu-icon header-menu-icon--close" src="/assets/img/x-white.svg" alt="" width="20" height="20" />
+        </button>
+      </div>
+
+<nav class="main-nav">
           <a href="autopark.html">Автопарк</a>
           <a href="terms.html">Условия</a>
           <a href="certificates.html">Сертификаты</a>
@@ -73,7 +85,39 @@
       </div>
     </header>
 
-    <main class="blogs-page partner-page">
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu-nav">
+        <a href="autopark.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="terms.html" class="mobile-menu-link">Условия<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="certificates.html" class="mobile-menu-link">Сертификаты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="blogs.html" class="mobile-menu-link">Блог<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="partner.html" class="mobile-menu-link">Стать партнером<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="contacts.html" class="mobile-menu-link">Контакты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="tel:+375333337744" class="mobile-menu-phone">+375 (33) 333 77 44</a>
+        <div class="mobile-menu-social">
+          <a href="#" aria-label="Telegram"><img src="/assets/img/tg.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="WhatsApp"><img src="/assets/img/wp.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Instagram"><img src="/assets/img/ig.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Max"><img src="/assets/img/max.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="TikTok"><img src="/assets/img/tt.svg" alt="" loading="lazy" /></a>
+        </div>
+        <div class="mobile-menu-lang">
+          <a href="#" class="mobile-menu-lang-item mobile-menu-lang-item--active">RU</a>
+          <a href="#" class="mobile-menu-lang-item">ENG</a>
+          <a href="#" class="mobile-menu-lang-item">TR</a>
+          <a href="#" class="mobile-menu-lang-item">ZH</a>
+        </div>
+        <div class="mobile-menu-currency">
+          <a href="#" class="mobile-menu-currency-item">USD</a>
+          <a href="#" class="mobile-menu-currency-item mobile-menu-currency-item--active">BYN</a>
+          <a href="#" class="mobile-menu-currency-item">RUB</a>
+        </div>
+      </div>
+    </div>
+
+<main class="blogs-page partner-page">
       <!-- ── HERO ──────────────────────────────────────── -->
       <section class="inner-hero">
         <div class="container-page inner-hero-container">
@@ -97,6 +141,7 @@
             class="inner-hero-img"
             loading="lazy"
           />
+          <img src="/assets/img/partners-mobile.webp" alt="" class="inner-hero-img inner-hero-img--mobile" aria-hidden="true" loading="lazy" />
         </div>
       </section>
 
@@ -178,11 +223,17 @@
             />
             <div class="partner-earn-body">
               <p class="partner-earn-name">BMW X7</p>
-              <p class="partner-earn-sub">Ваш автомобиль у нас в аренде</p>
-              <p class="partner-earn-value">2900 $</p>
-              <p class="partner-earn-sub">Ваш доход в месяц</p>
-              <p class="partner-earn-value">34800 $</p>
-              <p class="partner-earn-sub">Ваш доход в год</p>
+              <p class="partner-earn-sub partner-earn-sub--lease">Ваш автомобиль у нас в аренде</p>
+              <div class="partner-earn-stats">
+                <div class="partner-earn-stat">
+                  <p class="partner-earn-value">2900 $</p>
+                  <p class="partner-earn-sub">Ваш доход в месяц</p>
+                </div>
+                <div class="partner-earn-stat">
+                  <p class="partner-earn-value">34800 $</p>
+                  <p class="partner-earn-sub">Ваш доход в год</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -195,11 +246,17 @@
             />
             <div class="partner-earn-body">
               <p class="partner-earn-name">Porsche Cayenne</p>
-              <p class="partner-earn-sub">Ваш автомобиль у нас в аренде</p>
-              <p class="partner-earn-value">3300 $</p>
-              <p class="partner-earn-sub">Ваш доход в месяц</p>
-              <p class="partner-earn-value">39600 $</p>
-              <p class="partner-earn-sub">Ваш доход в год</p>
+              <p class="partner-earn-sub partner-earn-sub--lease">Ваш автомобиль у нас в аренде</p>
+              <div class="partner-earn-stats">
+                <div class="partner-earn-stat">
+                  <p class="partner-earn-value">3300 $</p>
+                  <p class="partner-earn-sub">Ваш доход в месяц</p>
+                </div>
+                <div class="partner-earn-stat">
+                  <p class="partner-earn-value">39600 $</p>
+                  <p class="partner-earn-sub">Ваш доход в год</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -212,11 +269,17 @@
             />
             <div class="partner-earn-body">
               <p class="partner-earn-name">Audi RS7</p>
-              <p class="partner-earn-sub">Ваш автомобиль у нас в аренде</p>
-              <p class="partner-earn-value">3300 $</p>
-              <p class="partner-earn-sub">Ваш доход в месяц</p>
-              <p class="partner-earn-value">39600 $</p>
-              <p class="partner-earn-sub">Ваш доход в год</p>
+              <p class="partner-earn-sub partner-earn-sub--lease">Ваш автомобиль у нас в аренде</p>
+              <div class="partner-earn-stats">
+                <div class="partner-earn-stat">
+                  <p class="partner-earn-value">3300 $</p>
+                  <p class="partner-earn-sub">Ваш доход в месяц</p>
+                </div>
+                <div class="partner-earn-stat">
+                  <p class="partner-earn-value">39600 $</p>
+                  <p class="partner-earn-sub">Ваш доход в год</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -232,7 +295,7 @@
           </article>
 
           <article class="terms-card glass">
-            <h3 class="terms-card-title">Полная конфиденциальность</h3>
+            <h3 class="terms-card-title">Полная приватность</h3>
             <p class="terms-card-text">В наших автомобилях не ведется видео- и аудиозапись, что гарантирует полную конфиденциальность.</p>
           </article>
 
@@ -316,7 +379,10 @@
     <!-- ── CTA ───────────────────────────────────────── -->
     <section class="home-cta">
       <div class="home-cta-content">
-        <h2 class="home-cta-title">Есть вопросы? Звони!</h2>
+        <h2 class="home-cta-title">
+          <span class="home-cta-title-line">Есть вопросы?</span>
+          <span class="home-cta-title-line">Звони!</span>
+        </h2>
         <p class="home-cta-text">
           Бесплатная консультация и помощь эксперта<br />
           по вопросам партнёрства по телефону:<br />
@@ -325,24 +391,34 @@
           <a href="tel:+375333337744">+375 (33) 333 77 44</a>
         </div>
         <div class="home-cta-actions">
-          <a href="#" class="home-cta-btn home-cta-btn-telegram glass"
-            >Написать в Telegram</a
-          >
-          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass"
-            >Написать в WhatsApp</a
-          >
-          <a href="#" class="home-cta-btn home-cta-btn-max glass"
-            >Написать в Max</a
-          >
+          <a href="#" class="home-cta-btn home-cta-btn-telegram glass">
+            <img src="/assets/img/tg.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в Telegram</span>
+          </a>
+          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass">
+            <img src="/assets/img/wp.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в WhatsApp</span>
+          </a>
+          <a href="#" class="home-cta-btn home-cta-btn-max glass">
+            <img src="/assets/img/max.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в Max</span>
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container-footer">
+      <div class="footer-brand"><a href="index.html">LAOCAR</a></div>
         <div class="footer-top">
-          <div class="footer-col">
-            <h4 class="footer-head">Клиентам:</h4>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Клиентам:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-clients">
+            <span class="footer-head footer-head--mobile">Клиентам</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-clients">
+
             <ul class="footer-links">
               <li><a href="autopark.html">Автопарк</a></li>
               <li><a href="terms.html">Условия</a></li>
@@ -354,10 +430,18 @@
               <li><a href="partner.html">Сдать авто</a></li>
               <li><a href="contacts.html">Контакты</a></li>
             </ul>
+  
           </div>
+        </div>
 
-          <div class="footer-col">
-            <h4 class="footer-head">Автопарк:</h4>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Автопарк:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-fleet">
+            <span class="footer-head footer-head--mobile">Автопарк</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-fleet">
+
             <ul class="footer-links">
               <li><a href="autopark-category.html">Внедорожники</a></li>
               <li><a href="autopark-category.html">Кабриолеты</a></li>
@@ -367,20 +451,36 @@
               <li><a href="autopark-category.html">Семейные</a></li>
               <li><a href="autopark-category.html">Купе</a></li>
             </ul>
+  
           </div>
+        </div>
 
-          <div class="footer-col">
-            <h4 class="footer-head">Для мероприятий:</h4>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Для мероприятий:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-events">
+            <span class="footer-head footer-head--mobile">Для мероприятий</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-events">
+
             <ul class="footer-links">
               <li><a href="events.html">Видеосъемка</a></li>
               <li><a href="events.html">Фотосессия</a></li>
               <li><a href="events.html">День Рождения</a></li>
               <li><a href="events.html">Свадьба</a></li>
             </ul>
+  
           </div>
+        </div>
 
-          <div class="footer-col">
-            <h4 class="footer-head">О компании:</h4>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">О компании:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-company">
+            <span class="footer-head footer-head--mobile">Компания</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-company">
+
             <ul class="footer-links">
               <li><a href="about.html">О нас</a></li>
               <li><a href="faq.html">FAQ</a></li>
@@ -389,10 +489,13 @@
               <li><a href="cookies.html">Политика Cookies</a></li>
               <li><a href="reviews.html">Отзывы</a></li>
             </ul>
+  
           </div>
+        </div>
 
-          <div class="footer-col">
-            <h4 class="footer-head">Контакты:</h4>
+          <div class="footer-col footer-col--contacts">
+          <h4 class="footer-head">Контакты:</h4>
+
             <ul class="footer-links">
               <li><a href="tel:+375333337744">+375 (33) 333 77 44</a></li>
               <li><a href="mailto:admin@laocar.by">admin@laocar.by</a></li>
@@ -433,6 +536,7 @@
                 <a href="#">TikTok</a>
               </li>
             </ul>
+
           </div>
         </div>
 
@@ -443,10 +547,10 @@
             Все расчеты за аренду автомобилей осуществляются исключительно в
             Национальной валюте (BYN, белорусский рубль, согласно действующему
             законодательству Республики Беларусь.
-          </p>
-          <p>ООО «ПраймАвтоСолюшн»</p>
-          <p>УНП 193771180</p>
-          <p>юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
+          </p>        <p class="footer-bottom-company">ООО «ПраймАвтоСолюшн» · УНП 193771180 · г. Минск, пр-т Газеты Звязда 16</p>
+        <p class="footer-bottom-company-line">ООО «ПраймАвтоСолюшн»</p>
+        <p class="footer-bottom-company-line">УНП 193771180</p>
+        <p class="footer-bottom-company-line">юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
         </div>
       </div>
     </footer>
@@ -462,7 +566,7 @@
 
         <form class="cert-modal-form partner-contact-modal-form" id="partnerIncomeModalForm" novalidate>
           <input class="cert-modal-input partner-contact-modal-input" type="text" name="name" placeholder="Ваше имя" autocomplete="name" />
-          <input class="cert-modal-input partner-contact-modal-input" type="tel" name="phone" placeholder="Номер телефона" autocomplete="tel" />
+          <input class="cert-modal-input partner-contact-modal-input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" />
           <input class="cert-modal-input partner-contact-modal-input" type="email" name="email" placeholder="E-mail" autocomplete="email" />
           <textarea class="cert-modal-textarea partner-contact-modal-textarea" name="message" placeholder="Опишите ваш автомобиль: марка, кузов, год выпуска, цвет и другие особенности"></textarea>
           <button type="submit" class="cert-modal-submit partner-contact-modal-submit" id="partnerIncomeModalSubmit" disabled>Отправить</button>

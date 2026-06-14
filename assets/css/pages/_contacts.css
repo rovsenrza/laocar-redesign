@@ -1,3 +1,5 @@
+/* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
+@media (min-width: 577px) {
 /* ══ CONTACTS PAGE (Контакты) ════════════════════════ */
 
 .contacts-page {
@@ -282,4 +284,5 @@
   .contacts-form-head h2 {
     font-size: 20px;
   }
-
+}
+}

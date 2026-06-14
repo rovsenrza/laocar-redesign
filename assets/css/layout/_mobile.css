@@ -1,0 +1,70 @@
+/* ══ MOBILE LAYOUT (≤576px) ═══════════════════════════ */
+
+:root {
+  --bp-mobile: 576px;
+}
+
+@media (max-width: 576px) {
+  /* Mobile type scale — matches homepage */
+  :root {
+    --m-section: 17px;
+    --m-page-title: 25px;
+    --m-card-title: 15px;
+    --m-body: 12px;
+    --m-stat: 22px;
+    --m-hero-brand: 47px;
+    --m-hero-mark: 35px;
+  }
+
+  .section-headline {
+    font-family: "Unbounded", sans-serif;
+    font-size: var(--m-section);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-text);
+    margin-bottom: 20px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* All content containers — full width, 16px padding */
+  .container-header {
+    width: 100%;
+    max-width: none;
+    padding-inline: 16px;
+  }
+
+  .container-index,
+  .container-page,
+  .container-footer,
+  .inner-hero-container,
+  .legal-page-inner,
+  .contacts-page-inner,
+  .blog-detail-container,
+  .car-detail-container,
+  .autopark-category-container,
+  .certs-content-section,
+  .terms-content-section,
+  .blogs-grid-section,
+  .price-content-section,
+  .reviews-section,
+  .legal-content {
+    width: 100%;
+    max-width: none;
+    padding-inline: 16px;
+    padding-block: 16px;
+  }
+
+  /* Sections inside an existing container — avoid double padding */
+  .container-page > .certs-content-section,
+  .container-page > .terms-content-section,
+  .container-page > .reviews-section,
+  .container-page > .legal-content,
+  .legal-page-inner > .certs-content-section,
+  .legal-page-inner > .reviews-section,
+  .legal-page-inner > .legal-content {
+    padding: 0;
+  }
+}

@@ -1,0 +1,67 @@
+/* ══ WHITE BAR BUTTON — mobile (≤576px) ════════════════
+   Shared by .blog-detail-glass-btn and .inner-mobile-order-btn
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .blog-detail-glass-btn,
+  .inner-mobile-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    background: #ececec;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+    --glass-blur: 0;
+    backdrop-filter: none;
+  }
+
+  .blog-detail-glass-btn::after,
+  .inner-mobile-order-btn::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    background: url("/assets/img/button-chevron.svg") center / contain no-repeat;
+  }
+
+  .certs-content-section .blog-detail-glass-btn,
+  .terms-content-section .blog-detail-glass-btn,
+  .blogs-page .blog-detail-glass-btn {
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .blog-detail-page .blog-detail-glass-btn,
+  .car-detail-page .blog-detail-glass-btn {
+    margin-bottom: 32px;
+  }
+
+  .inner-mobile-order-btn {
+    margin: 24px 0;
+  }
+
+  /* Reviews — centered label, no chevron */
+  .reviews-section .blog-detail-glass-btn {
+    justify-content: center;
+    font-size: var(--m-body);
+  }
+
+  .reviews-section .blog-detail-glass-btn::after {
+    display: none;
+  }
+}
+
+@media (min-width: 577px) {
+  .inner-mobile-order-btn {
+    display: none;
+  }
+}

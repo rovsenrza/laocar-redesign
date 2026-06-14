@@ -1,8 +1,11 @@
+/* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
+@media (min-width: 577px) {
 /* ── LEGAL ENTITIES PAGE ────────────────────────────── */
 
 .legal-entities-page .legal-page-title {
   margin-top: 0;
   margin-bottom: 30px;
+  
 }
 
 .legal-advantages-grid {
@@ -44,6 +47,10 @@
 
 .legal-inline-form .cert-modal-close {
   pointer-events: none;
+}
+
+.legal-inline-form-desc {
+  display: none;
 }
 
 .legal-benefits-grid {
@@ -119,4 +126,5 @@
   .legal-request-title {
     font-size: 28px;
   }
+}
 }

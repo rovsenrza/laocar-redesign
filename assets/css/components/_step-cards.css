@@ -1,0 +1,145 @@
+/* ══ STEP CARDS — numbered how-to rows (mobile) ═══════ */
+
+@media (max-width: 576px) {
+  .step-card-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .step-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .step-card__num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-text);
+  }
+
+  .step-card__body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .step-card__title {
+    margin: 0 0 4px;
+    font-family: var(--font-display);
+    font-size: var(--m-card-title);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--color-text);
+  }
+
+  .step-card__text {
+    margin: 0;
+    font-family: var(--font-base);
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--color-text-muted);
+  }
+
+  /* Autopark category — convert desktop how-grid to step cards */
+  .autopark-how-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .autopark-how-grid .terms-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    --glass-radius: 18px;
+    text-align: left;
+  }
+
+  .autopark-how-grid .autopark-how-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .autopark-how-grid .autopark-how-sub {
+    flex: 1;
+    margin: 0;
+    font-size: var(--m-card-title);
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  /* Partner page — circle numbered steps */
+  .partner-page .certs-how-grid {
+    counter-reset: partner-step;
+    gap: 10px;
+  }
+
+  .partner-page .certs-how-grid > div {
+    counter-increment: partner-step;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .partner-page .certs-how-number {
+    display: none;
+  }
+
+  .partner-page .certs-how-grid > div::before {
+    content: counter(partner-step);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-text);
+  }
+
+  .partner-page .certs-how-card {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    background: transparent;
+    --glass-bg: 0;
+    --glass-blur: 0;
+    backdrop-filter: none;
+  }
+}

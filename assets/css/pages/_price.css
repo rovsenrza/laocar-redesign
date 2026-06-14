@@ -1,3 +1,5 @@
+/* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
+@media (min-width: 577px) {
 /* ══ PRICE PAGE (Прайс) ═══════════════════════════════ */
 
 .price-content-section {
@@ -91,4 +93,5 @@
 
 .price-list-btn:hover {
   opacity: 0.7;
+}
 }

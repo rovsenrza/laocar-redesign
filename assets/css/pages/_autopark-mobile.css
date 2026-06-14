@@ -1,0 +1,82 @@
+/* ══ AUTOPARK CATEGORY — mobile (≤576px) ══════════════ */
+
+@media (max-width: 576px) {
+  .autopark-category-container {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .autopark-page-title {
+    margin: 0 0 20px;
+    font-family: var(--font-display);
+    font-size: var(--m-page-title);
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--color-text);
+  }
+
+  .autopark-show-all {
+    margin-bottom: 32px;
+  }
+
+  .autopark-show-all.is-hidden {
+    display: none;
+  }
+
+  /* Content below grid — simplified mobile layout */
+  .autopark-category-page .certs-content-section {
+    padding-top: 0;
+  }
+
+  .autopark-category-page .intro-font,
+  .autopark-category-page .certs-intro-text,
+  .autopark-category-page .certs-conditions-grid {
+    display: none;
+  }
+
+  .autopark-category-page .certs-section-title {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  /* Why cards — hide decorative numbers, use gray-card layout */
+  .autopark-category-page .autopark-why-grid > div {
+    display: block;
+  }
+
+  .autopark-category-page .certs-how-number {
+    display: none;
+  }
+
+  .autopark-category-page .certs-how-card {
+    min-height: 0;
+    height: auto;
+    padding: 16px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    --glass-radius: 18px;
+    display: block;
+  }
+
+  .autopark-category-page .certs-how-title {
+    font-size: var(--m-card-title);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .autopark-category-page .certs-how-text {
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 577px) {
+  .autopark-page-title {
+    display: none;
+  }
+
+  .autopark-how-step--mobile {
+    display: none;
+  }
+}

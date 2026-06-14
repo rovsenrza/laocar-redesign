@@ -5,6 +5,8 @@ Thumbs.db
 # Idea/Editor
 .vscode/
 .idea/
+.codemie/
+.cursor/
 
 # Images - Originals
 # We keep raw files out of the production build
@@ -22,3 +24,4 @@ yarn-error.log*
 node_modules/
 dist/
 build/
+.vscode/mcp.json

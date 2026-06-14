@@ -1,0 +1,109 @@
+/* ══ REVIEWS — mobile (≤576px) ════════════════════════ */
+
+@media (max-width: 576px) {
+  .legal-page .legal-page-inner:first-of-type {
+    display: none;
+  }
+
+  .legal-page .legal-hero {
+    margin-bottom: 0;
+  }
+
+  .reviews-section {
+    padding: 24px 0 32px;
+  }
+  .review-card{margin-bottom: 10px;}
+
+  .reviews-title {
+    margin-bottom: 16px;
+  }
+
+  .reviews-grid {
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .review-card {
+    --glass-radius: 14px;
+    position: relative;
+    min-height: 117px;
+    padding: 12px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+  }
+
+  .review-card-header {
+    position: static;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .review-card-name {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .review-card-stars {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    gap: 2px;
+  }
+
+  .review-card-stars img {
+    width: 8px;
+    height: 8px;
+  }
+
+  .review-card-car {
+    margin-bottom: 4px;
+    font-family: var(--font-base);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-text-muted);
+  }
+
+  .review-card-date {
+    display: none;
+  }
+
+  .review-card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--color-text-muted);
+  }
+
+  .reviews-pagination {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .reviews-pagination-btn img {
+    width: 12px;
+    height: auto;
+  }
+
+  .reviews-pagination-num,
+  .reviews-pagination-sep {
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .reviews-pagination-num--active {
+    opacity: 0.5;
+  }
+
+  .legal-page-inner .home-cta {
+    margin-top: 32px;
+  }
+}

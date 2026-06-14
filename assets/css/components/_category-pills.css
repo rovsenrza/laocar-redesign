@@ -1,0 +1,54 @@
+/* ══ CATEGORY PILLS — horizontal nav (mobile) ══════════ */
+
+@media (max-width: 576px) {
+  .category-pills,
+  .autopark-category-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0 -16px 16px;
+    padding: 0 16px 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .category-pills::-webkit-scrollbar,
+  .autopark-category-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-pill,
+  .autopark-category-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 10px;
+    border-radius: 46px;
+    border: 1px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: var(--font-base);
+    font-size: var(--m-body);
+    font-weight: 500;
+    line-height: 1;
+    color: var(--color-text);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .category-pill--active,
+  .autopark-category-pill--active {
+    background: var(--color-text);
+    border-color: var(--color-text);
+    color: var(--color-bg);
+  }
+}
+
+@media (min-width: 577px) {
+  .category-pills {
+    display: none;
+  }
+}

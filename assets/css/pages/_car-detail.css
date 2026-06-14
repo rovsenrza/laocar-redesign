@@ -98,28 +98,40 @@
   align-items: start;
 }
 
+.car-detail-info-main {
+  min-width: 0;
+}
+
 .car-detail-title {
   font-family: "Unbounded", sans-serif;
   font-size: 47px;
   font-weight: 600;
   line-height: 1;
   color: #ececec;
-  margin-bottom: 24px ;
+  margin: 0 0 24px;
 }
 
 .car-detail-specs {
-  margin: 0 0 50px;
+  margin: 0 0 82px;
 }
 
 .car-detail-specs-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 4px;
+  display: block;
+  margin: 0 0 4px;
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  line-height: 1.18;
+  line-height: 1.183;
   color: #ececec;
+}
+
+.car-detail-specs-row:last-child {
+  margin-bottom: 0;
+}
+
+.car-detail-specs-row dt,
+.car-detail-specs-row dd {
+  display: inline;
+  margin: 0;
 }
 
 .car-detail-specs-row dt {
@@ -127,43 +139,54 @@
 }
 
 .car-detail-specs-row dd {
-  margin: 0;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .car-detail-extra p {
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  line-height: 1.2;
+  line-height: 1.183;
   color: #ececec;
   margin: 0 0 4px;
 }
 
+.car-detail-extra p:last-child {
+  margin-bottom: 0;
+}
+
 .car-detail-extra strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .car-detail-pricing {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: right;
-  min-width: 260px;
+  min-width: 264px;
 }
 
 .car-detail-rates {
   list-style: none;
-  margin: 0 0 24px;
+  margin: 0;
   padding: 0;
 }
 
 .car-detail-rates li {
   font-family: "Inter", sans-serif;
   font-size: 18px;
-  line-height: 1.18;
+  line-height: 1.183;
   color: #ececec;
-  margin-bottom: 4px;
+  margin: 0 0 4px;
+  white-space: nowrap;
+}
+
+.car-detail-rates li:last-child {
+  margin-bottom: 0;
 }
 
 .car-detail-rates strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 .car-detail-book-shortcut {
@@ -172,12 +195,14 @@
   justify-content: center;
   min-width: 264px;
   height: 50px;
+  margin-top: 46px;
   padding: 10px 20px;
   background: #ececec;
   border-radius: 0;
   font-family: "Unbounded", sans-serif;
   font-size: 24px;
   font-weight: 600;
+  line-height: 1;
   color: #111;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -198,7 +223,17 @@
   margin-bottom: 56px;
   border: 1px solid #ececec;
 }
-.car-detail-booking-intro{display: flex; flex-direction: column; justify-content: space-between;height: 100%;}
+.car-detail-booking-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.car-detail-booking-heading {
+  display: flex;
+  flex-direction: column;
+}
 .car-detail-booking-label {
   font-family: "Unbounded", sans-serif;
   font-size: 24px;
@@ -446,6 +481,7 @@
 
   .car-detail-pricing {
     text-align: left;
+    align-items: flex-start;
   }
 
   .car-detail-booking {

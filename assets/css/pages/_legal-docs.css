@@ -1,3 +1,5 @@
+/* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
+@media (min-width: 577px) {
 /* ══ Legal Docs PAGE ════════════════════════════════════════ */
 
 .legal-page {
@@ -242,7 +244,7 @@
   --glass-radius: 32px;
   border-radius: var(--glass-radius);
   padding: 34px 34px 22px;
-  min-height: 136px;
+  
 }
 
 @media (max-width: 1100px) {
@@ -252,8 +254,8 @@
 }
 
 @media (max-width: 768px) {
-  .legal-advantages-grid,
-  .legal-advantages-grid2 {
+  .legal-advantages-grid{
     grid-template-columns: 1fr;
   }
+}
 }

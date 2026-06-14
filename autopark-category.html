@@ -8,13 +8,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Inter+Tight:wght@300;400;500&family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/style-mobile.css" />
   </head>
   <body class="autopark-category-page">
     <header class="site-header">
       <div class="container-header">
         <div class="logo"><a href="index.html">LAOCAR</a></div>
 
-        <nav class="main-nav">
+        
+      <div class="header-mobile-actions">
+        <a href="tel:+375333337744" class="header-mobile-phone" aria-label="Позвонить">
+          <img src="/assets/img/phone-icon.svg" alt="" width="20" height="20" loading="lazy" />
+        </a>
+        <button type="button" class="header-mobile-menu" aria-label="Меню" aria-expanded="false" aria-controls="mobile-menu">
+          <img class="header-menu-icon header-menu-icon--open" src="/assets/img/hammenu.svg" alt="" width="20" height="20" />
+          <img class="header-menu-icon header-menu-icon--close" src="/assets/img/x-white.svg" alt="" width="20" height="20" />
+        </button>
+      </div>
+
+<nav class="main-nav">
           <a href="autopark.html" style="border-bottom-color: #fff;">Автопарк</a>
           <a href="terms.html">Условия</a>
           <a href="certificates.html">Сертификаты</a>
@@ -58,7 +70,39 @@
       </div>
     </header>
 
-    <main class="autopark-category-page">
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <nav class="mobile-menu-nav">
+        <a href="autopark.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="terms.html" class="mobile-menu-link">Условия<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="certificates.html" class="mobile-menu-link">Сертификаты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="blogs.html" class="mobile-menu-link">Блог<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="partner.html" class="mobile-menu-link">Стать партнером<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="contacts.html" class="mobile-menu-link">Контакты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="tel:+375333337744" class="mobile-menu-phone">+375 (33) 333 77 44</a>
+        <div class="mobile-menu-social">
+          <a href="#" aria-label="Telegram"><img src="/assets/img/tg.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="WhatsApp"><img src="/assets/img/wp.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Instagram"><img src="/assets/img/ig.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="Max"><img src="/assets/img/max.svg" alt="" loading="lazy" /></a>
+          <a href="#" aria-label="TikTok"><img src="/assets/img/tt.svg" alt="" loading="lazy" /></a>
+        </div>
+        <div class="mobile-menu-lang">
+          <a href="#" class="mobile-menu-lang-item mobile-menu-lang-item--active">RU</a>
+          <a href="#" class="mobile-menu-lang-item">ENG</a>
+          <a href="#" class="mobile-menu-lang-item">TR</a>
+          <a href="#" class="mobile-menu-lang-item">ZH</a>
+        </div>
+        <div class="mobile-menu-currency">
+          <a href="#" class="mobile-menu-currency-item">USD</a>
+          <a href="#" class="mobile-menu-currency-item mobile-menu-currency-item--active">BYN</a>
+          <a href="#" class="mobile-menu-currency-item">RUB</a>
+        </div>
+      </div>
+    </div>
+
+<main class="autopark-category-page">
       <div class="container-page autopark-category-container">
         <div class="speedbar autopark-category-speedbar">
           <a href="index.html" class="speedbar-link">Главная</a>
@@ -67,6 +111,8 @@
           <img src="/assets/img/br-cev.svg" alt="/" class="speedbar-icon" aria-hidden="true" loading="lazy" />
           <span class="speedbar-current">Купе</span>
         </div>
+
+        <h1 class="autopark-page-title">Автопарк</h1>
 
         <nav class="autopark-category-nav" aria-label="Категории автопарка">
           <a href="autopark-category.html" class="autopark-category-pill">Доступны на сегодня</a>
@@ -81,12 +127,13 @@
         </nav>
 
         <div class="autopark-toolbar-wrap">
-        <div class="autopark-toolbar">
-          <div class="autopark-filter" id="autoparkFilter">
+        <div class="autopark-toolbar fleet-toolbar">
+          <div class="autopark-filter fleet-toolbar__filter" id="autoparkFilter">
             <div class="autopark-filter-control" id="autoparkFilterControl">
               <button type="button" class="autopark-filter-btn" id="autoparkFilterBtn" aria-expanded="false" aria-controls="autoparkFilterPanel">
                 <img src="/assets/img/filter.svg" alt="" aria-hidden="true" />
                 <span class="autopark-filter-label">Фильтр</span>
+                <span class="toolbar-badge toolbar-badge--filter" id="autoparkFilterBadge" aria-hidden="true">0</span>
                 <span class="autopark-filter-chips" id="autoparkFilterChips"></span>
               </button>
               <button type="button" class="autopark-filter-bar-clear" id="autoparkFilterBarClear" aria-label="Сбросить фильтры" hidden>
@@ -95,7 +142,7 @@
             </div>
           </div>
 
-          <form class="autopark-search-form" id="autoparkSearchForm">
+          <form class="autopark-search-form fleet-toolbar__search" id="autoparkSearchForm">
             <div class="autopark-search-control">
               <div class="autopark-search-field">
                 <input class="autopark-search-input" type="text" name="q" placeholder="Поиск автомобиля" autocomplete="off" />
@@ -107,7 +154,7 @@
             </div>
           </form>
 
-          <div class="autopark-sort" id="autoparkSort">
+          <div class="autopark-sort fleet-toolbar__sort" id="autoparkSort">
             <div class="autopark-sort-control" id="autoparkSortControl">
               <button type="button" class="autopark-sort-btn" id="autoparkSortBtn" aria-expanded="false" aria-haspopup="listbox">
                 <span class="autopark-sort-arrows" aria-hidden="true">
@@ -115,6 +162,7 @@
                   <img src="/assets/img/down.svg" alt="" />
                 </span>
                 <span class="autopark-sort-label">Сортировать</span>
+                <span class="toolbar-badge toolbar-badge--sort" id="autoparkSortBadge" aria-hidden="true">1</span>
                 <span class="autopark-sort-chip">
                   <span class="autopark-sort-chip-text"></span>
                 </span>
@@ -270,7 +318,12 @@
         </div>
         </div>
 
-        <div class="certs-cars-grid" id="autoparkCategoryGrid"></div>
+        <div class="certs-cars-grid fleet-grid is-collapsed" id="autoparkCategoryGrid"></div>
+
+        <button type="button" class="btn-primary autopark-show-all" id="autoparkShowAll">
+          <span>Смотреть все автомобили</span>
+          <img src="/assets/img/button-chevron.svg" alt="" class="btn-primary__chevron" aria-hidden="true" />
+        </button>
       </div>
 
       <section class="certs-content-section">
@@ -347,18 +400,22 @@
 
         <h2 class="certs-section-title">Как арендовать автомобиль в LaoCar.by?</h2>
 
-        <div class="autopark-how-grid">
-          <article class="terms-card glass">
+        <div class="autopark-how-grid step-card-list">
+          <article class="terms-card glass step-card">
             <p class="autopark-how-main">1</p>
             <p class="autopark-how-sub">Выберите автомобиль из нашего автопарка</p>
           </article>
-          <article class="terms-card glass">
+          <article class="terms-card glass step-card">
             <p class="autopark-how-main">2</p>
             <p class="autopark-how-sub">Свяжитесь с нами для уточнения условий аренды</p>
           </article>
-          <article class="terms-card glass">
+          <article class="terms-card glass step-card">
             <p class="autopark-how-main">3</p>
             <p class="autopark-how-sub">Оформите договор и получите авто в удобное время и место</p>
+          </article>
+          <article class="terms-card glass step-card autopark-how-step--mobile">
+            <p class="autopark-how-main">4</p>
+            <p class="autopark-how-sub">Получите автомобиль</p>
           </article>
         </div>
       </section>
@@ -366,7 +423,10 @@
 
     <section class="home-cta">
       <div class="home-cta-content">
-        <h2 class="home-cta-title">Есть вопросы? Звони!</h2>
+        <h2 class="home-cta-title">
+          <span class="home-cta-title-line">Есть вопросы?</span>
+          <span class="home-cta-title-line">Звони!</span>
+        </h2>
         <p class="home-cta-text">
           Бесплатная консультация и помощь эксперта<br />
           в выборе автомобиля по телефону:<br />
@@ -375,18 +435,34 @@
           <a href="tel:+375333337744">+375 (33) 333 77 44</a>
         </div>
         <div class="home-cta-actions">
-          <a href="#" class="home-cta-btn home-cta-btn-telegram glass">Написать в Telegram</a>
-          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass">Написать в WhatsApp</a>
-          <a href="#" class="home-cta-btn home-cta-btn-max glass">Написать в Max</a>
+          <a href="#" class="home-cta-btn home-cta-btn-telegram glass">
+            <img src="/assets/img/tg.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в Telegram</span>
+          </a>
+          <a href="#" class="home-cta-btn home-cta-btn-whatsapp glass">
+            <img src="/assets/img/wp.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в WhatsApp</span>
+          </a>
+          <a href="#" class="home-cta-btn home-cta-btn-max glass">
+            <img src="/assets/img/max.svg" alt="" class="home-cta-btn__icon" width="18" height="18" aria-hidden="true" loading="lazy" />
+            <span>Написать в Max</span>
+          </a>
         </div>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container-footer">
+      <div class="footer-brand"><a href="index.html">LAOCAR</a></div>
         <div class="footer-top">
-          <div class="footer-col">
-            <h4 class="footer-head">Клиентам:</h4>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Клиентам:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-clients">
+            <span class="footer-head footer-head--mobile">Клиентам</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-clients">
+
             <ul class="footer-links">
               <li><a href="autopark.html">Автопарк</a></li>
               <li><a href="terms.html">Условия</a></li>
@@ -398,9 +474,17 @@
               <li><a href="partner.html">Сдать авто</a></li>
               <li><a href="contacts.html">Контакты</a></li>
             </ul>
+  
           </div>
-          <div class="footer-col">
-            <h4 class="footer-head">Автопарк:</h4>
+        </div>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Автопарк:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-fleet">
+            <span class="footer-head footer-head--mobile">Автопарк</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-fleet">
+
             <ul class="footer-links">
               <li><a href="autopark-category.html">Внедорожники</a></li>
               <li><a href="autopark-category.html">Кабриолеты</a></li>
@@ -410,18 +494,34 @@
               <li><a href="autopark-category.html">Семейные</a></li>
               <li><a href="autopark-category.html">Купе</a></li>
             </ul>
+  
           </div>
-          <div class="footer-col">
-            <h4 class="footer-head">Для мероприятий:</h4>
+        </div>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">Для мероприятий:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-events">
+            <span class="footer-head footer-head--mobile">Для мероприятий</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-events">
+
             <ul class="footer-links">
               <li><a href="events.html">Видеосъемка</a></li>
               <li><a href="events.html">Фотосессия</a></li>
               <li><a href="events.html">День Рождения</a></li>
               <li><a href="events.html">Свадьба</a></li>
             </ul>
+  
           </div>
-          <div class="footer-col">
-            <h4 class="footer-head">О компании:</h4>
+        </div>
+          <div class="footer-col footer-accordion accordion-card">
+          <h4 class="footer-head footer-head--desktop">О компании:</h4>
+          <button type="button" class="accordion-card__trigger footer-accordion__trigger" aria-expanded="false" aria-controls="footer-panel-company">
+            <span class="footer-head footer-head--mobile">Компания</span>
+            <img src="/assets/img/chevron.svg" alt="" class="accordion-card__chevron" aria-hidden="true" loading="lazy" />
+          </button>
+          <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-company">
+
             <ul class="footer-links">
               <li><a href="about.html">О нас</a></li>
               <li><a href="faq.html">FAQ</a></li>
@@ -430,9 +530,12 @@
               <li><a href="cookies.html">Политика Cookies</a></li>
               <li><a href="reviews.html">Отзывы</a></li>
             </ul>
+  
           </div>
-          <div class="footer-col">
-            <h4 class="footer-head">Контакты:</h4>
+        </div>
+          <div class="footer-col footer-col--contacts">
+          <h4 class="footer-head">Контакты:</h4>
+
             <ul class="footer-links">
               <li><a href="tel:+375333337744">+375 (33) 333 77 44</a></li>
               <li><a href="mailto:admin@laocar.by">admin@laocar.by</a></li>
@@ -441,13 +544,14 @@
               <li class="footer-social-item"><img src="/assets/img/ig.svg" alt="Instagram" class="footer-social-icon" loading="lazy" /><a href="#">Instagram</a></li>
               <li class="footer-social-item"><img src="/assets/img/tt.svg" alt="TikTok" class="footer-social-icon" loading="lazy" /><a href="#">TikTok</a></li>
             </ul>
+
           </div>
         </div>
         <div class="footer-bottom">
-          <p>Для удобства иностранных граждан других государств на сайте справочно указана ориентировочная стоимость аренды в долларах США. Все расчеты за аренду автомобилей осуществляются исключительно в Национальной валюте (BYN, белорусский рубль, согласно действующему законодательству Республики Беларусь.</p>
-          <p>ООО «ПраймАвтоСолюшн»</p>
-          <p>УНП 193771180</p>
-          <p>юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
+          <p>Для удобства иностранных граждан других государств на сайте справочно указана ориентировочная стоимость аренды в долларах США. Все расчеты за аренду автомобилей осуществляются исключительно в Национальной валюте (BYN, белорусский рубль, согласно действующему законодательству Республики Беларусь.</p>        <p class="footer-bottom-company">ООО «ПраймАвтоСолюшн» · УНП 193771180 · г. Минск, пр-т Газеты Звязда 16</p>
+        <p class="footer-bottom-company-line">ООО «ПраймАвтоСолюшн»</p>
+        <p class="footer-bottom-company-line">УНП 193771180</p>
+        <p class="footer-bottom-company-line">юр. адрес г. Минск, пр-т Газеты Звязда 16</p>
         </div>
       </div>
     </footer>

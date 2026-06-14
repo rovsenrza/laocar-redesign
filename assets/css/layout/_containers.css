@@ -1,0 +1,36 @@
+/* ══ CONTAINER SYSTEM — desktop ═══════════════════════ */
+
+/* header / full-width: max 1380px */
+.container-header {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* footer / internal pages: max 1380px, 40px inline */
+.container-footer {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  
+}
+
+/* index.html sections: max 1336px, 60px inline */
+.container-index {
+  width: 100%;
+  max-width: 1336px;
+  margin: 0 auto;
+  
+}
+
+/* inner pages: max 1264px, 88px inline */
+.container-page {
+  width: 100%;
+  max-width: 1330px;
+  margin: 0 auto;
+  
+}

@@ -1,0 +1,19 @@
+/* ══ BASE RESET — desktop ═════════════════════════════ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: auto;
+}
