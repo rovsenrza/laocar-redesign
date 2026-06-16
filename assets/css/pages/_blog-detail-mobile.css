@@ -25,6 +25,7 @@
     max-height: 220px;
     margin-bottom: 16px;
     border-radius: 14px;
+    object-fit: cover;
   }
 
   .blog-detail-text-block p {
@@ -43,6 +44,7 @@
     height: auto;
     max-height: 200px;
     border-radius: 14px;
+    object-fit: cover;
   }
 
   .blog-detail-grid-text {

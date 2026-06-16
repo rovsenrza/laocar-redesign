@@ -17,6 +17,7 @@
 
         
       <div class="header-mobile-actions">
+        <button type="button" class="header-currency-btn" aria-label="Сменить валюту" data-currency="BYN">BYN</button>
         <a href="tel:+375333337744" class="header-mobile-phone" aria-label="Позвонить">
           <img src="/assets/img/phone-icon.svg" alt="" width="20" height="20" loading="lazy" />
         </a>
@@ -27,7 +28,7 @@
       </div>
 
 <nav class="main-nav">
-          <a href="autopark.html" style="border-bottom-color: #fff;">Автопарк</a>
+          <a href="autopark-category.html" style="border-bottom-color: #fff;">Автопарк</a>
           <a href="terms.html">Условия</a>
           <a href="certificates.html">Сертификаты</a>
           <a href="blogs.html">Блог</a>
@@ -72,7 +73,7 @@
 
     <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
       <nav class="mobile-menu-nav">
-        <a href="autopark.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="autopark-category.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
         <a href="terms.html" class="mobile-menu-link">Условия<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
         <a href="certificates.html" class="mobile-menu-link">Сертификаты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
         <a href="blogs.html" class="mobile-menu-link">Блог<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
@@ -107,7 +108,7 @@
         <div class="speedbar autopark-category-speedbar">
           <a href="index.html" class="speedbar-link">Главная</a>
           <img src="/assets/img/br-cev.svg" alt="/" class="speedbar-icon" aria-hidden="true" loading="lazy" />
-          <a href="autopark.html" class="speedbar-link">Автопарк</a>
+          <a href="autopark-category.html" class="speedbar-link">Автопарк</a>
           <img src="/assets/img/br-cev.svg" alt="/" class="speedbar-icon" aria-hidden="true" loading="lazy" />
           <span class="speedbar-current">Купе</span>
         </div>
@@ -116,7 +117,7 @@
 
         <nav class="autopark-category-nav" aria-label="Категории автопарка">
           <a href="autopark-category.html" class="autopark-category-pill">Доступны на сегодня</a>
-          <a href="autopark.html" class="autopark-category-pill">Все автомобили</a>
+          <a href="autopark-category.html" class="autopark-category-pill">Все автомобили</a>
           <a href="autopark-category.html" class="autopark-category-pill">Внедорожники</a>
           <a href="autopark-category.html" class="autopark-category-pill">Спорткары</a>
           <a href="autopark-category.html" class="autopark-category-pill autopark-category-pill--active">Купе</a>
@@ -128,17 +129,44 @@
 
         <div class="autopark-toolbar-wrap">
         <div class="autopark-toolbar fleet-toolbar">
-          <div class="autopark-filter fleet-toolbar__filter" id="autoparkFilter">
-            <div class="autopark-filter-control" id="autoparkFilterControl">
-              <button type="button" class="autopark-filter-btn" id="autoparkFilterBtn" aria-expanded="false" aria-controls="autoparkFilterPanel">
-                <img src="/assets/img/filter.svg" alt="" aria-hidden="true" />
-                <span class="autopark-filter-label">Фильтр</span>
-                <span class="toolbar-badge toolbar-badge--filter" id="autoparkFilterBadge" aria-hidden="true">0</span>
-                <span class="autopark-filter-chips" id="autoparkFilterChips"></span>
-              </button>
-              <button type="button" class="autopark-filter-bar-clear" id="autoparkFilterBarClear" aria-label="Сбросить фильтры" hidden>
-                <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
-              </button>
+          <div class="fleet-bottom-bar">
+            <div class="autopark-filter fleet-toolbar__filter" id="autoparkFilter">
+              <div class="autopark-filter-control" id="autoparkFilterControl">
+                <button type="button" class="autopark-filter-btn" id="autoparkFilterBtn" aria-expanded="false" aria-controls="autoparkFilterPanel">
+                  <img src="/assets/img/filter.svg" alt="" aria-hidden="true" />
+                  <span class="autopark-filter-label">Фильтр</span>
+                  <span class="toolbar-badge toolbar-badge--filter" id="autoparkFilterBadge" aria-hidden="true">0</span>
+                  <span class="autopark-filter-chips" id="autoparkFilterChips"></span>
+                </button>
+                <button type="button" class="autopark-filter-bar-clear" id="autoparkFilterBarClear" aria-label="Сбросить фильтры" hidden>
+                  <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
+                </button>
+              </div>
+            </div>
+
+            <div class="autopark-sort fleet-toolbar__sort" id="autoparkSort">
+              <div class="autopark-sort-control" id="autoparkSortControl">
+                <button type="button" class="autopark-sort-btn" id="autoparkSortBtn" aria-expanded="false" aria-haspopup="listbox">
+                  <span class="autopark-sort-arrows" aria-hidden="true">
+                    <img src="/assets/img/up.svg" alt="" />
+                    <img src="/assets/img/down.svg" alt="" />
+                  </span>
+                  <span class="autopark-sort-label">Сортировать</span>
+                  <span class="toolbar-badge toolbar-badge--sort" id="autoparkSortBadge" aria-hidden="true">1</span>
+                  <span class="autopark-sort-chip">
+                    <span class="autopark-sort-chip-text"></span>
+                  </span>
+                </button>
+                <button type="button" class="autopark-sort-clear" id="autoparkSortClear" aria-label="Сбросить сортировку" hidden>
+                  <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
+                </button>
+              </div>
+              <div class="autopark-sort-menu" id="autoparkSortMenu" role="listbox" aria-label="Сортировка">
+                <button type="button" class="autopark-sort-option is-active" data-sort="default" role="option">По умолчанию</button>
+                <button type="button" class="autopark-sort-option" data-sort="new" role="option">Сначала новые</button>
+                <button type="button" class="autopark-sort-option" data-sort="price-asc" role="option">Сначала низкие цены</button>
+                <button type="button" class="autopark-sort-option" data-sort="price-desc" role="option">Сначала высокие цены</button>
+              </div>
             </div>
           </div>
 
@@ -153,31 +181,6 @@
               <button type="submit" class="autopark-search-submit">Искать</button>
             </div>
           </form>
-
-          <div class="autopark-sort fleet-toolbar__sort" id="autoparkSort">
-            <div class="autopark-sort-control" id="autoparkSortControl">
-              <button type="button" class="autopark-sort-btn" id="autoparkSortBtn" aria-expanded="false" aria-haspopup="listbox">
-                <span class="autopark-sort-arrows" aria-hidden="true">
-                  <img src="/assets/img/up.svg" alt="" />
-                  <img src="/assets/img/down.svg" alt="" />
-                </span>
-                <span class="autopark-sort-label">Сортировать</span>
-                <span class="toolbar-badge toolbar-badge--sort" id="autoparkSortBadge" aria-hidden="true">1</span>
-                <span class="autopark-sort-chip">
-                  <span class="autopark-sort-chip-text"></span>
-                </span>
-              </button>
-              <button type="button" class="autopark-sort-clear" id="autoparkSortClear" aria-label="Сбросить сортировку" hidden>
-                <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
-              </button>
-            </div>
-            <div class="autopark-sort-menu" id="autoparkSortMenu" role="listbox" aria-label="Сортировка">
-              <button type="button" class="autopark-sort-option is-active" data-sort="default" role="option">По умолчанию</button>
-              <button type="button" class="autopark-sort-option" data-sort="new" role="option">Сначала новые</button>
-              <button type="button" class="autopark-sort-option" data-sort="price-asc" role="option">Сначала низкие цены</button>
-              <button type="button" class="autopark-sort-option" data-sort="price-desc" role="option">Сначала высокие цены</button>
-            </div>
-          </div>
         </div>
 
         <div class="autopark-filter-panel" id="autoparkFilterPanel" aria-hidden="true">
@@ -464,7 +467,7 @@
           <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-clients">
 
             <ul class="footer-links">
-              <li><a href="autopark.html">Автопарк</a></li>
+              <li><a href="autopark-category.html">Автопарк</a></li>
               <li><a href="terms.html">Условия</a></li>
               <li><a href="certificates.html">Сертификаты</a></li>
               <li><a href="legal.html">Для юр. лиц</a></li>
@@ -558,5 +561,6 @@
 
     <script type="module" src="/assets/js/index.js"></script>
     <script src="/assets/js/autopark-category.js"></script>
-  </body>
+    <script src="/assets/js/currency-switch.js"></script>
+</body>
 </html>

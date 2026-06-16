@@ -61,7 +61,7 @@
 
   /* ── Requirements & docs cards ─────────────────────── */
   .certs-page .terms-top-grid {
-    gap: 10px;
+    gap: 0px;
     margin-bottom: 10px;
   }
 
@@ -102,7 +102,7 @@
     padding-left: 16px;
   }
 
-  .certs-page .terms-stat-value {
+  .certs-page .terms-top-grid .terms-card:first-child .terms-stat-value {
     font-family: "Unbounded", sans-serif;
     font-size: 13px;
     font-weight: 600;
@@ -111,7 +111,7 @@
     margin-bottom: 4px;
   }
 
-  .certs-page .terms-stat-label {
+  .certs-page .terms-top-grid .terms-card:first-child .terms-stat-label {
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 400;
@@ -182,15 +182,13 @@
     padding: 0 20px;
   }
 
-  /* ── How-to steps ──────────────────────────────────── */
+  /* ── How-to steps (numbered circle badge) ──────────── */
   .certs-page .certs-how-grid {
-    counter-reset: cert-step;
     gap: 10px;
     margin-bottom: 20px;
   }
 
   .certs-page .certs-how-grid > div {
-    counter-increment: cert-step;
     position: relative;
     margin-bottom: 0;
   }
@@ -200,17 +198,22 @@
   }
 
   .certs-page .certs-how-grid > div::after {
-    content: counter(cert-step);
-    position: absolute;
-    right: 16px;
-    top: 8px;
-    font-family: "Inter", sans-serif;
-    font-size: 72px;
-    font-weight: 400;
-    line-height: 1;
-    color: #ececec;
-    opacity: 0.12;
-    pointer-events: none;
+    display: none;
+  }
+
+  .certs-how-number-badge {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Unbounded", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
   }
 
   .certs-page .certs-how-card {
@@ -218,10 +221,13 @@
     --glass-blur: 2px;
     position: relative;
     width: 100%;
-    min-height: 85px;
-    padding: 16px 56px 16px 16px;
+    min-height: 60px;
+    padding: 16px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     text-align: left;
     overflow: hidden;
   }

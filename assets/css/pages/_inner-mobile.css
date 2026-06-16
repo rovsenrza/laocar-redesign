@@ -88,6 +88,7 @@
 
   .terms-top-grid .terms-card-title {
     margin-bottom: 8px;
+    text-align: center;
   }
 
   /* ── Body copy ─────────────────────────────────────── */
@@ -187,8 +188,13 @@
   .partner-cards-grid,
   .partner-advantages-grid,
   .legal-advantages-grid,
+  .legal-benefits-grid,
   .autopark-why-grid {
     grid-template-columns: 1fr;
+  }
+
+  .legal-entities-page .legal-advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .legal-advantages-grid2 {
     display: grid;
@@ -199,6 +205,7 @@
     padding: 18px 5px !important;
     min-height: 0 !important;
     text-align: center;
+    margin-bottom: 0;
   }
 
   .legal-advantages-grid2 h3 {
@@ -278,6 +285,32 @@
   .inner-hero-image-wrap::after {
     display: none;
     content: none;
+  }
+
+  /* ── Hero bottom fade (stacked hero: certs, events, terms, legal-entities) */
+  .certs-page .inner-hero-image-wrap::after,
+  .legal-entities-page .inner-hero-image-wrap::after,
+  .events-page .inner-hero-image-wrap::after,
+  .terms-page .inner-hero-image-wrap::after {
+    display: block;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 55%, var(--color-bg) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ── Hero bottom fade (overlay title: abroad, partner) ── */
+  .abroad-page .inner-hero-image-wrap::after,
+  .partner-page .inner-hero-image-wrap::after {
+    display: block;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.72) 100%);
+    pointer-events: none;
+    z-index: 1;
   }
 
   .inner-hero-img {
@@ -413,5 +446,34 @@
   .legal-page-inner .home-cta,
   .contacts-page-inner .home-cta {
     margin: 32px 0;
+  }
+
+  /* ── Global spacing tokens: 32px between sections, 20px heading→content ── */
+  .certs-conditions-grid,
+  .certs-how-grid,
+  .autopark-why-grid,
+  .partner-advantages-grid,
+  .partner-cards-grid,
+  .partner-faq-list,
+  .certs-cars-grid,
+  .terms-top-grid,
+  .legal-advantages-grid,
+  .legal-benefits-grid,
+  .reviews-grid,
+  .price-list {
+    margin-bottom: 32px;
+  }
+
+  .certs-content-section > .certs-section-title,
+  .certs-content-section > .certs-cars-title,
+  .certs-content-section > .intro-font {
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+
+  .certs-content-section > .certs-section-title:first-child,
+  .certs-content-section > .certs-cars-title:first-child,
+  .certs-content-section > .intro-font:first-child {
+    margin-top: 0;
   }
 }

@@ -7,6 +7,16 @@
    ══════════════════════════════════════════════════════ */
 
 @media (max-width: 576px) {
+  /* ── Global accordion font: Unbounded Medium 12px ────── */
+  .terms-wide-card .terms-card-title,
+  .events-card .events-card-title,
+  .events-card .accordion-card__title,
+  .accordion-card__title {
+    font-family: var(--font-display, "Unbounded", sans-serif);
+    font-size: 12px;
+    font-weight: 500;
+  }
+
   /* ── Accordion pills (terms, partner FAQ, legal FAQ) ─ */
   .terms-content-section .terms-wide-card,
   .partner-faq-list .terms-wide-card,
@@ -192,6 +202,7 @@
   }
 
   .legal-entities-page .legal-advantages-grid {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .legal-benefits-grid .terms-card {
@@ -211,7 +222,14 @@
     color: rgba(236, 236, 236, 0.6);
   }
   .legal-entities-page .legal-advantages-grid .terms-card {
-    padding: 16px 21px;
+    padding: 16px 5px;
+    border-radius: 22px;
+    text-align: center;
+  }
+
+  .legal-entities-page .legal-advantages-grid .terms-card-title,
+  .legal-entities-page .legal-advantages-grid .terms-card-text {
+    text-align: center;
   }
 
   .legal-entities-page .legal-request-section {
@@ -267,5 +285,94 @@
   .legal-page .legal-text p,
   .legal-page .legal-text li {
     margin-bottom: 10px;
+  }
+
+  /* ── FAQ: 32px gap between accordion groups ──────────── */
+  .terms-content-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .terms-content-section > .certs-section-title,
+  .terms-content-section > h2 {
+    margin-bottom: 0;
+  }
+
+  /* ── Terms page: first top card (match certs layout) ─ */
+  .terms-page .terms-top-grid {
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child {
+    --glass-blur: 0;
+    backdrop-filter: none;
+    border-radius: 16px;
+    padding: 16px;
+    background: rgba(var(--glass-rgb), var(--glass-bg));
+    text-align: center;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child.glass::before {
+    display: none;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child .terms-card-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ececec;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child .terms-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding-inline: 8px;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child .terms-stats > div {
+    flex: 1;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child .terms-stats > div + div {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 16px;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child .terms-stat-value {
+    font-family: "Unbounded", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+    color: #ececec;
+    margin-bottom: 4px;
+  }
+
+  .terms-page .terms-top-grid .terms-card:first-child .terms-stat-label {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgba(236, 236, 236, 0.8);
+  }
+
+  .terms-page .terms-top-grid .terms-list {
+    padding-left: 18px;
+    text-align: left;
+  }
+
+  .terms-page .terms-top-grid .terms-list li {
+    font-family: "Unbounded", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+    margin-bottom: 4px;
   }
 }

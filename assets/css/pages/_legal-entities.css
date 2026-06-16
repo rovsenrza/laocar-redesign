@@ -1,3 +1,131 @@
+/* ── Mobile styles (≤576px) ──────────────────────────── */
+@media (max-width: 576px) {
+  .legal-entities-page .inner-hero-container {
+    padding-bottom: 0;
+  }
+
+  .legal-entities-page .certs-content-section > .certs-section-title,
+  .legal-entities-page .certs-content-section > h2 {
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
+
+  .legal-entities-page .certs-content-section > .certs-section-title:first-child,
+  .legal-entities-page .certs-content-section > h2:first-child {
+    margin-top: 0;
+  }
+
+  .legal-entities-page .legal-advantages-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .legal-entities-page .legal-advantages-grid .terms-card {
+    text-align: center;
+  }
+
+  .legal-entities-page .legal-advantages-grid .terms-card-title,
+  .legal-entities-page .legal-advantages-grid .terms-card-text {
+    text-align: center;
+  }
+
+  .legal-entities-page .legal-advantages-grid2 > article {
+    margin-bottom: 0;
+  }
+
+  .legal-entities-page .certs-cars-grid {
+    margin-bottom: 16px;
+  }
+
+  .legal-entities-page .legal-benefits-grid {
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .legal-entities-page .legal-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 32px 0;
+  }
+
+  .legal-entities-page .legal-requirements-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .legal-entities-page .legal-requirements-block > .certs-section-title {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .legal-entities-page .legal-requirements-card {
+    --glass-bg: 0;
+    --glass-blur: 0;
+    backdrop-filter: none;
+    border-radius: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+  .legal-entities-page .legal-requirements-card.glass::before {
+    display: none;
+  }
+
+  .legal-entities-page .legal-requirements-card .terms-card-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #ececec;
+    margin-bottom: 12px;
+    text-align: left;
+  }
+
+  .legal-entities-page .legal-requirements-card .terms-list {
+    padding-left: 18px;
+    margin-bottom: 0;
+    list-style: disc;
+  }
+
+  .legal-entities-page .legal-requirements-card .legal-requirements-list li {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.45;
+    color: rgba(236, 236, 236, 0.75);
+    margin-bottom: 4px;
+  }
+
+  .legal-entities-page .legal-desktop-cards {
+    display: none;
+  }
+
+  .legal-entities-page .legal-page-inner .legal-benefits-list li {
+    font-family: "Inter", sans-serif;
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.45;
+    color: rgba(236, 236, 236, 0.75);
+    margin-bottom: 6px;
+  }
+
+  .legal-entities-page .legal-advantages-grid .terms-card-text,
+  .legal-entities-page .legal-benefits-grid .terms-card-text {
+    font-family: "Inter", sans-serif;
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.45;
+    color: rgba(236, 236, 236, 0.75);
+  }
+}
+
 /* Scoped to desktop/tablet — mobile styles load via style-mobile.css + bundles */
 @media (min-width: 577px) {
 /* ── LEGAL ENTITIES PAGE ────────────────────────────── */
@@ -82,21 +210,46 @@
   margin: 50px 0 20px;
 }
 
-.legal-requirements .terms-card-title {
-  margin-bottom: 16px;
+.legal-requirements-block + .legal-requirements-block {
+  margin-top: 32px;
 }
 
-.legal-requirements-subtitle {
-  margin-top: 28px;
+.legal-requirements-block > .certs-section-title {
+  margin-bottom: 20px;
 }
 
-.legal-requirements-list li {
+.legal-requirements-card .terms-card-title {
+  margin-bottom: 12px;
+}
+
+.legal-requirements-card .legal-requirements-list li {
   font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.25;
   color: rgba(236, 236, 236, 0.75);
   margin-bottom: 8px;
+}
+
+.legal-requirements-card {
+  padding: 28px 24px;
+}
+
+.legal-requirements-card .terms-card-title {
+  text-align: left;
+}
+
+.legal-requirements-card .legal-requirements-list {
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.legal-desktop-cards .terms-wide-card {
+  margin-bottom: 20px;
+}
+
+.legal-desktop-cards .terms-wide-card:last-child {
+  margin-bottom: 0;
 }
 
 @media (max-width: 1280px) {

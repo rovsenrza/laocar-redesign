@@ -68,4 +68,47 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  /* ── Documents: group headers styled as section headings ── */
+  .legal-doc-group-heading {
+    font-family: "Unbounded", sans-serif;
+    font-size: var(--m-section);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text);
+    margin-top: 32px;
+    margin-bottom: 10px;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .legal-doc-group-heading:first-of-type {
+    margin-top: 0;
+  }
+
+  /* ── Link colors in legal text pages ─────────────────── */
+  .legal-text a {
+    color: var(--color-text);
+    text-decoration: underline;
+  }
+
+  /* ── Bullet lists in privacy/cookie policy ────────────── */
+  .legal-text ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+
+  .legal-text ul li {
+    list-style: disc;
+    margin-bottom: 6px;
+    font-size: var(--m-body);
+    line-height: 1.45;
+  }
+
+  /* ── Section spacing in legal text ───────────────────── */
+  .legal-text h2 {
+    margin-top: 32px;
+    margin-bottom: 20px;
+  }
 }

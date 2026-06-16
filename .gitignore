@@ -25,3 +25,7 @@ node_modules/
 dist/
 build/
 .vscode/mcp.json
+
+# Secrets & business inbox from Telegram
+.env
+business-inbox/

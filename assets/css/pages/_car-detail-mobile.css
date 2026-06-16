@@ -138,9 +138,20 @@
   }
 
   .car-detail-specs-row dt {
+    display: flex;
+    align-items: baseline;
     flex: 1;
     font-weight: 300;
     color: var(--color-text-muted);
+  }
+
+  .car-detail-specs-row dt::after {
+    content: "";
+    flex: 1;
+    margin-inline: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    align-self: flex-end;
+    margin-bottom: 3px;
   }
 
   .car-detail-specs-row dd {
@@ -390,6 +401,23 @@
 
   .car-detail-page + .home-cta {
     margin-top: 0;
+  }
+
+  /* ── Rental conditions: vertical divider + bold docs list ── */
+  .car-detail-page .terms-top-grid .terms-stats > div + div {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 16px;
+  }
+
+  .car-detail-page .terms-top-grid .terms-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .car-detail-page .terms-top-grid .terms-list li {
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-size: 13px;
   }
 }
 

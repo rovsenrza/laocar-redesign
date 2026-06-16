@@ -37,6 +37,20 @@
     gap: 14px;
   }
 
+  .header-currency-btn {
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-text);
+    background: none;
+    border: none;
+    padding: 2px 6px;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
   .header-mobile-phone,
   .header-mobile-menu {
     display: inline-flex;

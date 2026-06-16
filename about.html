@@ -17,6 +17,7 @@
 
         
       <div class="header-mobile-actions">
+        <button type="button" class="header-currency-btn" aria-label="Сменить валюту" data-currency="BYN">BYN</button>
         <a href="tel:+375333337744" class="header-mobile-phone" aria-label="Позвонить">
           <img src="/assets/img/phone-icon.svg" alt="" width="20" height="20" loading="lazy" />
         </a>
@@ -27,7 +28,7 @@
       </div>
 
 <nav class="main-nav">
-          <a href="autopark.html">Автопарк</a>
+          <a href="autopark-category.html">Автопарк</a>
           <a href="terms.html">Условия</a>
           <a href="certificates.html">Сертификаты</a>
           <a href="blogs.html">Блог</a>
@@ -72,7 +73,7 @@
 
     <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
       <nav class="mobile-menu-nav">
-        <a href="autopark.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
+        <a href="autopark-category.html" class="mobile-menu-link">Автопарк<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
         <a href="terms.html" class="mobile-menu-link">Условия<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
         <a href="certificates.html" class="mobile-menu-link">Сертификаты<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
         <a href="blogs.html" class="mobile-menu-link">Блог<img src="/assets/img/chevron.svg" alt="" class="mobile-menu-chevron" aria-hidden="true" loading="lazy" /></a>
@@ -129,6 +130,7 @@
       <section class="certs-content-section">
 
         <!-- Stats -->
+        <h2 class="certs-section-title">Мы в цифрах</h2>
 
         <div class="certs-conditions-grid">
           <article class="terms-card glass">
@@ -150,15 +152,15 @@
           </article>
 
           <article class="terms-card glass">
-            <p class="terms-card-text2">Становятся</p>
-            <h3 class="terms-card-title2">95%</h3>
-            <p class="terms-card-text2">клиентов<br>постоянными</p>
-          </article>
-
-          <article class="terms-card glass">
             <p class="terms-card-text2">Не менее</p>
             <h3 class="terms-card-title2">10</h3>
             <p class="terms-card-text2">новых машин<br>ежегодно</p>
+          </article>
+
+          <article class="terms-card glass">
+            <p class="terms-card-text2">Становятся</p>
+            <h3 class="terms-card-title2">95%</h3>
+            <p class="terms-card-text2">клиентов<br>постоянными</p>
           </article>
 
           <article class="terms-card glass">
@@ -204,7 +206,7 @@
 
         <!-- Cars -->
         <h2 class="certs-cars-title">Какой автопарк доступен для аренды?</h2>
-        <p class="about-fleet-intro">Наш автопарк включает самые дорогие и эксклюзивные автомобили, доступные для аренды в Беларуси.</p>
+        <p class="about-fleet-intro">Наш автопарк включает самые дорогие и эксклюзивные модели, обеспечивая клиентам максимальный комфорт, статус и удовольствие от вождения.</p>
 
         <div class="certs-cars-grid">
           <a href="car-detail.html" class="blog-detail-car-card">
@@ -340,7 +342,7 @@
           </a>
         </div>
 
-        <a href="autopark.html" class="blog-detail-glass-btn glass">Перейти в автопарк</a>
+        <a href="autopark-category.html" class="blog-detail-glass-btn glass">Перейти в автопарк</a>
 
         <!-- Services -->
         <h2 class="certs-section-title">Наши услуги</h2>
@@ -413,7 +415,7 @@
           <div class="accordion-card__panel footer-accordion__panel" id="footer-panel-clients">
 
             <ul class="footer-links">
-              <li><a href="autopark.html">Автопарк</a></li>
+              <li><a href="autopark-category.html">Автопарк</a></li>
               <li><a href="terms.html">Условия</a></li>
               <li><a href="certificates.html">Сертификаты</a></li>
               <li><a href="legal.html">Для юр. лиц</a></li>
@@ -506,5 +508,6 @@
     </footer>
 
     <script type="module" src="/assets/js/index.js"></script>
-  </body>
+    <script src="/assets/js/currency-switch.js"></script>
+</body>
 </html>
