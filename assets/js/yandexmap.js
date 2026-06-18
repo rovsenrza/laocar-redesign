@@ -1,32 +1,34 @@
-      (function () {
-        if (typeof ymaps === 'undefined') return;
+(function () {
+  if (typeof ymaps === 'undefined') return;
 
-        ymaps.ready(function initContactsMap() {
-          var mapNode = document.getElementById('contactsYandexMap');
-          if (!mapNode) return;
+  ymaps.ready(init);
 
-          var center = [53.903855559766946, 27.562364839412634];
-          var myMap = new ymaps.Map('contactsYandexMap', {
-            center: center,
-            zoom: 12,
-            controls: []
-          });
+  function init() {
+    var mapNode = document.getElementById('contactsYandexMap');
+    if (!mapNode) return;
 
-          myMap.geoObjects.add(new ymaps.Placemark(center, {}, {
-            iconLayout: 'default#image',
-            iconImageHref: '/assets/img/marker.png',
-            iconImageSize: [36, 48],
-            iconImageOffset: [-18, -48]
-          }));
+    var myMap = new ymaps.Map('contactsYandexMap', {
+      center: [53.903855559766946, 27.562364839412634],
+      zoom: 12
+    });
 
-          myMap.controls.remove('geolocationControl');
-          myMap.controls.remove('searchControl');
-          myMap.controls.remove('trafficControl');
-          myMap.controls.remove('typeSelector');
-          myMap.controls.remove('fullscreenControl');
-          myMap.controls.remove('zoomControl');
-          myMap.controls.remove('rulerControl');
-          myMap.behaviors.disable('scrollZoom');
-        });
-      }());
-    
+    myMap.geoObjects.add(
+      new ymaps.Placemark(
+        [53.903855559766946, 27.562364839412634],
+        {},
+        {
+          iconLayout: 'default#image',
+          iconImageHref: '/assets/img/marker.png'
+        }
+      )
+    );
+
+    myMap.controls.remove('geolocationControl');
+    myMap.controls.remove('searchControl');
+    myMap.controls.remove('trafficControl');
+    myMap.controls.remove('typeSelector');
+    myMap.controls.remove('fullscreenControl');
+    myMap.behaviors.disable('scrollZoom');
+    myMap.controls.remove('rulerControl');
+  }
+})();

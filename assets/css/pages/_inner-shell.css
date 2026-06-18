@@ -408,9 +408,7 @@
 
 
 .speedbar-icon {
-  
-  width: 7;
-  height: 6;
+  margin-bottom: -1.5px;
   object-fit: contain;
 }
 
