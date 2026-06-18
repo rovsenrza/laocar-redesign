@@ -17,6 +17,7 @@
   .autopark-filter-panel{padding-bottom: 0;}
   .autopark-show-all {
     margin-bottom: 32px;
+    margin-top: 14px;
   }
 
   .autopark-show-all.is-hidden {
@@ -47,11 +48,15 @@
   .autopark-category-page .certs-how-number {
     display: none;
   }
-
+  .autopark-category-page .autopark-how-grid .terms-card{
+    padding: 16px;
+    align-items: center;
+  }
   .autopark-category-page .certs-how-card {
     min-height: 0;
     height: auto;
     padding: 16px;
+    text-align: start;
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.1);
     --glass-radius: 18px;

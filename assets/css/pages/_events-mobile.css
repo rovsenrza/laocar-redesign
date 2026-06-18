@@ -1,0 +1,158 @@
+/* ══ EVENTS PAGE — mobile (≤576px) ═════════════════════
+   Figma node 409:5640
+   ══════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .events-page .certs-content-section {
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  /* ── Hero: image → title ───────────────────────────── */
+  .events-page .inner-hero-image-wrap::after {
+    display: none;
+    content: none;
+  }
+
+  .events-page .inner-hero-image-wrap {
+    height: 272px;
+    overflow: hidden;
+  }
+
+  .events-page .inner-hero-img.inner-hero-img--mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .events-page .inner-hero-container {
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+
+  .events-page .inner-hero-title {
+    font-family: "Unbounded", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 35px;
+    color: #ececec;
+    margin: 0;
+  }
+
+  /* ── Event service blocks ──────────────────────────── */
+  .events-page .events-services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 32px;
+  }
+
+  .events-page .events-service {
+    margin: 0;
+  }
+  
+  .events-page .events-service-title {
+    margin: 0 0 8px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .events-page .events-service-text {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  .events-page .inner-mobile-order-btn {
+    margin: 0 0 32px;
+    height: 44px;
+    padding: 0 20px;
+  }
+
+  /* ── Section titles ──────────────────────────────────── */
+  .events-page .certs-section-title,
+  .events-page .certs-cars-title {
+    margin: 0 0 20px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    color: #ececec;
+  }
+
+  .events-page .certs-cars-title {
+    margin-top: 32px;
+  }
+
+  /* ── Advantages cards ────────────────────────────────── */
+  .events-page .partner-advantages-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .events-page .partner-advantages-grid .terms-card {
+    --glass-radius: 20px;
+    --glass-bg: 0;
+    --glass-blur: 0;
+    padding: 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    text-align: center;
+  }
+
+  .events-page .partner-advantages-grid .terms-card.glass::before {
+    display: none;
+  }
+
+  .events-page .partner-advantages-grid .terms-card-title {
+    margin: 0 0 4px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22.5px;
+    color: #ececec;
+  }
+
+  .events-page .partner-advantages-grid .terms-card-text {
+    margin: 0 auto;
+    max-width: 275px;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  /* ── Popular cars: 2×4 grid ──────────────────────────── */
+  .events-page .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card:nth-child(n + 5) {
+    display: flex;
+  }
+
+  .events-page .certs-cars-grid:not(.fleet-grid) .blog-detail-car-card:nth-child(n + 9) {
+    display: none;
+  }
+
+  .events-page .blog-detail-glass-btn {
+    margin-top: 16px;
+    
+    height: 44px;
+    padding: 0 20px;
+    justify-content: space-between;
+  }
+
+  .events-page + .home-cta {
+    margin-top: 0;
+  }
+}

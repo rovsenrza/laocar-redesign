@@ -134,14 +134,13 @@
     top: 0;
     height: 257px;
   }
-
+  .first-terms2{margin-bottom: 10px;}
   .inner-hero-image-wrap::after {
     bottom: 0;
     height: 100%;
     background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%);
   }
 }
-
 @media (max-width: 1280px) {
   .terms-card-title {
     font-size: 18px;
@@ -164,7 +163,7 @@
 
 @media (max-width: 768px) {
   .terms-content-section {
-    padding: 14px 12px 24px;
+    padding: 14px 12px 32px;
   }
   .terms-wide-card {margin-bottom: 10px;}
 

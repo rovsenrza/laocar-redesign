@@ -78,36 +78,7 @@
   /* ── Certificates → pages/_certs-mobile.css ────────── */
   /* ── Partner → pages/_partner-mobile.css ─────────────── */
 
-  /* ── Events ────────────────────────────────────────── */
-  .events-page .partner-faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .events-page .partner-faq-list br {
-    display: none;
-  }
-
-  .events-page .partner-faq-list article {
-    --glass-radius: 18px;
-    padding: 16px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.1);
-    text-align: center;
-  }
-
-  .events-page .partner-faq-list .terms-card-title {
-    margin-bottom: 8px;
-  }
-
-  .events-page .partner-advantages-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .events-page .partner-advantages-grid .terms-card {
-    text-align: center;
-  }
+  /* ── Events → pages/_events-mobile.css ─────────────── */
 
   /* ── Blog listing ──────────────────────────────────── */
   .blogs-page:not(.partner-page):not(.events-page):not(.certs-page):not(
@@ -409,6 +380,7 @@
   .terms-page .terms-top-grid .terms-card:first-child {
     --glass-blur: 0;
     backdrop-filter: none;
+    margin-bottom: 10px;
     border-radius: 16px;
     padding: 16px;
     background: rgba(var(--glass-rgb), var(--glass-bg));

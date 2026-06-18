@@ -431,7 +431,7 @@
 
   /* Blog */
   .blog {
-    padding-block: 16px;
+    padding: 16px 0 32px 0;
   }
 
   .blog-title {

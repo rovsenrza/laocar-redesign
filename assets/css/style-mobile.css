@@ -34,8 +34,6 @@
 @import url("pages/_autopark-mobile.css");
 @import url("pages/_certs-mobile.css");
 @import url("pages/_partner-mobile.css");
+@import url("pages/_events-mobile.css");
 @import url("pages/_price-mobile.css");
 @import url("pages/_about-mobile.css");
-@media (max-width:577px) {
-   .terms-card{margin-bottom: 10px;}
-}

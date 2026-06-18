@@ -4,7 +4,7 @@
   .home-cta {
     position: relative;
     overflow: hidden;
-    margin: 32px 16px;
+    margin: 0 16px;
     padding: 24px 20px;
     border-radius: 20px;
     max-width: none;
