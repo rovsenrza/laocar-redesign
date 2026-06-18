@@ -180,6 +180,7 @@
   }
   .legal-benefits-grid .terms-card {
     padding: 14px;
+    margin-bottom: 10px;
   }
   .legal-benefits-grid .terms-card-title {
     text-align: start;
@@ -237,12 +238,22 @@
   }
 
   .legal-entities-page .legal-inline-form .cert-modal-title {
-    margin: 0 0 16px;
+    margin: 0 0 12px;
     font-family: "Unbounded", sans-serif;
     font-size: 18px;
     font-weight: 600;
     line-height: 27px;
     color: #ececec;
+  }
+
+  .legal-entities-page .legal-inline-form-desc {
+    display: block;
+    margin: 0 0 16px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: normal;
+    color: rgba(236, 236, 236, 1);
   }
 
   .legal-entities-page .legal-inline-form .cert-modal-form {
@@ -251,17 +262,6 @@
     flex-direction: column;
     gap: 0;
     width: 100%;
-  }
-
-  .legal-entities-page .legal-inline-form-desc {
-    order: 3;
-    display: block;
-    margin: 12px 0 0;
-    font-family: "Inter", sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    line-height: normal;
-    color: rgba(236, 236, 236, 0.7);
   }
 
   .legal-entities-page .legal-inline-form .cert-modal-input,
@@ -359,6 +359,12 @@
     margin-bottom: 6px;
   }
   .legal-text br{display: none;}
+
+  /* ── FAQ: first section title spacing ───────────────── */
+  .legal-page .certs-content-section > .certs-section-title.certs-intro-title {
+    margin-top: 32px;
+  }
+
   /* ── FAQ: 32px gap between accordion groups ──────────── */
   .terms-content-section {
     display: flex;

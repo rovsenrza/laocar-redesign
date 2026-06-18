@@ -35,13 +35,14 @@
   .blog-detail-mixed-grid {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    
     margin-block: 16px;
   }
 
   .blog-detail-grid-image {
     width: 100%;
     height: auto;
+    margin-bottom: 16px;
     max-height: 200px;
     border-radius: 14px;
     object-fit: cover;
@@ -52,11 +53,11 @@
   }
 
   .blog-detail-grid-text h3 {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   .blog-detail-grid-text p {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
   }
 
   .blog-detail-cars-title {

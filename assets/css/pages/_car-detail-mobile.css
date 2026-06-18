@@ -419,15 +419,17 @@
   .car-detail-container > .certs-cars-title {
     order: 5;
     margin-top: 0;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   .car-detail-page .certs-cars-grid {
     order: 6;
+    margin-top: 0;
   }
 
   .car-detail-page .blog-detail-glass-btn {
     order: 7;
+    margin-top: 10px;
   }
 
   .car-detail-page + .home-cta {

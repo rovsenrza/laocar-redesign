@@ -34,17 +34,15 @@
   }
 
   .legal-content--documents .legal-documents-list li {
-    display: grid;
-    grid-template-columns: max-content minmax(0, 1fr);
-    column-gap: 12px;
-    align-items: center;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
     width: 100%;
     min-height: 45px;
     margin: 0;
     padding: 14px 16px;
     border-radius: 14px;
     background: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
     font-family: "Unbounded", sans-serif;
     font-size: 12px;
     font-weight: 500;
@@ -53,7 +51,8 @@
   }
 
   .legal-content--documents .legal-documents-list li::before {
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    padding-top: 1px;
     font-family: "Unbounded", sans-serif;
     font-size: 12px;
     font-weight: 500;
@@ -62,11 +61,11 @@
   }
 
   .legal-content--documents .legal-documents-label {
-    display: block;
+    flex: 1 1 0;
     min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   /* ── Documents: group headers styled as section headings ── */

@@ -86,8 +86,8 @@
   .reviews-pagination {
     display: flex;
     align-items: center;
-    gap: 2px;
-    flex-wrap: wrap;
+    gap: 0;
+    flex-wrap: nowrap;
     justify-content: center;
     margin-bottom: 24px;
   }
