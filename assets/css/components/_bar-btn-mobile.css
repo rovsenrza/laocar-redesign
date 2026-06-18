@@ -1,8 +1,15 @@
 /* ══ WHITE BAR BUTTON — mobile (≤576px) ════════════════
-   Shared by .blog-detail-glass-btn and .inner-mobile-order-btn
+   Shared: .blog-detail-glass-btn, .inner-mobile-order-btn,
+   .autopark-show-all
    ══════════════════════════════════════════════════════ */
 
 @media (max-width: 576px) {
+  .blog-detail-glass-btn,
+  .inner-mobile-order-btn,
+  .autopark-show-all {
+    margin-top: 16px;
+  }
+
   .blog-detail-glass-btn,
   .inner-mobile-order-btn {
     display: flex;
@@ -33,20 +40,13 @@
     background: url("/assets/img/button-chevron.svg") center / contain no-repeat;
   }
 
-  .certs-content-section .blog-detail-glass-btn,
-  .terms-content-section .blog-detail-glass-btn,
-  .blogs-page .blog-detail-glass-btn {
-    margin-top: 16px;
-    margin-bottom: 32px;
-  }
-
-  .blog-detail-page .blog-detail-glass-btn,
-  .car-detail-page .blog-detail-glass-btn {
+  .blog-detail-glass-btn,
+  .autopark-show-all {
     margin-bottom: 32px;
   }
 
   .inner-mobile-order-btn {
-    margin: 24px 0;
+    margin-bottom: 24px;
   }
 
   /* Reviews — centered label, no chevron */

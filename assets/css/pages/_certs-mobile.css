@@ -180,7 +180,7 @@
   /* ── Order CTA ─────────────────────────────────────── */
   .certs-page .inner-mobile-order-btn {
     height: 44px;
-    margin: 10px 0 20px;
+    margin-bottom: 20px;
     padding: 0 20px;
   }
 

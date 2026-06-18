@@ -98,6 +98,7 @@
     justify-content: center;
     min-width: 28px;
     height: 28px;
+    margin-inline: 4px;
     border-radius: 50%;
     border: 1px solid rgba(236, 236, 236, 0.25);
     background: transparent;

@@ -188,6 +188,9 @@
     margin-bottom: 8px;
   }
   .terms-list{margin-bottom: 10px;}
+  .legal-entities-page .legal-benefits-list {
+    margin-bottom: 0;
+  }
   .terms-list li {
     margin-bottom: 0;
     font-family: "Inter", sans-serif;

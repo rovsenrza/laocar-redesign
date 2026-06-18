@@ -15,10 +15,6 @@
     color: var(--color-text);
   }
   .autopark-filter-panel{padding-bottom: 0;}
-  .autopark-show-all {
-    margin-bottom: 32px;
-    margin-top: 14px;
-  }
 
   .autopark-show-all.is-hidden {
     display: none;
