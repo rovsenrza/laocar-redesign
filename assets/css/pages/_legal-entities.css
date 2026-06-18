@@ -60,6 +60,7 @@
     margin: 0;
     font-size: 17px;
     font-weight: 600;
+    
     line-height: 1.2;
   }
 
@@ -89,7 +90,7 @@
   }
 
   .legal-entities-page .legal-requirements-card .terms-list {
-    padding-left: 18px;
+    padding-left: 12px;
     margin-bottom: 0;
     list-style: disc;
   }
@@ -100,7 +101,7 @@
     font-weight: 300;
     line-height: 1.45;
     color: rgba(236, 236, 236, 0.75);
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
 
   .legal-entities-page .legal-desktop-cards {

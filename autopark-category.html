@@ -129,47 +129,6 @@
 
         <div class="autopark-toolbar-wrap">
         <div class="autopark-toolbar fleet-toolbar">
-          <div class="fleet-bottom-bar">
-            <div class="autopark-filter fleet-toolbar__filter" id="autoparkFilter">
-              <div class="autopark-filter-control" id="autoparkFilterControl">
-                <button type="button" class="autopark-filter-btn" id="autoparkFilterBtn" aria-expanded="false" aria-controls="autoparkFilterPanel">
-                  <img src="/assets/img/filter.svg" alt="" aria-hidden="true" />
-                  <span class="autopark-filter-label">Фильтр</span>
-                  <span class="toolbar-badge toolbar-badge--filter" id="autoparkFilterBadge" aria-hidden="true">0</span>
-                  <span class="autopark-filter-chips" id="autoparkFilterChips"></span>
-                </button>
-                <button type="button" class="autopark-filter-bar-clear" id="autoparkFilterBarClear" aria-label="Сбросить фильтры" hidden>
-                  <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
-                </button>
-              </div>
-            </div>
-
-            <div class="autopark-sort fleet-toolbar__sort" id="autoparkSort">
-              <div class="autopark-sort-control" id="autoparkSortControl">
-                <button type="button" class="autopark-sort-btn" id="autoparkSortBtn" aria-expanded="false" aria-haspopup="listbox">
-                  <span class="autopark-sort-arrows" aria-hidden="true">
-                    <img src="/assets/img/up.svg" alt="" />
-                    <img src="/assets/img/down.svg" alt="" />
-                  </span>
-                  <span class="autopark-sort-label">Сортировать</span>
-                  <span class="toolbar-badge toolbar-badge--sort" id="autoparkSortBadge" aria-hidden="true">1</span>
-                  <span class="autopark-sort-chip">
-                    <span class="autopark-sort-chip-text"></span>
-                  </span>
-                </button>
-                <button type="button" class="autopark-sort-clear" id="autoparkSortClear" aria-label="Сбросить сортировку" hidden>
-                  <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
-                </button>
-              </div>
-              <div class="autopark-sort-menu" id="autoparkSortMenu" role="listbox" aria-label="Сортировка">
-                <button type="button" class="autopark-sort-option is-active" data-sort="default" role="option">По умолчанию</button>
-                <button type="button" class="autopark-sort-option" data-sort="new" role="option">Сначала новые</button>
-                <button type="button" class="autopark-sort-option" data-sort="price-asc" role="option">Сначала низкие цены</button>
-                <button type="button" class="autopark-sort-option" data-sort="price-desc" role="option">Сначала высокие цены</button>
-              </div>
-            </div>
-          </div>
-
           <form class="autopark-search-form fleet-toolbar__search" id="autoparkSearchForm">
             <div class="autopark-search-control">
               <div class="autopark-search-field">
@@ -181,6 +140,45 @@
               <button type="submit" class="autopark-search-submit">Искать</button>
             </div>
           </form>
+
+          <div class="autopark-filter fleet-toolbar__filter" id="autoparkFilter">
+            <div class="autopark-filter-control" id="autoparkFilterControl">
+              <button type="button" class="autopark-filter-btn" id="autoparkFilterBtn" aria-expanded="false" aria-controls="autoparkFilterPanel">
+                <img src="/assets/img/filter.svg" alt="" aria-hidden="true" />
+                <span class="autopark-filter-label">Фильтр</span>
+                <span class="toolbar-badge toolbar-badge--filter" id="autoparkFilterBadge" aria-hidden="true">0</span>
+                <span class="autopark-filter-chips" id="autoparkFilterChips"></span>
+              </button>
+              <button type="button" class="autopark-filter-bar-clear" id="autoparkFilterBarClear" aria-label="Сбросить фильтры" hidden>
+                <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+
+          <div class="autopark-sort fleet-toolbar__sort" id="autoparkSort">
+            <div class="autopark-sort-control" id="autoparkSortControl">
+              <button type="button" class="autopark-sort-btn" id="autoparkSortBtn" aria-expanded="false" aria-haspopup="listbox">
+                <span class="autopark-sort-arrows" aria-hidden="true">
+                  <img src="/assets/img/up.svg" alt="" />
+                  <img src="/assets/img/down.svg" alt="" />
+                </span>
+                <span class="autopark-sort-label">Сортировать</span>
+                <span class="toolbar-badge toolbar-badge--sort" id="autoparkSortBadge" aria-hidden="true">1</span>
+                <span class="autopark-sort-chip">
+                  <span class="autopark-sort-chip-text"></span>
+                </span>
+              </button>
+              <button type="button" class="autopark-sort-clear" id="autoparkSortClear" aria-label="Сбросить сортировку" hidden>
+                <img src="/assets/img/close.svg" alt="" width="11" height="11" aria-hidden="true" />
+              </button>
+            </div>
+            <div class="autopark-sort-menu" id="autoparkSortMenu" role="listbox" aria-label="Сортировка">
+              <button type="button" class="autopark-sort-option is-active" data-sort="default" role="option">По умолчанию</button>
+              <button type="button" class="autopark-sort-option" data-sort="new" role="option">Сначала новые</button>
+              <button type="button" class="autopark-sort-option" data-sort="price-asc" role="option">Сначала низкие цены</button>
+              <button type="button" class="autopark-sort-option" data-sort="price-desc" role="option">Сначала высокие цены</button>
+            </div>
+          </div>
         </div>
 
         <div class="autopark-filter-panel" id="autoparkFilterPanel" aria-hidden="true">

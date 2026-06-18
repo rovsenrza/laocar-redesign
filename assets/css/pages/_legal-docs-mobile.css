@@ -86,13 +86,13 @@
   .legal-doc-group-heading:first-of-type {
     margin-top: 0;
   }
-
+  .tog-m{display: none;}
   /* ── Link colors in legal text pages ─────────────────── */
   .legal-text a {
     color: var(--color-text);
     text-decoration: underline;
   }
-
+  .legal-advantages-grid>article{margin-bottom: 0;}
   /* ── Bullet lists in privacy/cookie policy ────────────── */
   .legal-text ul {
     padding-left: 20px;

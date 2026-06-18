@@ -109,7 +109,6 @@
   .contacts-info-label,
   .terms-list li,
   .terms-stat-label,
-  .terms-forbidden-list li,
   .small-p,
   .price-list-num {
     font-family: var(--font-base);
@@ -117,6 +116,14 @@
     font-weight: 300;
     line-height: 1.35;
     color: var(--color-text-muted);
+  }
+
+  .terms-forbidden-list li {
+    font-family: var(--font-base);
+    font-size: var(--m-body);
+    font-weight: 300;
+    line-height: 1.35;
+    color: rgba(236, 236, 236, 0.6);
   }
 
   .terms-card-text2,
@@ -301,14 +308,13 @@
     z-index: 1;
   }
 
-  /* ── Hero bottom fade (overlay title: abroad, partner) ── */
-  .abroad-page .inner-hero-image-wrap::after,
-  .partner-page .inner-hero-image-wrap::after {
+  /* ── Hero bottom fade (overlay title: abroad) ── */
+  .abroad-page .inner-hero-image-wrap::after {
     display: block;
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.72) 100%);
+    background: linear-gradient(0deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
     pointer-events: none;
     z-index: 1;
   }

@@ -15,7 +15,7 @@
     font-weight: 500;
     line-height: 35px;
     color: #ececec;
-    margin: 0 0 12px;
+    margin: 0 0 0;
   }
 
   .certs-page .certs-content-section {
@@ -33,11 +33,13 @@
     display: block;
     margin-bottom: 10px;
   }
-
+  .ds-br br{ display: none;}
+  .ds-br a{ color: rgba(236, 236, 236, 0.7);text-decoration: none;}
   .certs-page .certs-intro-text {
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 300;
+    margin-bottom: 32px;
     line-height: normal;
     color: rgba(236, 236, 236, 0.7);
   }

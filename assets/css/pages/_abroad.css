@@ -3,9 +3,14 @@
 /* ══ ABROAD PAGE (Выезд за границу) ═══════════════════ */
 
 .abroad-page .intro-font {
-  font-size: 14px;
+  font-size: 30px;
   font-weight: 500;
 }
+
+.abroad-page .abroad-intro-lead {
+  display: none;
+}
+
 .abroad-page .abroad-text {
   color: var(--color-white);
 }

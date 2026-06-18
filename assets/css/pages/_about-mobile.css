@@ -11,7 +11,7 @@
   .about-page .about-hero-stack {
     display: block;
   }
-
+  .abroad-page .inner-hero-image-wrap::after{padding-bottom:1px ;}
   .about-page .about-hero-stack .legal-hero-overlay {
     display: flex;
   }
@@ -67,8 +67,8 @@
   .about-page .certs-conditions-grid .terms-card-text2 {
     margin: 0;
     font-family: "Inter", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 500;
     line-height: 1.25;
     color: #ececec;
   }
@@ -76,14 +76,16 @@
   .about-page .certs-conditions-grid .terms-card-title2 {
     margin: 4px 0;
     font-family: "Unbounded", sans-serif;
-    font-size: var(--m-stat);
-    font-weight: 500;
-    line-height: 1;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.25;
     color: #ececec;
   }
 
   .about-page .certs-conditions-grid .terms-card-text2:last-of-type {
-    font-weight: 300;
+   font-family: var(--font-display);
+   font-size: 13px;
+    font-weight: 500;
     line-height: 1.25;
     color: rgba(236, 236, 236, 0.85);
   }
@@ -91,6 +93,7 @@
   /* Why choose — stacked glass cards */
   .about-page .certs-section-title {
     margin-bottom: 20px;
+    text-align: center;
   }
 
   .about-page .partner-advantages-grid {

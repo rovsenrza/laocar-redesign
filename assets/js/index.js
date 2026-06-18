@@ -89,18 +89,8 @@ function initAccordionGroup(cards) {
     trigger.addEventListener('click', () => {
       if (!isMobile()) return;
 
-      const isOpen = card.classList.contains('is-open');
-
-      cards.forEach((other) => {
-        other.classList.remove('is-open');
-        const otherTrigger = other.querySelector('.accordion-card__trigger');
-        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
-      });
-
-      if (!isOpen) {
-        card.classList.add('is-open');
-        trigger.setAttribute('aria-expanded', 'true');
-      }
+      const isOpen = card.classList.toggle('is-open');
+      trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   });
 }

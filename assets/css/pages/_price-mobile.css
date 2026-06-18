@@ -22,7 +22,9 @@
     --glass-bg: 0;
     --glass-blur: 0;
     display: flex;
+    margin-bottom: 5px;
     align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 5px;
     min-height: 30px;
@@ -30,7 +32,7 @@
     border-radius: 0;
     background: transparent;
   }
-
+  
   .price-page .price-list-item.glass::before {
     display: none;
   }
@@ -42,13 +44,17 @@
     flex: 1 1 auto;
     min-width: 0;
     padding-left: 0;
+    border-radius: 10px;
+    background:rgba(41, 41, 41, 1);
+    padding: 4px 17px;
+    justify-content: center;
   }
 
   .price-page .price-list-num {
     flex: 0 0 auto;
-    min-width: 14px;
+    
     font-family: var(--font-base);
-    font-size: 12px;
+    font-size: 9px;
     font-weight: 600;
     line-height: 1.4;
     color: var(--color-text);
@@ -64,9 +70,9 @@
   .price-page .price-list-name {
     flex: 1 1 auto;
     min-width: 0;
-    font-family: var(--font-base);
-    font-size: 12px;
-    font-weight: 500;
+    font-family: var(--font-display);
+    font-size: 9px;
+    font-weight: 400;
     line-height: 1.15;
     color: var(--color-text);
     margin: 0;
@@ -83,9 +89,9 @@
     border: none;
     border-radius: 6666px;
     background: #ffffff;
-    font-family: var(--font-base);
-    font-size: 11px;
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-size: 9px;
+    font-weight: 500;
     line-height: 1;
     color: #000000;
     text-decoration: none;

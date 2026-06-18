@@ -54,7 +54,7 @@
     width: 100%;
     max-width: none;
     padding-inline: 16px;
-    padding-block: 16px;
+    
   }
 
   /* Sections inside an existing container — avoid double padding */

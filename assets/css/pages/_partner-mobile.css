@@ -250,7 +250,7 @@
     
     margin-bottom: 20px;
   }
-  .partner-page .certs-how-card{min-height:0;}
+  .partner-page .certs-how-card{min-height:0;border-radius: 0;}
 
   .partner-page .partner-faq-list .terms-wide-card {
     --glass-radius: 14px;

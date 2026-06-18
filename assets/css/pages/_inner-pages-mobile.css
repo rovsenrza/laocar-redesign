@@ -61,6 +61,7 @@
   .terms-content-section .terms-wide-card .terms-card-text,
   .terms-content-section .terms-wide-card .terms-forbidden-list,
   .partner-faq-list .terms-wide-card .terms-card-text,
+  .partner-faq-list .terms-wide-card .terms-forbidden-list,
   .legal-page .terms-wide-card .terms-card-text {
     display: none;
     padding-bottom: 16px;
@@ -69,6 +70,7 @@
   .terms-content-section .terms-wide-card.is-open .terms-card-text,
   .terms-content-section .terms-wide-card.is-open .terms-forbidden-list,
   .partner-faq-list .terms-wide-card.is-open .terms-card-text,
+  .partner-faq-list .terms-wide-card.is-open .terms-forbidden-list,
   .legal-page .terms-wide-card.is-open .terms-card-text {
     display: block;
   }
@@ -222,7 +224,7 @@
     color: rgba(236, 236, 236, 0.6);
   }
   .legal-entities-page .legal-advantages-grid .terms-card {
-    padding: 16px 5px;
+    padding: 16px 7px;
     border-radius: 22px;
     text-align: center;
   }
@@ -244,22 +246,111 @@
   }
 
   .legal-entities-page .legal-inline-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     width: 100%;
     max-width: none;
     margin: 0;
+    padding: 16px;
+    border: 1px solid #ececec;
+    border-radius: 20px;
+    background: #111;
+    max-height: none;
+    overflow: visible;
   }
 
   .legal-entities-page .legal-inline-form .cert-modal-header {
-    margin-bottom: 10px;
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-title {
+    margin: 0 0 16px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #ececec;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-form {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
   }
 
   .legal-entities-page .legal-inline-form-desc {
-    margin: 0 0 40px;
+    order: 3;
+    display: block;
+    margin: 12px 0 0;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: normal;
+    color: rgba(236, 236, 236, 0.7);
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-input,
+  .legal-entities-page .legal-inline-form .cert-modal-textarea {
+    width: 100%;
+    margin-bottom: 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    border-radius: 0;
+    background: transparent;
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 300;
     line-height: normal;
+    color: #ececec;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-input {
+    height: 47px;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-textarea {
+    min-height: 89px;
+    padding: 8px 0;
+    resize: none;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-input::placeholder,
+  .legal-entities-page .legal-inline-form .cert-modal-textarea::placeholder {
+    color: rgba(236, 236, 236, 0.5);
+    opacity: 1;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-input:focus,
+  .legal-entities-page .legal-inline-form .cert-modal-textarea:focus {
+    border-bottom-color: #ececec;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-submit {
+    width: 100%;
+    margin-top: 20px;
+    height: 48px;
+    border: none;
+    border-radius: 12px;
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
     color: #111;
+    background: #fff;
+    cursor: pointer;
+  }
+
+  .legal-entities-page .legal-inline-form .cert-modal-submit:disabled {
+    background: rgba(236, 236, 236, 0.35);
+    color: rgba(17, 17, 17, 0.45);
+    cursor: not-allowed;
   }
 
   .legal-entities-page .legal-benefits-grid {
@@ -270,7 +361,17 @@
   /* ── Abroad ────────────────────────────────────────── */
   .abroad-page .intro-font {
     margin-bottom: 16px;
-    font-size: 14px;
+    font-size: 17px;
+    line-height: 1.2;
+  }
+
+  .abroad-page .abroad-intro-lead {
+    margin: 0 0 32px;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--color-text);
   }
 
   .abroad-page .terms-wide-card {
@@ -284,9 +385,9 @@
 
   .legal-page .legal-text p,
   .legal-page .legal-text li {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
   }
-
+  .legal-text br{display: none;}
   /* ── FAQ: 32px gap between accordion groups ──────────── */
   .terms-content-section {
     display: flex;

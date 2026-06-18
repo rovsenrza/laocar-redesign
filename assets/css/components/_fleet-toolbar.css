@@ -67,7 +67,8 @@
   /* Compact icon-only filter / sort controls */
   .autopark-filter-control,
   .autopark-sort-control {
-    position: relative;
+    display: inline-flex;
+    align-items: center;
     height: 35px;
     min-width: 35px;
     padding: 0;
@@ -78,12 +79,14 @@
 
   .autopark-filter-control.has-selection,
   .autopark-sort-control.has-selection {
-    padding-right: 0;
+    width: auto;
+    min-width: 35px;
+    padding-inline: 4px 6px;
   }
 
   .autopark-filter-btn,
   .autopark-sort-btn {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 35px;
@@ -92,6 +95,14 @@
     gap: 0;
     border-radius: 60px;
     background: transparent;
+    flex-shrink: 0;
+  }
+
+  .autopark-filter-control.has-selection .autopark-filter-btn,
+  .autopark-sort-control.has-selection .autopark-sort-btn {
+    width: auto;
+    padding-inline: 6px 2px;
+    gap: 6px;
   }
 
   .autopark-filter-label,
@@ -106,13 +117,16 @@
   .autopark-filter-btn img {
     width: 14px;
     height: auto;
+    flex-shrink: 0;
   }
 
   .autopark-sort-arrows {
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 2px;
     width: 12px;
+    flex-shrink: 0;
   }
 
   .autopark-sort-arrows img {
@@ -121,28 +135,26 @@
   }
 
   .toolbar-badge {
-    position: absolute;
-    top: 7px;
-    right: -4px;
     display: none;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     min-width: 19px;
     height: 19px;
     padding: 0 4px;
-    border-radius: 89px;
-    background: var(--color-text);
+    border-radius: 50%;
+    background: #ececec;
     font-family: var(--font-base);
     font-size: 10px;
     font-weight: 400;
     line-height: 1;
-    color: var(--color-bg);
+    color: #111111;
     pointer-events: none;
   }
 
   .autopark-filter-control.has-selection .toolbar-badge--filter,
   .autopark-sort-control.has-selection .toolbar-badge--sort {
-    display: flex;
+    display: inline-flex;
   }
 
   /* Sort dropdown */
@@ -162,42 +174,6 @@
     font-weight: 500;
     text-align: right;
     padding: 2px 0;
-  }
-
-  /* ── Fixed bottom bar (filter + sort) ──────────────── */
-  .fleet-bottom-bar {
-    position: fixed;
-    bottom: env(safe-area-inset-bottom);
-    left: 0;
-    right: 0;
-    z-index: 200;
-    display: flex;
-    gap: 8px;
-    padding: 12px 16px;
-    background: linear-gradient(to top, var(--color-bg) 70%, transparent);
-  }
-
-  .fleet-bottom-bar .autopark-filter-control,
-  .fleet-bottom-bar .autopark-sort-control {
-    flex: 1;
-    min-width: 0;
-    height: 44px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .fleet-bottom-bar .autopark-filter-btn,
-  .fleet-bottom-bar .autopark-sort-btn {
-    width: 100%;
-    height: 44px;
-    border-radius: 10px;
-    gap: 6px;
-    font-family: var(--font-display, "Unbounded", sans-serif);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--color-text);
   }
 
   /* Search shrinks when filter/sort badge is active */
@@ -271,9 +247,5 @@
 @media (min-width: 577px) {
   .toolbar-badge {
     display: none !important;
-  }
-
-  .fleet-bottom-bar {
-    display: contents;
   }
 }

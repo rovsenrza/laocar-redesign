@@ -14,8 +14,7 @@
   }
 
   .cert-modal,
-  .partner-contact-modal,
-  .legal-entities-page .legal-inline-form {
+  .partner-contact-modal {
     width: 100%;
     max-width: 328px;
     margin-inline: auto;
@@ -27,15 +26,13 @@
   }
 
   .cert-modal-header,
-  .partner-contact-modal-header,
-  .legal-entities-page .legal-inline-form .cert-modal-header {
+  .partner-contact-modal-header {
     align-items: flex-start;
     margin-bottom: 16px;
   }
 
   .cert-modal-title,
-  .partner-contact-modal-title,
-  .legal-entities-page .legal-inline-form .cert-modal-title {
+  .partner-contact-modal-title {
     font-family: "Unbounded", sans-serif;
     font-size: 17px;
     font-weight: 600;
@@ -56,8 +53,7 @@
   }
 
   .cert-modal-form,
-  .partner-contact-modal-form,
-  .legal-entities-page .legal-inline-form .cert-modal-form {
+  .partner-contact-modal-form {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -66,9 +62,7 @@
   .cert-modal-input,
   .cert-modal-textarea,
   .partner-contact-modal-input,
-  .partner-contact-modal-textarea,
-  .legal-entities-page .legal-inline-form .cert-modal-input,
-  .legal-entities-page .legal-inline-form .cert-modal-textarea {
+  .partner-contact-modal-textarea {
     width: 100%;
     margin-bottom: 0;
     outline: none;
@@ -79,8 +73,7 @@
   }
 
   .cert-modal-input,
-  .partner-contact-modal-input,
-  .legal-entities-page .legal-inline-form .cert-modal-input {
+  .partner-contact-modal-input {
     height: 38px;
     padding: 8px 0;
     border: none;
@@ -90,8 +83,7 @@
   }
 
   .cert-modal-textarea,
-  .partner-contact-modal-textarea,
-  .legal-entities-page .legal-inline-form .cert-modal-textarea {
+  .partner-contact-modal-textarea {
     min-height: 89px;
     padding: 12px;
     border: 1px solid #111;
@@ -104,28 +96,23 @@
   .cert-modal-input::placeholder,
   .cert-modal-textarea::placeholder,
   .partner-contact-modal-input::placeholder,
-  .partner-contact-modal-textarea::placeholder,
-  .legal-entities-page .legal-inline-form .cert-modal-input::placeholder,
-  .legal-entities-page .legal-inline-form .cert-modal-textarea::placeholder {
+  .partner-contact-modal-textarea::placeholder {
     color: rgba(17, 17, 17, 0.5);
     font-weight: 300;
   }
 
   .cert-modal-input:focus,
-  .partner-contact-modal-input:focus,
-  .legal-entities-page .legal-inline-form .cert-modal-input:focus {
+  .partner-contact-modal-input:focus {
     border-bottom-color: #111;
   }
 
   .cert-modal-textarea:focus,
-  .partner-contact-modal-textarea:focus,
-  .legal-entities-page .legal-inline-form .cert-modal-textarea:focus {
+  .partner-contact-modal-textarea:focus {
     border-color: #111;
   }
 
   .cert-modal-submit,
-  .partner-contact-modal-submit,
-  .legal-entities-page .legal-inline-form .cert-modal-submit {
+  .partner-contact-modal-submit {
     height: 49px;
     margin-top: 0;
     border: none;
@@ -140,8 +127,7 @@
   }
 
   .cert-modal-submit:not(:disabled),
-  .partner-contact-modal-submit:not(:disabled),
-  .legal-entities-page .legal-inline-form .cert-modal-submit:not(:disabled) {
+  .partner-contact-modal-submit:not(:disabled) {
     background: #111;
     color: #ececec;
     cursor: pointer;

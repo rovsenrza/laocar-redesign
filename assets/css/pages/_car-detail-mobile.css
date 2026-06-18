@@ -126,8 +126,8 @@
   .car-detail-specs-row {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
+    
     margin-bottom: 6px;
     font-size: var(--m-body);
     line-height: 1.3;
@@ -139,7 +139,7 @@
 
   .car-detail-specs-row dt {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     flex: 1;
     font-weight: 300;
     color: var(--color-text-muted);
@@ -148,10 +148,9 @@
   .car-detail-specs-row dt::after {
     content: "";
     flex: 1;
-    margin-inline: 5px;
+    margin-inline: 7px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    align-self: flex-end;
-    margin-bottom: 3px;
+    align-self: center;
   }
 
   .car-detail-specs-row dd {
@@ -191,19 +190,35 @@
   .car-detail-rates li {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
     margin-bottom: 6px;
     font-size: var(--m-body);
-    font-weight: 300;
-    color: var(--color-text-muted);
+    line-height: 1.3;
   }
 
   .car-detail-rates li:last-child {
     margin-bottom: 0;
   }
 
+  .car-detail-rates li span {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    font-weight: 300;
+    color: var(--color-text-muted);
+  }
+
+  .car-detail-rates li span::after {
+    content: "";
+    flex: 1;
+    margin-inline: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    align-self: center;
+  }
+
   .car-detail-rates strong {
+    flex-shrink: 0;
     font-size: 13px;
     font-weight: 900;
     color: var(--color-text);
@@ -226,19 +241,35 @@
   .car-detail-extra p {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 12px;
+    align-items: center;
     margin: 0 0 6px;
     font-size: var(--m-body);
-    font-weight: 300;
-    color: var(--color-text-muted);
+    line-height: 1.3;
   }
 
   .car-detail-extra p:last-child {
     margin-bottom: 0;
   }
 
+  .car-detail-extra p span {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 0;
+    font-weight: 300;
+    color: var(--color-text-muted);
+  }
+
+  .car-detail-extra p span::after {
+    content: "";
+    flex: 1;
+    margin-inline: 7px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    align-self: center;
+  }
+
   .car-detail-extra strong {
+    flex-shrink: 0;
     font-size: 13px;
     font-weight: 900;
     color: var(--color-text);
