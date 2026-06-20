@@ -288,9 +288,12 @@
     padding: 0;
     margin-bottom: 12px;
   }
-
+  .legal-entities-page .cert-modal-header {
+    flex-direction: column;
+  }
   .legal-entities-page .legal-inline-form .cert-modal-textarea {
-    min-height: 89px;
+    max-height: 49px;
+    min-height: 49px;
     padding: 8px 0;
     resize: none;
   }

@@ -336,6 +336,10 @@
   margin: 0 0 16px;
 }
 
+.car-detail-description-content p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .car-detail-description-content h3 {
   font-family: "Inter", sans-serif;
   font-size: 20px;

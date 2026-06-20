@@ -93,6 +93,14 @@
   color: #ffffff;
 }
 
+@media (min-width: 577px) {
+  .terms-top-grid .terms-card:nth-child(2) .terms-list li {
+    font-family: "Unbounded", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
 .terms-forbidden-list {
   margin: 0 0 12px;
   padding-left: 24px;
@@ -159,6 +167,10 @@
   .terms-list li {
     font-size: 18px;
   }
+
+  .terms-top-grid .terms-card:nth-child(2) .terms-list li {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -186,6 +198,12 @@
 
   .terms-list li {
     font-size: 16px;
+  }
+
+  .terms-top-grid .terms-card:nth-child(2) .terms-list li {
+    font-family: "Unbounded", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
   }
 
   .terms-stats {
